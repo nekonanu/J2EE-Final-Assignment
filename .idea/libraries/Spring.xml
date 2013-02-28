@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Spring" type="spring">
+    <CLASSES>
+      <root url="file://E:/Download/各种库和包/J2EE/spring-framework-3.2.1.RELEASE/libs" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://E:/Download/各种库和包/J2EE/spring-framework-3.2.1.RELEASE/libs" />
+    </SOURCES>
+    <jarDirectory url="file://E:/Download/各种库和包/J2EE/spring-framework-3.2.1.RELEASE/libs" recursive="false" />
+    <jarDirectory url="file://E:/Download/各种库和包/J2EE/spring-framework-3.2.1.RELEASE/libs" recursive="false" type="SOURCES" />
+  </library>
+</component>

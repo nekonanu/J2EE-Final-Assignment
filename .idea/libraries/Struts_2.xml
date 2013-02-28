@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Struts 2" type="struts2">
+    <CLASSES>
+      <root url="file://E:/Download/各种库和包/J2EE/struts-2.3.8/lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://E:/Download/各种库和包/J2EE/struts-2.3.8/lib" recursive="false" />
+  </library>
+</component>
