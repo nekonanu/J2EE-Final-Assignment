@@ -3,13 +3,14 @@
         "-//Hibernate/HibernateMappingDTD3.0//EN"
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-
-    <class name="cn.edu.nju.bean.Product" table="product">
+    <class name="cn.edu.nju.bean.VipCard" table="vip_card">
         <id name="id">
             <generator class="increment"/>
         </id>
-        <property name="product_name"/>
-        <property name="price"/>
-        <property name="remain_num"/>
+        <property name="holder_id"/>
+        <property name="register_date" type="java.util.Date"/>
+        <property name="deadline_date" type="java.util.Date"/>
+        <property name="status"/>
+        <property name="remain_amount"/>
     </class>
 </hibernate-mapping>

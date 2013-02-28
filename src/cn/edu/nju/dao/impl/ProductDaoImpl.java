@@ -3,8 +3,11 @@ package cn.edu.nju.dao.impl;
 import cn.edu.nju.bean.Product;
 import cn.edu.nju.dao.HibernateUtil;
 import cn.edu.nju.dao.ProductDao;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+
+import java.util.List;
 
 
 /**
@@ -24,4 +27,37 @@ public class ProductDaoImpl implements ProductDao{
         transaction.commit();
         HibernateUtil.closeSession();
     }
+
+    @Override
+    public void deleteProductByID(int id) {
+        Session session=HibernateUtil.currentSession();
+        Transaction transaction=session.beginTransaction();
+        session.delete("id",id);
+        transaction.commit();
+        HibernateUtil.closeSession();
+    }
+
+    @Override
+    public Product findByName(String name) {
+        Session session=HibernateUtil.currentSession();
+        Query query=session.createQuery("from Product p where p.product_name=:name");
+        query.setString("name",name);
+        List<Product> list=query.list();
+        if (list.size()!=0)
+            return list.get(0);
+        return null;
+    }
+
+    @Override
+    public Product findByID(int id) {
+        Session session=HibernateUtil.currentSession();
+        Query query=session.createQuery("from Product p where p.id=:id");
+        query.setInteger("id",id);
+        List<Product> list=query.list();
+        if (list.size()!=0)
+            return list.get(0);
+        return null;
+    }
+
+
 }

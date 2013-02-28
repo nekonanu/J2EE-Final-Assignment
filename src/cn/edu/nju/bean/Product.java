@@ -10,7 +10,7 @@ package cn.edu.nju.bean;
 public class Product {
     private int id;
     private String product_name;
-    private int remainal_num;
+    private int remain_num;
     private double price;
 
     public int getId() {
@@ -29,12 +29,12 @@ public class Product {
         this.product_name = product_name;
     }
 
-    public int getRemainal_num() {
-        return remainal_num;
+    public int getRemain_num() {
+        return remain_num;
     }
 
-    public void setRemainal_num(int remainal_num) {
-        this.remainal_num = remainal_num;
+    public void setRemain_num(int remain_num) {
+        this.remain_num = remain_num;
     }
 
     public double getPrice() {

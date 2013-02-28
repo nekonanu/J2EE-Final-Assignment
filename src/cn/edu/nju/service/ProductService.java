@@ -11,4 +11,7 @@ import cn.edu.nju.bean.Product;
  */
 public interface ProductService {
     public void addProduct(Product product);
+    public void deleteProductByID(int id);
+    public Product findByName(String name);
+    public Product findByID(int id);
 }

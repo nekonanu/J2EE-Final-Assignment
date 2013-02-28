@@ -3,12 +3,13 @@
         "-//Hibernate/HibernateMappingDTD3.0//EN"
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
+
     <class name="cn.edu.nju.bean.Product" table="product">
         <id name="id">
             <generator class="increment"/>
         </id>
         <property name="product_name"/>
         <property name="price"/>
-        <property name="remainal_num"/>
+        <property name="remain_num"/>
     </class>
 </hibernate-mapping>
