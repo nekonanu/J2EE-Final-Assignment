@@ -21,6 +21,7 @@ public class ProductDaoImpl implements ProductDao{
 
     @Override
     public void addProduct(Product product) {
+
         Session session= HibernateUtil.currentSession();
         Transaction transaction=session.beginTransaction();
         session.save(product);
@@ -45,6 +46,7 @@ public class ProductDaoImpl implements ProductDao{
         List<Product> list=query.list();
         if (list.size()!=0)
             return list.get(0);
+        HibernateUtil.closeSession();
         return null;
     }
 
@@ -56,7 +58,17 @@ public class ProductDaoImpl implements ProductDao{
         List<Product> list=query.list();
         if (list.size()!=0)
             return list.get(0);
+        HibernateUtil.closeSession();
         return null;
+    }
+
+    @Override
+    public List<Product> getAllAvailableProduct() {
+        Session session=HibernateUtil.currentSession();
+        Query query=session.createQuery("from Product p");
+        List<Product> list=query.list();
+        HibernateUtil.closeSession();
+        return list;
     }
 
 

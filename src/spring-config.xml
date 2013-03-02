@@ -20,7 +20,7 @@
         </property>
         <property name="hibernateProperties">
             <props>
-                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</prop>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
                 <prop key="hibernate.show_sql">true</prop>
             </props>
         </property>
@@ -29,6 +29,7 @@
                 <value>cn/edu/nju/bean/Product.hbm.xml</value>
                 <value>cn/edu/nju/bean/User.hbm.xml</value>
                 <value>cn/edu/nju/bean/VipCard.hbm.xml</value>
+                <value>cn/edu/nju/bean/Order.hbm.xml</value>
             </list>
         </property>
     </bean>
@@ -36,10 +37,12 @@
     <bean id="productDao" class="cn.edu.nju.dao.impl.ProductDaoImpl"></bean>
     <bean id="userDao" class="cn.edu.nju.dao.impl.UserDaoImpl"></bean>
     <bean id="vipCardDao" class="cn.edu.nju.dao.impl.VipCardDaoImpl"></bean>
+    <bean id="orderDao" class="cn.edu.nju.dao.impl.OrderDaoImpl"></bean>
 
 
     <bean id="productService" class="cn.edu.nju.service.impl.ProductServiceImpl">
         <property name="productDao" ref="productDao"/>
+        <property name="orderDao" ref="orderDao"/>
     </bean>
     <bean id="userService" class="cn.edu.nju.service.impl.UserServiceImpl">
         <property name="userDao" ref="userDao"/>

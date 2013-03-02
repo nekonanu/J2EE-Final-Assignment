@@ -5,7 +5,7 @@
 <hibernate-mapping>
     <class name="cn.edu.nju.bean.VipCard" table="vip_card">
         <id name="id">
-            <generator class="increment"/>
+            <generator class="native"/>
         </id>
         <property name="holder_id"/>
         <property name="register_date" type="java.util.Date"/>

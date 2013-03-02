@@ -4,12 +4,13 @@
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="cn.edu.nju.bean.Product" table="product">
+    <class name="cn.edu.nju.bean.Order" table="product_order">
         <id name="id">
             <generator class="native"/>
         </id>
-        <property name="product_name"/>
-        <property name="price"/>
-        <property name="remain_num"/>
+        <property name="customer_id"/>
+        <property name="product_id"/>
+        <property name="order_num"/>
+        <property name="order_date" type="java.util.Date"/>
     </class>
 </hibernate-mapping>

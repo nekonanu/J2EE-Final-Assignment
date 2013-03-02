@@ -2,6 +2,8 @@ package cn.edu.nju.dao;
 
 import cn.edu.nju.bean.Product;
 
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: nekosama
@@ -14,4 +16,5 @@ public interface ProductDao {
     public void deleteProductByID(int id);
     public Product findByName(String name);
     public Product findByID(int id);
+    public List<Product> getAllAvailableProduct();
 }
