@@ -18,13 +18,13 @@ public class Main {
         helloService.sayHello();
 
         ProductEntity product=new ProductEntity();
-        product.setId(1);
         product.setPrice(32.0);
         product.setProductName("喜之郎");
         product.setRemainNum(100);
 
         ProductService service= (ProductService) context.getBean("productService");
-        service.sellProduct(1,1,10);
+//        service.addProduct(product);
+        service.sellProduct(4,1,10);
 
 //        service.addProduct(product);
     }

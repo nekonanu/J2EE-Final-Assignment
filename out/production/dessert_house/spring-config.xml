@@ -34,21 +34,10 @@
         </property>
     </bean>
 
-    <!--<bean id="productDao" class="cn.edu.nju.dao.impl.ProductDaoImpl"></bean>-->
-    <!--<bean id="userDao" class="cn.edu.nju.dao.impl.UserDaoImpl"></bean>-->
-    <!--<bean id="vipCardDao" class="cn.edu.nju.dao.impl.VipCardDaoImpl"></bean>-->
-    <!--<bean id="orderDao" class="cn.edu.nju.dao.impl.OrderDaoImpl"></bean>-->
-
-
     <bean id="productService" class="cn.edu.nju.service.impl.ProductServiceImpl">
     </bean>
     <bean id="userService" class="cn.edu.nju.service.impl.UserServiceImpl">
     </bean>
-
-    <!--<bean id="hibernateUtil" class="cn.edu.nju.util.HibernateUtil">-->
-        <!--<property name="session_factory" ref="mySessionFactory"/>-->
-    <!--</bean>-->
-
 
     <aop:aspectj-autoproxy/>
 
