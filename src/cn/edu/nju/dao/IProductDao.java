@@ -1,6 +1,6 @@
 package cn.edu.nju.dao;
 
-import cn.edu.nju.bean.ProductEntity;
+import cn.edu.nju.bean.Product;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ import java.util.List;
  * Time: 下午5:42
  * To change this template use File | Settings | File Templates.
  */
-public interface IProductDao extends IBaseDao<ProductEntity>{
-    public ProductEntity findByName(String name);
-    public List<ProductEntity> getAllAvailableProduct();
+public interface IProductDao extends IBaseDao<Product>{
+    public Product findByName(String name);
+    public List<Product> getAllAvailableProduct();
 }

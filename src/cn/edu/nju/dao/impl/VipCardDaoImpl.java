@@ -1,6 +1,6 @@
 package cn.edu.nju.dao.impl;
 
-import cn.edu.nju.bean.VipCardEntity;
+import cn.edu.nju.bean.VipCard;
 import cn.edu.nju.dao.IVipCardDao;
 import org.springframework.stereotype.Repository;
 
@@ -13,5 +13,5 @@ import org.springframework.stereotype.Repository;
  * To change this template use File | Settings | File Templates.
  */
 @Repository
-public class VipCardDaoImpl extends BaseDaoSupport<VipCardEntity> implements IVipCardDao {
+public class VipCardDaoImpl extends BaseDaoSupport<VipCard> implements IVipCardDao {
 }

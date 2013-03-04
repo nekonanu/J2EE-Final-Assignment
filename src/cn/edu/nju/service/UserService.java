@@ -1,7 +1,7 @@
 package cn.edu.nju.service;
 
-import cn.edu.nju.bean.ProductEntity;
-import cn.edu.nju.bean.UserEntity;
+import cn.edu.nju.bean.Product;
+import cn.edu.nju.bean.User;
 import cn.edu.nju.util.LinkedItem;
 
 import java.util.List;
@@ -14,17 +14,17 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public interface UserService {
-    public void addUser(UserEntity user);
+    public void addUser(User user);
     public void deleteUserByID(int id);
-    public UserEntity findUserByID(int id);
+    public User findUserByID(int id);
 
     /**
      *
-     * @param productEntity
-     * @param userEntity
+     * @param product
+     * @param user
      * @param product_num
      */
-    public void orderProduct(ProductEntity productEntity,UserEntity userEntity,int product_num);
+    public void orderProduct(Product product,User user,int product_num);
     public LinkedItem getUserAndCard(int user_id);
     public List getAllUserAndCard();
 }

@@ -1,6 +1,6 @@
 package cn.edu.nju.dao.impl;
 
-import cn.edu.nju.bean.ProductOrderEntity;
+import cn.edu.nju.bean.ProductOrder;
 import cn.edu.nju.dao.IOrderDao;
 import org.springframework.stereotype.Repository;
 
@@ -12,5 +12,5 @@ import org.springframework.stereotype.Repository;
  * To change this template use File | Settings | File Templates.
  */
 @Repository
-public class OrderDaoImpl extends BaseDaoSupport<ProductOrderEntity> implements IOrderDao {
+public class OrderDaoImpl extends BaseDaoSupport<ProductOrder> implements IOrderDao {
 }

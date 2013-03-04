@@ -1,31 +1,23 @@
 package cn.edu.nju.bean;
 
+import javax.persistence.*;
+import java.io.Serializable;
+import java.util.Set;
+
 /**
  * Created with IntelliJ IDEA.
  * User: nekosama
- * Date: 13-2-28
- * Time: 下午7:01
+ * Date: 13-3-4
+ * Time: 上午10:04
  * To change this template use File | Settings | File Templates.
  */
-public class User {
-    private String email;
-    private int vip_card_id;
+@javax.persistence.Table(name = "user", schema = "", catalog = "dessert_house")
+@Entity
+public class User implements Serializable {
     private int id;
-    private String user_name;
-    private String password;
-    private int age;
-    private int sex;
-    private String address;
-    private int type;
 
-    public int getType() {
-        return type;
-    }
-
-    public void setType(int type) {
-        this.type = type;
-    }
-
+    @javax.persistence.Column(name = "id")
+    @Id
     public int getId() {
         return id;
     }
@@ -34,14 +26,33 @@ public class User {
         this.id = id;
     }
 
-    public String getUser_name() {
-        return user_name;
+    private Set<ProductOrder> productOrderEntities;
+
+    @OneToMany(mappedBy = "user")
+    public Set<ProductOrder> getProductOrderEntities() {
+        return productOrderEntities;
     }
 
-    public void setUser_name(String user_name) {
-        this.user_name = user_name;
+    public void setProductOrderEntities(Set<ProductOrder> productOrderEntities) {
+        this.productOrderEntities = productOrderEntities;
     }
 
+    private String userName;
+
+    @javax.persistence.Column(name = "user_name")
+    @Basic
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    private String password;
+
+    @javax.persistence.Column(name = "password")
+    @Basic
     public String getPassword() {
         return password;
     }
@@ -50,30 +61,10 @@ public class User {
         this.password = password;
     }
 
-    public int getAge() {
-        return age;
-    }
+    private String email;
 
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public int getSex() {
-        return sex;
-    }
-
-    public void setSex(int sex) {
-        this.sex = sex;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
+    @javax.persistence.Column(name = "email")
+    @Basic
     public String getEmail() {
         return email;
     }
@@ -82,11 +73,120 @@ public class User {
         this.email = email;
     }
 
-    public int getVip_card_id() {
-        return vip_card_id;
+//    private int vipCardId;
+//
+//    @javax.persistence.Column(name = "vip_card_id")
+//    @Basic
+//    public int getVipCardId() {
+//        return vipCardId;
+//    }
+//
+//    public void setVipCardId(int vipCardId) {
+//        this.vipCardId = vipCardId;
+//    }
+
+    private VipCard vipCard;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "vip_card_id")
+    public VipCard getVipCard() {
+        return vipCard;
     }
 
-    public void setVip_card_id(int vip_card_id) {
-        this.vip_card_id = vip_card_id;
+    public void setVipCard(VipCard vipCard) {
+        this.vipCard = vipCard;
+    }
+
+    private int age;
+
+    @javax.persistence.Column(name = "age")
+    @Basic
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    private int sex;
+
+    @javax.persistence.Column(name = "sex")
+    @Basic
+    public int getSex() {
+        return sex;
+    }
+
+    public void setSex(int sex) {
+        this.sex = sex;
+    }
+
+    private String address;
+
+    @javax.persistence.Column(name = "address")
+    @Basic
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    private int type;
+
+    @javax.persistence.Column(name = "type")
+    @Basic
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
+
+    private Set<ChargeLog> chargeLogs;
+
+    @OneToMany(mappedBy = "user")
+    public Set<ChargeLog> getChargeLogs() {
+        return chargeLogs;
+    }
+
+    public void setChargeLogs(Set<ChargeLog> chargeLogs) {
+        this.chargeLogs = chargeLogs;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        User that = (User) o;
+
+        if (age != that.age) return false;
+        if (id != that.id) return false;
+        if (sex != that.sex) return false;
+        if (type != that.type) return false;
+        if (vipCard != that.vipCard) return false;
+        if (address != null ? !address.equals(that.address) : that.address != null) return false;
+        if (email != null ? !email.equals(that.email) : that.email != null) return false;
+        if (password != null ? !password.equals(that.password) : that.password != null) return false;
+        if (userName != null ? !userName.equals(that.userName) : that.userName != null) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id;
+        result = 31 * result + (userName != null ? userName.hashCode() : 0);
+        result = 31 * result + (password != null ? password.hashCode() : 0);
+        result = 31 * result + (email != null ? email.hashCode() : 0);
+        result = 31 * result + vipCard.hashCode();
+        result = 31 * result + age;
+        result = 31 * result + sex;
+        result = 31 * result + (address != null ? address.hashCode() : 0);
+        result = 31 * result + type;
+        return result;
     }
 }

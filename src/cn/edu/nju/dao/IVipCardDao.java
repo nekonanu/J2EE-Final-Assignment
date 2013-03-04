@@ -1,6 +1,6 @@
 package cn.edu.nju.dao;
 
-import cn.edu.nju.bean.VipCardEntity;
+import cn.edu.nju.bean.VipCard;
 
 /**
  * Created with IntelliJ IDEA.
@@ -9,5 +9,5 @@ import cn.edu.nju.bean.VipCardEntity;
  * Time: 下午7:29
  * To change this template use File | Settings | File Templates.
  */
-public interface IVipCardDao extends IBaseDao<VipCardEntity>{
+public interface IVipCardDao extends IBaseDao<VipCard>{
 }

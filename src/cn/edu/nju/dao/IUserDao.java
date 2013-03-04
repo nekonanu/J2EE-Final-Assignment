@@ -1,6 +1,6 @@
 package cn.edu.nju.dao;
 
-import cn.edu.nju.bean.UserEntity;
+import cn.edu.nju.bean.User;
 import cn.edu.nju.util.LinkedItem;
 
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.List;
  * Time: 下午7:22
  * To change this template use File | Settings | File Templates.
  */
-public interface IUserDao extends IBaseDao<UserEntity>{
+public interface IUserDao extends IBaseDao<User>{
     public LinkedItem getUserAndCard(int user_id);
     public List getAllUserAndCard();
 }

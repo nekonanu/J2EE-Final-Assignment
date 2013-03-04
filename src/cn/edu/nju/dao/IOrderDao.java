@@ -1,7 +1,7 @@
 package cn.edu.nju.dao;
 
 
-import cn.edu.nju.bean.ProductOrderEntity;
+import cn.edu.nju.bean.ProductOrder;
 
 /**
  * Created with IntelliJ IDEA.
@@ -10,5 +10,5 @@ import cn.edu.nju.bean.ProductOrderEntity;
  * Time: 下午4:11
  * To change this template use File | Settings | File Templates.
  */
-public interface IOrderDao extends IBaseDao<ProductOrderEntity>{
+public interface IOrderDao extends IBaseDao<ProductOrder>{
 }

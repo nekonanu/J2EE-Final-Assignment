@@ -1,18 +1,23 @@
 package cn.edu.nju.bean;
 
+import javax.persistence.*;
+import java.io.Serializable;
+import java.util.Set;
+
 /**
  * Created with IntelliJ IDEA.
  * User: nekosama
- * Date: 13-2-28
- * Time: 下午5:41
+ * Date: 13-3-4
+ * Time: 上午10:04
  * To change this template use File | Settings | File Templates.
  */
-public class Product {
+@javax.persistence.Table(name = "product", schema = "", catalog = "dessert_house")
+@Entity
+public class Product implements Serializable {
     private int id;
-    private String product_name;
-    private int remain_num;
-    private double price;
 
+    @javax.persistence.Column(name = "id")
+    @Id
     public int getId() {
         return id;
     }
@@ -21,27 +26,77 @@ public class Product {
         this.id = id;
     }
 
-    public String getProduct_name() {
-        return product_name;
+    private Set<ProductOrder> productOrder;
+
+    @OneToMany(mappedBy = "product")
+    public Set<ProductOrder> getProductOrder() {
+        return productOrder;
     }
 
-    public void setProduct_name(String product_name) {
-        this.product_name = product_name;
+    public void setProductOrder(Set<ProductOrder> productOrder) {
+        this.productOrder = productOrder;
     }
 
-    public int getRemain_num() {
-        return remain_num;
+    private String productName;
+
+    @javax.persistence.Column(name = "product_name")
+    @Basic
+    public String getProductName() {
+        return productName;
     }
 
-    public void setRemain_num(int remain_num) {
-        this.remain_num = remain_num;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
+    private int remainNum;
+
+    @javax.persistence.Column(name = "remain_num")
+    @Basic
+    public int getRemainNum() {
+        return remainNum;
+    }
+
+    public void setRemainNum(int remainNum) {
+        this.remainNum = remainNum;
+    }
+
+    private double price;
+
+    @javax.persistence.Column(name = "price")
+    @Basic
     public double getPrice() {
         return price;
     }
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Product that = (Product) o;
+
+        if (id != that.id) return false;
+        if (Double.compare(that.price, price) != 0) return false;
+        if (remainNum != that.remainNum) return false;
+        if (productName != null ? !productName.equals(that.productName) : that.productName != null) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        result = id;
+        result = 31 * result + (productName != null ? productName.hashCode() : 0);
+        result = 31 * result + remainNum;
+        temp = price != +0.0d ? Double.doubleToLongBits(price) : 0L;
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        return result;
     }
 }

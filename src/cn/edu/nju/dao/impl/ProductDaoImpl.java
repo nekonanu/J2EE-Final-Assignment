@@ -1,6 +1,6 @@
 package cn.edu.nju.dao.impl;
 
-import cn.edu.nju.bean.ProductEntity;
+import cn.edu.nju.bean.Product;
 import cn.edu.nju.util.HibernateUtil;
 import cn.edu.nju.dao.IProductDao;
 import org.hibernate.Query;
@@ -18,23 +18,23 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 @Repository
-public class ProductDaoImpl extends BaseDaoSupport<ProductEntity> implements IProductDao {
+public class ProductDaoImpl extends BaseDaoSupport<Product> implements IProductDao {
     @Override
-    public ProductEntity findByName(String name) {
+    public Product findByName(String name) {
         Session session=getSession();
-        Query query=session.createQuery("from ProductEntity p where p.productName=:name");
+        Query query=session.createQuery("from Product p where p.productName=:name");
         query.setString("name",name);
-        List<ProductEntity> list=query.list();
+        List<Product> list=query.list();
         if (list.size()!=0)
             return list.get(0);
         return null;
     }
 
     @Override
-    public List<ProductEntity> getAllAvailableProduct() {
+    public List<Product> getAllAvailableProduct() {
         Session session=getSession();
-        Query query=session.createQuery("from ProductEntity p");
-        List<ProductEntity> list=query.list();
+        Query query=session.createQuery("from Product p");
+        List<Product> list=query.list();
         HibernateUtil.closeSession();
         return list;
     }

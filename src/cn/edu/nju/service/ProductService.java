@@ -1,7 +1,7 @@
 package cn.edu.nju.service;
 
-import cn.edu.nju.bean.ProductEntity;
-import cn.edu.nju.bean.UserEntity;
+import cn.edu.nju.bean.Product;
+import cn.edu.nju.bean.User;
 
 import java.util.List;
 
@@ -13,18 +13,18 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public interface ProductService {
-    public void addProduct(ProductEntity product);
+    public void addProduct(Product product);
     public void deleteProductByID(int id);
-    public ProductEntity findByName(String name);
-    public ProductEntity findByID(int id);
+    public Product findByName(String name);
+    public Product findByID(int id);
 
     //店员============
     /**
      * 获得当前可销售的产品
       * @return
      */
-    public List<ProductEntity> getAvailableProduct();
-    public void sellProduct(ProductEntity productEntity,UserEntity userEntity,int amount);
+    public List<Product> getAvailableProduct();
+    public void sellProduct(Product product,User user,int amount);
 
 
 }
