@@ -41,6 +41,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public void changeAuthority(User user, int type) {
+        IUserDao.changeAuthority(user,type);
+    }
+
+    @Override
     public User findUserByID(int id) {
         return IUserDao.findById(id);
     }

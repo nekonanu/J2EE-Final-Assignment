@@ -68,4 +68,11 @@ public class UserDaoImpl extends BaseDaoSupport<User> implements IUserDao {
         }
         return resultList;
     }
+
+    @Override
+    public void changeAuthority(User user, int type) {
+        Session session=getSession();
+        user.setType(type);
+        session.update(user);
+    }
 }

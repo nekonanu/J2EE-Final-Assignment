@@ -16,6 +16,7 @@ import java.util.List;
 public interface UserService {
     public void addUser(User user);
     public void deleteUserByID(int id);
+    public void changeAuthority(User user,int type);
     public User findUserByID(int id);
 
     /**

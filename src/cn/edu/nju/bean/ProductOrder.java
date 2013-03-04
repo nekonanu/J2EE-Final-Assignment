@@ -74,6 +74,17 @@ public class ProductOrder implements Serializable {
         this.orderDate = orderDate;
     }
 
+    private Store store;
+    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @JoinColumn(name = "store_id")
+    public Store getStore() {
+        return store;
+    }
+
+    public void setStore(Store store) {
+        this.store = store;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

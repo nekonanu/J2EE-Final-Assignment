@@ -37,6 +37,7 @@
       <column name="product_name" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12" />
       <column name="remain_num" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
       <column name="price" sqlType="DOUBLE" length="22" precision="0" nullable="false" jdbcType="8" />
+      <column name="store_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
       <primary-key name="PRIMARY" columns="id" />
       <exported-key name="product" table="product_order" schema="" catalog="dessert_house" columns="product_id" />
     </table>
@@ -46,11 +47,18 @@
       <column name="product_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
       <column name="order_num" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
       <column name="order_date" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91" />
+      <column name="store_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
       <primary-key name="PRIMARY" columns="id" />
       <foreign-key name="customer" columns="customer_id" ref-table="user" ref-schema="" ref-catalog="dessert_house" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
       <foreign-key name="product" columns="product_id" ref-table="product" ref-schema="" ref-catalog="dessert_house" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
       <index name="customer_idx" unique="false" columns="customer_id" />
       <index name="product_idx" unique="false" columns="product_id" />
+    </table>
+    <table name="store" schema="" catalog="dessert_house" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="store_name" sqlType="VARCHAR" length="32" precision="0" nullable="true" jdbcType="12" />
+      <column name="store_location" sqlType="VARCHAR" length="64" precision="0" nullable="true" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
     </table>
     <table name="user" schema="" catalog="dessert_house" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
@@ -62,6 +70,7 @@
       <column name="sex" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
       <column name="address" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" />
       <column name="type" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="store_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
       <primary-key name="PRIMARY" columns="id" />
       <exported-key name="holder_id" table="charge_log" schema="" catalog="dessert_house" columns="holder_id" />
       <exported-key name="customer" table="product_order" schema="" catalog="dessert_house" columns="customer_id" />

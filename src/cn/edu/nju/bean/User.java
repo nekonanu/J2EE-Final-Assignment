@@ -156,6 +156,17 @@ public class User implements Serializable {
         this.chargeLogs = chargeLogs;
     }
 
+    private Store store;
+    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @JoinColumn(name = "store_id")
+    public Store getStore() {
+        return store;
+    }
+
+    public void setStore(Store store) {
+        this.store = store;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

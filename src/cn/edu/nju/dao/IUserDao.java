@@ -15,4 +15,5 @@ import java.util.List;
 public interface IUserDao extends IBaseDao<User>{
     public LinkedItem getUserAndCard(int user_id);
     public List getAllUserAndCard();
+    public void changeAuthority(User user,int type);
 }
