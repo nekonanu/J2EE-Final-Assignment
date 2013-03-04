@@ -82,6 +82,16 @@ public class Store implements Serializable {
         this.users = users;
     }
 
+    private Set<Sale> sales;
+    @OneToMany(mappedBy = "store")
+    public Set<Sale> getSales() {
+        return sales;
+    }
+
+    public void setSales(Set<Sale> sales) {
+        this.sales = sales;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

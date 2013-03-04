@@ -10,4 +10,17 @@ import cn.edu.nju.bean.VipCard;
  * To change this template use File | Settings | File Templates.
  */
 public interface IVipCardDao extends IBaseDao<VipCard>{
+    public void charge(VipCard vipCard,int amount);
+
+    /**
+     * 激活
+     * @param vipCard
+     */
+    public void activate(VipCard vipCard);
+
+    /**
+     * 冻结
+     * @param vipCard
+     */
+    public void freeze(VipCard vipCard);
 }

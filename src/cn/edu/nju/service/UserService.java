@@ -2,9 +2,10 @@ package cn.edu.nju.service;
 
 import cn.edu.nju.bean.Product;
 import cn.edu.nju.bean.User;
-import cn.edu.nju.util.LinkedItem;
+import cn.edu.nju.bean.VipCard;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA.
@@ -26,6 +27,5 @@ public interface UserService {
      * @param product_num
      */
     public void orderProduct(Product product,User user,int product_num);
-    public LinkedItem getUserAndCard(int user_id);
-    public List getAllUserAndCard();
+    public Set<User> getAllUser(int store_id);
 }

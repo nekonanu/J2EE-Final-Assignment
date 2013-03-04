@@ -4,6 +4,7 @@ import cn.edu.nju.bean.Store;
 import cn.edu.nju.dao.IStoreDao;
 import org.hibernate.Query;
 import org.hibernate.Session;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -14,6 +15,7 @@ import java.util.List;
  * Time: 下午4:28
  * To change this template use File | Settings | File Templates.
  */
+@Repository
 public class StoreDao extends BaseDaoSupport<Store> implements IStoreDao{
     @Override
     public Store findByName(String name) {

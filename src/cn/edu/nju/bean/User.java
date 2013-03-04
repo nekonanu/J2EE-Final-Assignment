@@ -37,6 +37,16 @@ public class User implements Serializable {
         this.productOrderEntities = productOrderEntities;
     }
 
+    private Set<Sale> sales;
+    @OneToMany(mappedBy = "user")
+    public Set<Sale> getSales() {
+        return sales;
+    }
+
+    public void setSales(Set<Sale> sales) {
+        this.sales = sales;
+    }
+
     private String userName;
 
     @javax.persistence.Column(name = "user_name")

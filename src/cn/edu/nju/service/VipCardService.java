@@ -1,5 +1,7 @@
 package cn.edu.nju.service;
 
+import cn.edu.nju.bean.User;
+
 /**
  * Created with IntelliJ IDEA.
  * User: nekosama
@@ -8,19 +10,19 @@ package cn.edu.nju.service;
  * To change this template use File | Settings | File Templates.
  */
 public interface VipCardService {
-    public void cardCharge(int vip_card_id,double amount);
+    public void cardCharge(User user,int amount);
     /**
      * 判断是否过期
-     * @param vip_card_id
+     * @param user
      * @return 是否过期
      */
-    public boolean isDead(int vip_card_id);
+    public boolean isFreeze(User user);
 
     /**
      * 设置过期与否
-     * @param isDead
+     * @param user,isFreeze
      */
-    public void setDead(boolean isDead);
+    public void setFreeze(User user,boolean isFreeze);
 
 
 }

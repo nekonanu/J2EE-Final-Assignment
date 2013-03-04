@@ -5,12 +5,14 @@ import cn.edu.nju.bean.ProductOrder;
 import cn.edu.nju.bean.User;
 import cn.edu.nju.dao.IOrderDao;
 import cn.edu.nju.dao.IProductDao;
+import cn.edu.nju.dao.IStoreDao;
 import cn.edu.nju.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA.
@@ -22,37 +24,39 @@ import java.util.List;
 @Service
 public class ProductServiceImpl implements ProductService{
     @Autowired
-    private IProductDao IProductDao;
+    private IProductDao productDao;
     @Autowired
-    private IOrderDao IOrderDao;
+    private IOrderDao orderDao;
+    @Autowired
+    private IStoreDao storeDao;
 
-    public IProductDao getIProductDao() {
-        return IProductDao;
+    public IProductDao getProductDao() {
+        return productDao;
     }
 
     @Override
     public void addProduct(Product product) {
-        IProductDao.save(product);
+        productDao.save(product);
     }
 
     @Override
     public void deleteProductByID(int id) {
-        IProductDao.deleteById(id);
+        productDao.deleteById(id);
     }
 
     @Override
     public Product findByName(String name) {
-        return IProductDao.findByName(name);
+        return productDao.findByName(name);
     }
 
     @Override
     public Product findByID(int id) {
-        return IProductDao.findById(id);
+        return productDao.findById(id);
     }
 
     @Override
-    public List<Product> getAvailableProduct() {
-        return IProductDao.getAllAvailableProduct();
+    public Set<Product> getAvailableProduct(int store_id) {
+        return storeDao.findById(store_id).getProducts();
     }
 
     @Override
@@ -62,24 +66,14 @@ public class ProductServiceImpl implements ProductService{
         order.setProduct(product);
         order.setOrderNum(amount);
         order.setOrderDate(new Date());
-        IOrderDao.save(order);
+        orderDao.save(order);
     }
 
-//    @Override
-//    public void sellProduct(int product_id, int user_id, int amount) {
-//        ProductOrder order=new ProductOrder();
-//        order.setCustomerId(user_id);
-//        order.setProductId(product_id);
-//        order.setOrderNum(amount);
-//        order.setOrderDate(new Date());
-//        IOrderDao.save(order);
-//    }
-
-    public void setIProductDao(IProductDao IProductDao) {
-        this.IProductDao = IProductDao;
+    public void setProductDao(IProductDao productDao) {
+        this.productDao = productDao;
     }
 
-    public void setIOrderDao(IOrderDao IOrderDao) {
-        this.IOrderDao = IOrderDao;
+    public void setOrderDao(IOrderDao orderDao) {
+        this.orderDao = orderDao;
     }
 }

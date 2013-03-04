@@ -14,4 +14,20 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public class VipCardDaoImpl extends BaseDaoSupport<VipCard> implements IVipCardDao {
+    @Override
+    public void charge(VipCard vipCard, int amount) {
+        vipCard.setRemainAmount(vipCard.getRemainAmount()+amount);
+        getSession().update(vipCard);
+    }
+
+    @Override
+    public void activate(VipCard vipCard) {
+        vipCard.setStatus("activate");
+        getSession().update(vipCard);
+    }
+
+    @Override
+    public void freeze(VipCard vipCard) {
+        vipCard.setStatus("freeze");
+    }
 }

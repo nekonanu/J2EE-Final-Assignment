@@ -30,12 +30,4 @@ public class ProductDaoImpl extends BaseDaoSupport<Product> implements IProductD
         return null;
     }
 
-    @Override
-    public List<Product> getAllAvailableProduct() {
-        Session session=getSession();
-        Query query=session.createQuery("from Product p");
-        List<Product> list=query.list();
-        HibernateUtil.closeSession();
-        return list;
-    }
 }

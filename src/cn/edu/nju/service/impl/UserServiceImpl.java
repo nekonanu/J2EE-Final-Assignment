@@ -2,13 +2,13 @@ package cn.edu.nju.service.impl;
 
 import cn.edu.nju.bean.Product;
 import cn.edu.nju.bean.User;
+import cn.edu.nju.dao.IStoreDao;
 import cn.edu.nju.dao.IUserDao;
 import cn.edu.nju.service.UserService;
-import cn.edu.nju.util.LinkedItem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA.
@@ -20,34 +20,36 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
-    private IUserDao IUserDao;
+    private IUserDao userDao;
+    @Autowired
+    private IStoreDao storeDao;
 
-    public IUserDao getIUserDao() {
-        return IUserDao;
+    public IUserDao getUserDao() {
+        return userDao;
     }
 
-    public void setIUserDao(IUserDao IUserDao) {
-        this.IUserDao = IUserDao;
+    public void setUserDao(IUserDao userDao) {
+        this.userDao = userDao;
     }
 
     @Override
     public void addUser(User user) {
-        IUserDao.save(user);
+        userDao.save(user);
     }
 
     @Override
     public void deleteUserByID(int id) {
-        IUserDao.deleteById(id);
+        userDao.deleteById(id);
     }
 
     @Override
     public void changeAuthority(User user, int type) {
-        IUserDao.changeAuthority(user,type);
+        userDao.changeAuthority(user, type);
     }
 
     @Override
     public User findUserByID(int id) {
-        return IUserDao.findById(id);
+        return userDao.findById(id);
     }
 
     @Override
@@ -55,18 +57,8 @@ public class UserServiceImpl implements UserService {
         //To change body of implemented methods use File | Settings | File Templates.
     }
 
-//    @Override
-//    public void orderProduct(int product_id, int user_id, int product_num) {
-//
-//    }
-
     @Override
-    public LinkedItem getUserAndCard(int user_id) {
-        return IUserDao.getUserAndCard(user_id);
-    }
-
-    @Override
-    public List getAllUserAndCard() {
-        return IUserDao.getAllUserAndCard();
+    public Set<User> getAllUser(int store_id) {
+        return storeDao.findById(store_id).getUsers();
     }
 }

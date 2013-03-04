@@ -7,14 +7,14 @@
     <file path="/helloService.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362044105315" ignored="false" />
     <file path="/spring-config.xml" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362383187529" ignored="false" />
     <file path="/Main.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362381553728" ignored="false" />
-    <file path="/Product.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362385252428" ignored="false" />
+    <file path="/Product.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362387389245" ignored="false" />
     <file path="/ProductDao.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362362953624" ignored="false" />
     <file path="/ProductDaoImpl.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362368785185" ignored="false" />
-    <file path="/fragment.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362385095065" ignored="false" />
+    <file path="/fragment.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362387547302" ignored="false" />
     <file path="/HibernateUtil.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362046790222" ignored="false" />
     <file path="/Product.hbm.xml" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362215913497" ignored="false" />
-    <file path="/ProductService.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362381333982" ignored="false" />
-    <file path="/ProductServiceImpl.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362381429715" ignored="false" />
+    <file path="/ProductService.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362388339550" ignored="false" />
+    <file path="/ProductServiceImpl.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362388424386" ignored="false" />
     <file path="/Customer.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362052678886" ignored="false" />
     <file path="/Customer.hbm.xml" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362049712868" ignored="false" />
     <file path="/Clerk.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362050717246" ignored="false" />
@@ -22,26 +22,26 @@
     <file path="/Manager.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362050794115" ignored="false" />
     <file path="/Manager.hbm.xml" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362050839066" ignored="false" />
     <file path="/SystemManager.hbm.xml" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362050846499" ignored="false" />
-    <file path="/VipCard.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362382774115" ignored="false" />
+    <file path="/VipCard.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362388826960" ignored="false" />
     <file path="/VipCard.hbm.xml" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362215919197" ignored="false" />
     <file path="/UserDao.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362362963171" ignored="false" />
     <file path="/SystemManager.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362050814261" ignored="false" />
-    <file path="/User.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362385423903" ignored="false" />
+    <file path="/User.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362387487980" ignored="false" />
     <file path="/VipCardDao.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362367970699" ignored="false" />
     <file path="/Dummy.txt" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362361273843" ignored="false" />
-    <file path="/UserDaoImpl.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362384289606" ignored="false" />
+    <file path="/UserDaoImpl.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362387565383" ignored="false" />
     <file path="/User.hbm.xml" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362215916182" ignored="false" />
-    <file path="/UserService.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362384228100" ignored="false" />
-    <file path="/UserServiceImpl.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362384314709" ignored="false" />
-    <file path="/VipCardDaoImpl.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362368613294" ignored="false" />
-    <file path="/VipCardService.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362127727041" ignored="false" />
+    <file path="/UserService.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362388228439" ignored="false" />
+    <file path="/UserServiceImpl.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362388353295" ignored="false" />
+    <file path="/VipCardDaoImpl.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362388981707" ignored="false" />
+    <file path="/VipCardService.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362388762208" ignored="false" />
     <file path="/LinkedItem.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362206238033" ignored="false" />
     <file path="/OrderDao.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362362938471" ignored="false" />
     <file path="/Order.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362215889877" ignored="false" />
     <file path="/Order.hbm.xml" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362215944432" ignored="false" />
     <file path="$PROJECT_DIR$/src/cn/edu/nju/dao/impl/OrderDao.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362212135485" ignored="false" />
     <file path="/OrderDaoImpl.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362368528733" ignored="false" />
-    <file path="/a.xml" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362362685115" ignored="false" />
+    <file path="/a.xml" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362387117091" ignored="false" />
     <file path="/ProductOrderEntity.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362381049856" ignored="false" />
     <file path="/HelloService.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362367339891" ignored="false" />
     <file path="/IBaseDao.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362368035296" ignored="false" />
@@ -56,10 +56,13 @@
     <file path="/ProductEntity.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362380733626" ignored="false" />
     <file path="/UserEntity.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362382153805" ignored="false" />
     <file path="/ChargeLog.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362382622095" ignored="false" />
-    <file path="/Store.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362385773854" ignored="false" />
+    <file path="/Store.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362387450480" ignored="false" />
     <file path="/ProductOrder.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362385368520" ignored="false" />
     <file path="/IStoreDao.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362385681321" ignored="false" />
-    <file path="/StoreDao.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362385795244" ignored="false" />
+    <file path="/StoreDao.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362388374956" ignored="false" />
+    <file path="/IVipCardDao.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362386818300" ignored="false" />
+    <file path="/Sale.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362387360632" ignored="false" />
+    <file path="/VipCardServiceImpl.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362388954808" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +118,7 @@
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/cn/edu/nju/dao/impl/StoreDao.java" line="16" class="cn.edu.nju.dao.impl.StoreDao" package="cn.edu.nju.dao.impl">
+      <breakpoint url="file://$PROJECT_DIR$/src/cn/edu/nju/dao/impl/StoreDao.java" line="18" class="cn.edu.nju.dao.impl.StoreDao" package="cn.edu.nju.dao.impl">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -139,55 +142,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="VipCardDaoImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/dao/impl/VipCardDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="35" selection-start="571" selection-end="571" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="spring-config.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/spring-config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="36" selection-start="2067" selection-end="2067" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Store.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/bean/Store.java">
+      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="41" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0">
+            <state line="25" column="55" selection-start="883" selection-end="883" vertical-scroll-proportion="0.46896553">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IStoreDao.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/dao/IStoreDao.java">
+      <file leaf-file-name="ProductServiceImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/service/impl/ProductServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="41" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0">
+            <state line="60" column="14" selection-start="1447" selection-end="1447" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderDaoImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/dao/impl/OrderDaoImpl.java">
+      <file leaf-file-name="VipCardServiceImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/service/impl/VipCardServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="13" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductDaoImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/dao/impl/ProductDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="26" selection-start="588" selection-end="862" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StoreDao.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/dao/impl/StoreDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="14" selection-start="513" selection-end="513" vertical-scroll-proportion="0.7112971">
+            <state line="42" column="39" selection-start="1189" selection-end="1189" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -195,37 +189,48 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDaoImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/dao/impl/UserDaoImpl.java">
+      <file leaf-file-name="IVipCardDao.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/dao/IVipCardDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="27" selection-start="2641" selection-end="2641" vertical-scroll-proportion="0.0">
+            <state line="11" column="17" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseDaoSupport.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/dao/impl/BaseDaoSupport.java">
+      <file leaf-file-name="VipCard.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/bean/VipCard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="22" selection-start="540" selection-end="540" vertical-scroll-proportion="0.0">
+            <state line="18" column="51" selection-start="521" selection-end="521" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IProductDao.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/dao/IProductDao.java">
+      <file leaf-file-name="UserServiceImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/service/impl/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="17" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
+            <state line="24" column="26" selection-start="637" selection-end="637" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VipCardService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/service/VipCardService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="40" selection-start="284" selection-end="287" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <file leaf-file-name="ProductService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/service/ProductService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="52" selection-start="808" selection-end="808" vertical-scroll-proportion="0.0">
+            <state line="14" column="17" selection-start="286" selection-end="286" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -251,22 +256,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/cn/edu/nju/service/ProductService.java" />
-        <option value="$PROJECT_DIR$/src/cn/edu/nju/service/impl/ProductServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/cn/edu/nju/bean/ChargeLog.java" />
-        <option value="$PROJECT_DIR$/src/cn/edu/nju/bean/VipCard.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/cn/edu/nju/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/cn/edu/nju/bean/Product.java" />
+        <option value="$PROJECT_DIR$/src/cn/edu/nju/bean/Store.java" />
+        <option value="$PROJECT_DIR$/src/cn/edu/nju/bean/User.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/nju/dao/IUserDao.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/nju/dao/impl/UserDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/cn/edu/nju/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/cn/edu/nju/dao/IProductDao.java" />
+        <option value="$PROJECT_DIR$/src/cn/edu/nju/dao/impl/ProductDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/cn/edu/nju/service/ProductService.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/nju/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/cn/edu/nju/bean/Product.java" />
-        <option value="$PROJECT_DIR$/src/cn/edu/nju/bean/ProductOrder.java" />
-        <option value="$PROJECT_DIR$/src/cn/edu/nju/bean/User.java" />
-        <option value="$PROJECT_DIR$/src/spring-config.xml" />
-        <option value="$PROJECT_DIR$/src/cn/edu/nju/dao/IStoreDao.java" />
-        <option value="$PROJECT_DIR$/src/cn/edu/nju/bean/Store.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/nju/dao/impl/StoreDao.java" />
+        <option value="$PROJECT_DIR$/src/cn/edu/nju/service/impl/ProductServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/cn/edu/nju/service/VipCardService.java" />
+        <option value="$PROJECT_DIR$/src/cn/edu/nju/bean/VipCard.java" />
+        <option value="$PROJECT_DIR$/src/cn/edu/nju/service/impl/VipCardServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/cn/edu/nju/dao/impl/VipCardDaoImpl.java" />
       </list>
     </option>
   </component>
@@ -373,7 +378,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bean" />
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dessert_house" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dessert house" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nju" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -630,32 +657,32 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1320" height="784" extended-state="7" />
+    <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.49682036" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24244833" sideWeight="0.15629984" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26947537" sideWeight="0.2169059" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="JavaEE:App" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1391097" sideWeight="0.8692185" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.059011165" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26947537" sideWeight="0.32535884" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.49761525" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.49682036" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19617225" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16746412" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24244833" sideWeight="0.6698565" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16267942" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26947537" sideWeight="0.7719298" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.307815" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -722,81 +749,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="42" selection-start="1052" selection-end="1052" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="52" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/bean/ChargeLog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="338" selection-end="338" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/bean/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="23" selection-start="1616" selection-end="1621" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/bean/ProductOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="32" selection-start="1736" selection-end="1736" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/bean/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="160" column="32" selection-start="3354" selection-end="3354" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="52" selection-start="808" selection-end="808" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/spring-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="36" selection-start="2067" selection-end="2067" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/dao/IProductDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="17" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/dao/IStoreDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="41" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/dao/impl/UserDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="27" selection-start="2641" selection-end="2641" vertical-scroll-proportion="0.0">
+        <state line="15" column="13" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -817,24 +772,98 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/dao/impl/ProductDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="26" selection-start="588" selection-end="862" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/bean/Store.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="41" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0">
+        <state line="19" column="0" selection-start="424" selection-end="435" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/dao/impl/StoreDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="14" selection-start="513" selection-end="513" vertical-scroll-proportion="0.7112971">
+        <state line="17" column="11" selection-start="391" selection-end="391" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/dao/impl/UserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="13" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="26" selection-start="637" selection-end="637" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/service/impl/ProductServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="14" selection-start="1447" selection-end="1447" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/service/ProductService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="17" selection-start="286" selection-end="286" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/service/VipCardService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="40" selection-start="284" selection-end="287" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/bean/VipCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="51" selection-start="521" selection-end="521" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/dao/IVipCardDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="17" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/service/impl/VipCardServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="39" selection-start="1189" selection-end="1189" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/edu/nju/dao/impl/VipCardDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="35" selection-start="571" selection-end="571" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/spring-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="55" selection-start="883" selection-end="883" vertical-scroll-proportion="0.46896553">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -15,6 +15,9 @@ import java.util.Set;
 @javax.persistence.Table(name = "vip_card", schema = "", catalog = "dessert_house")
 @Entity
 public class VipCard implements Serializable {
+    public static final String FREEZE="freeze";
+    public static final String ACTIVATE="activate";
+
     private int id;
 
     @javax.persistence.Column(name = "id")

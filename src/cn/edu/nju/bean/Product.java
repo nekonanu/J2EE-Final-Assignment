@@ -37,6 +37,16 @@ public class Product implements Serializable {
         this.productOrder = productOrder;
     }
 
+    private Set<Sale> sales;
+    @OneToMany(mappedBy = "product")
+    public Set<Sale> getSales() {
+        return sales;
+    }
+
+    public void setSales(Set<Sale> sales) {
+        this.sales = sales;
+    }
+
     private String productName;
 
     @javax.persistence.Column(name = "product_name")

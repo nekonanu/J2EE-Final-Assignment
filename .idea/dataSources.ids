@@ -54,6 +54,15 @@
       <index name="customer_idx" unique="false" columns="customer_id" />
       <index name="product_idx" unique="false" columns="product_id" />
     </table>
+    <table name="sale" schema="" catalog="dessert_house" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="customer_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="product_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="sale_num" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="sale_date" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91" />
+      <column name="store_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
     <table name="store" schema="" catalog="dessert_house" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="store_name" sqlType="VARCHAR" length="32" precision="0" nullable="true" jdbcType="12" />

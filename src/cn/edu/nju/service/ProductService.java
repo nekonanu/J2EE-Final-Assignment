@@ -3,7 +3,7 @@ package cn.edu.nju.service;
 import cn.edu.nju.bean.Product;
 import cn.edu.nju.bean.User;
 
-import java.util.List;
+import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA.
@@ -23,7 +23,7 @@ public interface ProductService {
      * 获得当前可销售的产品
       * @return
      */
-    public List<Product> getAvailableProduct();
+    public Set<Product> getAvailableProduct(int store_id);
     public void sellProduct(Product product,User user,int amount);
 
 

@@ -13,7 +13,5 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public interface IUserDao extends IBaseDao<User>{
-    public LinkedItem getUserAndCard(int user_id);
-    public List getAllUserAndCard();
     public void changeAuthority(User user,int type);
 }
