@@ -4,10 +4,9 @@ import cn.edu.nju.bean.Product;
 import cn.edu.nju.bean.User;
 import cn.edu.nju.dao.IStoreDao;
 import cn.edu.nju.dao.IUserDao;
-import cn.edu.nju.service.UserService;
+import cn.edu.nju.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.Set;
 
 /**
@@ -18,7 +17,7 @@ import java.util.Set;
  * To change this template use File | Settings | File Templates.
  */
 @Service
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl implements IUserService {
     @Autowired
     private IUserDao userDao;
     @Autowired
@@ -40,6 +39,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public void deleteUserByID(int id) {
         userDao.deleteById(id);
+    }
+
+    @Override
+    public void update(User user) {
+        userDao.update(user);
     }
 
     @Override

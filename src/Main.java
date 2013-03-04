@@ -1,7 +1,7 @@
 import cn.edu.nju.bean.Product;
 import cn.edu.nju.bean.User;
-import cn.edu.nju.service.ProductService;
-import cn.edu.nju.service.UserService;
+import cn.edu.nju.service.IProductService;
+import cn.edu.nju.service.IUserService;
 import cn.edu.nju.test.HelloService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -24,10 +24,11 @@ public class Main {
         product.setProductName("喜之郎");
         product.setRemainNum(100);
 
-        ProductService service= (ProductService) context.getBean("productService");
-        UserService userService= (UserService) context.getBean("userService");
-        Product productEntity=service.findByID(4);
-        User user = userService.findUserByID(1);
+        IProductService service= (IProductService) context.getBean("productService");
+        IUserService IUserService = (IUserService) context.getBean("userService");
+//        Product productEntity=service.findByID(4);
+        User user = IUserService.findUserByID(1);
+        System.out.println(user.getVipCard().getStatus());
 //        service.sellProduct(productEntity, user,100);
 
 //        service.addProduct(product);

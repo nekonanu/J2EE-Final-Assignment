@@ -4,7 +4,7 @@ import cn.edu.nju.bean.User;
 import cn.edu.nju.bean.VipCard;
 import cn.edu.nju.dao.IUserDao;
 import cn.edu.nju.dao.IVipCardDao;
-import cn.edu.nju.service.VipCardService;
+import cn.edu.nju.service.IVipCardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,11 +12,11 @@ import org.springframework.stereotype.Service;
  * Created with IntelliJ IDEA.
  * User: nekosama
  * Date: 13-3-4
- * Time: 下午5:14
+ * Time: 下午6:53
  * To change this template use File | Settings | File Templates.
  */
 @Service
-public class VipCardServiceImpl implements VipCardService {
+public class VipCardServiceImpl implements IVipCardService {
     @Autowired
     private IUserDao userDao;
     @Autowired

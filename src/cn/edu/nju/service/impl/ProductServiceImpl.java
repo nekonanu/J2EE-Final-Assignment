@@ -2,16 +2,17 @@ package cn.edu.nju.service.impl;
 
 import cn.edu.nju.bean.Product;
 import cn.edu.nju.bean.ProductOrder;
+import cn.edu.nju.bean.Sale;
 import cn.edu.nju.bean.User;
 import cn.edu.nju.dao.IOrderDao;
 import cn.edu.nju.dao.IProductDao;
 import cn.edu.nju.dao.IStoreDao;
-import cn.edu.nju.service.ProductService;
+import cn.edu.nju.service.IProductService;
+import cn.edu.nju.service.strategy.IProductStrategy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -22,13 +23,15 @@ import java.util.Set;
  * To change this template use File | Settings | File Templates.
  */
 @Service
-public class ProductServiceImpl implements ProductService{
+public class ProductServiceImpl implements IProductService {
     @Autowired
     private IProductDao productDao;
     @Autowired
     private IOrderDao orderDao;
     @Autowired
     private IStoreDao storeDao;
+    @Autowired
+    private IProductStrategy productStrategy;
 
     public IProductDao getProductDao() {
         return productDao;
@@ -42,6 +45,11 @@ public class ProductServiceImpl implements ProductService{
     @Override
     public void deleteProductByID(int id) {
         productDao.deleteById(id);
+    }
+
+    @Override
+    public void update(Product product) {
+        productDao.update(product);
     }
 
     @Override
@@ -67,6 +75,21 @@ public class ProductServiceImpl implements ProductService{
         order.setOrderNum(amount);
         order.setOrderDate(new Date());
         orderDao.save(order);
+    }
+
+    @Override
+    public Set<ProductOrder> getProductOrders(int store_id) {
+        return storeDao.findById(store_id).getProductOrders();
+    }
+
+    @Override
+    public Set<Sale> getSales(int store_id) {
+        return storeDao.findById(store_id).getSales();
+    }
+
+    @Override
+    public Set<Product> getHotProducts(int store_id) {
+        return productStrategy.filterHotProducts(storeDao.findById(store_id).getProducts());
     }
 
     public void setProductDao(IProductDao productDao) {
