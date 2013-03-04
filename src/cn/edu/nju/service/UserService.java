@@ -1,5 +1,6 @@
 package cn.edu.nju.service;
 
+import cn.edu.nju.bean.ProductEntity;
 import cn.edu.nju.bean.UserEntity;
 import cn.edu.nju.util.LinkedItem;
 
@@ -16,13 +17,14 @@ public interface UserService {
     public void addUser(UserEntity user);
     public void deleteUserByID(int id);
     public UserEntity findUserByID(int id);
+
     /**
-     * 预定铲平
-     * @param product_id
-     * @param user_id
+     *
+     * @param productEntity
+     * @param userEntity
      * @param product_num
      */
-    public void orderProduct(int product_id,int user_id,int product_num);
+    public void orderProduct(ProductEntity productEntity,UserEntity userEntity,int product_num);
     public LinkedItem getUserAndCard(int user_id);
     public List getAllUserAndCard();
 }

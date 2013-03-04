@@ -1,5 +1,6 @@
 package cn.edu.nju.service.impl;
 
+import cn.edu.nju.bean.ProductEntity;
 import cn.edu.nju.bean.UserEntity;
 import cn.edu.nju.dao.IUserDao;
 import cn.edu.nju.service.UserService;
@@ -45,9 +46,14 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void orderProduct(int product_id, int user_id, int product_num) {
-
+    public void orderProduct(ProductEntity productEntity, UserEntity userEntity, int product_num) {
+        //To change body of implemented methods use File | Settings | File Templates.
     }
+
+//    @Override
+//    public void orderProduct(int product_id, int user_id, int product_num) {
+//
+//    }
 
     @Override
     public LinkedItem getUserAndCard(int user_id) {

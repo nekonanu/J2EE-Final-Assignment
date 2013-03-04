@@ -28,53 +28,53 @@ public class ProductOrderEntity implements Serializable {
         this.id = id;
     }
 
-    private int customerId;
-
-    @javax.persistence.Column(name = "customer_id")
-    @Basic
-    public int getCustomerId() {
-        return customerId;
-    }
-
-    public void setCustomerId(int customerId) {
-        this.customerId = customerId;
-    }
-
-//    private UserEntity userEntity;
+//    private int customerId;
 //
-//    @OneToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "customer_id")
-//    public UserEntity getUserEntity() {
-//        return userEntity;
+//    @javax.persistence.Column(name = "customer_id")
+//    @Basic
+//    public int getCustomerId() {
+//        return customerId;
 //    }
 //
-//    public void setUserEntity(UserEntity userEntity) {
-//        this.userEntity = userEntity;
+//    public void setCustomerId(int customerId) {
+//        this.customerId = customerId;
 //    }
 
-    private int productId;
+    private UserEntity userEntity;
 
-    @javax.persistence.Column(name = "product_id")
-    @Basic
-    public int getProductId() {
-        return productId;
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "customer_id")
+    public UserEntity getUserEntity() {
+        return userEntity;
     }
 
-    public void setProductId(int productId) {
-        this.productId = productId;
+    public void setUserEntity(UserEntity userEntity) {
+        this.userEntity = userEntity;
     }
 
-//    private ProductEntity productEntity;
+//    private int productId;
 //
-//    @OneToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "product_id")
-//    public ProductEntity getProductEntity() {
-//        return productEntity;
+//    @javax.persistence.Column(name = "product_id")
+//    @Basic
+//    public int getProductId() {
+//        return productId;
 //    }
 //
-//    public void setProductEntity(ProductEntity productEntity) {
-//        this.productEntity = productEntity;
+//    public void setProductId(int productId) {
+//        this.productId = productId;
 //    }
+
+    private ProductEntity productEntity;
+
+    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @JoinColumn(name = "product_id")
+    public ProductEntity getProductEntity() {
+        return productEntity;
+    }
+
+    public void setProductEntity(ProductEntity productEntity) {
+        this.productEntity = productEntity;
+    }
 
     private int orderNum;
 
@@ -107,10 +107,10 @@ public class ProductOrderEntity implements Serializable {
 
         ProductOrderEntity that = (ProductOrderEntity) o;
 
-        if (customerId != that.customerId) return false;
+        if (userEntity != that.userEntity) return false;
         if (id != that.id) return false;
         if (orderNum != that.orderNum) return false;
-        if (productId != that.productId) return false;
+        if (productEntity != that.productEntity) return false;
         if (orderDate != null ? !orderDate.equals(that.orderDate) : that.orderDate != null) return false;
 
         return true;
@@ -119,8 +119,8 @@ public class ProductOrderEntity implements Serializable {
     @Override
     public int hashCode() {
         int result = id;
-        result = 31 * result + customerId;
-        result = 31 * result + productId;
+        result = 31 * result + userEntity.hashCode();
+        result = 31 * result + productEntity.hashCode();
         result = 31 * result + orderNum;
         result = 31 * result + (orderDate != null ? orderDate.hashCode() : 0);
         return result;

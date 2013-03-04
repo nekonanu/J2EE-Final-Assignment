@@ -1,6 +1,7 @@
 package cn.edu.nju.service;
 
 import cn.edu.nju.bean.ProductEntity;
+import cn.edu.nju.bean.UserEntity;
 
 import java.util.List;
 
@@ -23,7 +24,7 @@ public interface ProductService {
       * @return
      */
     public List<ProductEntity> getAvailableProduct();
-    public void sellProduct(int product_id,int user_id,int amount);
+    public void sellProduct(ProductEntity productEntity,UserEntity userEntity,int amount);
 
 
 }

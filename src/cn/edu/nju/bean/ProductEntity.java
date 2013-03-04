@@ -1,10 +1,8 @@
 package cn.edu.nju.bean;
 
-import javax.persistence.Basic;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA.
@@ -16,6 +14,17 @@ import java.io.Serializable;
 @javax.persistence.Table(name = "product", schema = "", catalog = "dessert_house")
 @Entity
 public class ProductEntity implements Serializable {
+    private Set<ProductOrderEntity> productOrderEntity;
+
+    @OneToMany(mappedBy = "productEntity")
+    public Set<ProductOrderEntity> getProductOrderEntity() {
+        return productOrderEntity;
+    }
+
+    public void setProductOrderEntity(Set<ProductOrderEntity> productOrderEntity) {
+        this.productOrderEntity = productOrderEntity;
+    }
+
     private int id;
 
     @javax.persistence.Column(name = "id")
