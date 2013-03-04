@@ -23,8 +23,9 @@ public class Main {
         product.setRemainNum(100);
 
         ProductService service= (ProductService) context.getBean("productService");
+
 //        service.addProduct(product);
-        service.sellProduct(4,1,10);
+//        service.sellProduct(4,1,10);
 
 //        service.addProduct(product);
     }

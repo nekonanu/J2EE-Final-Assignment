@@ -2,9 +2,7 @@ package cn.edu.nju.bean;
 
 import org.hibernate.annotations.Type;
 
-import javax.persistence.Basic;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -42,6 +40,18 @@ public class ProductOrderEntity implements Serializable {
         this.customerId = customerId;
     }
 
+//    private UserEntity userEntity;
+//
+//    @OneToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "customer_id")
+//    public UserEntity getUserEntity() {
+//        return userEntity;
+//    }
+//
+//    public void setUserEntity(UserEntity userEntity) {
+//        this.userEntity = userEntity;
+//    }
+
     private int productId;
 
     @javax.persistence.Column(name = "product_id")
@@ -53,6 +63,18 @@ public class ProductOrderEntity implements Serializable {
     public void setProductId(int productId) {
         this.productId = productId;
     }
+
+//    private ProductEntity productEntity;
+//
+//    @OneToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "product_id")
+//    public ProductEntity getProductEntity() {
+//        return productEntity;
+//    }
+//
+//    public void setProductEntity(ProductEntity productEntity) {
+//        this.productEntity = productEntity;
+//    }
 
     private int orderNum;
 
