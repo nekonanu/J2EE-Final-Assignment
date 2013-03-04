@@ -2,9 +2,11 @@ package cn.edu.nju.service.impl;
 
 import cn.edu.nju.bean.ProductEntity;
 import cn.edu.nju.bean.ProductOrderEntity;
-import cn.edu.nju.dao.OrderDao;
-import cn.edu.nju.dao.ProductDao;
+import cn.edu.nju.dao.IOrderDao;
+import cn.edu.nju.dao.IProductDao;
 import cn.edu.nju.service.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
@@ -16,37 +18,40 @@ import java.util.List;
  * Time: 下午5:54
  * To change this template use File | Settings | File Templates.
  */
+@Service
 public class ProductServiceImpl implements ProductService{
-    private ProductDao productDao;
-    private OrderDao orderDao;
+    @Autowired
+    private IProductDao IProductDao;
+    @Autowired
+    private IOrderDao IOrderDao;
 
-    public ProductDao getProductDao() {
-        return productDao;
+    public IProductDao getIProductDao() {
+        return IProductDao;
     }
 
     @Override
     public void addProduct(ProductEntity product) {
-        productDao.addProduct(product);
+        IProductDao.save(product);
     }
 
     @Override
     public void deleteProductByID(int id) {
-        productDao.deleteProductByID(id);
+        IProductDao.deleteById(id);
     }
 
     @Override
     public ProductEntity findByName(String name) {
-        return productDao.findByName(name);
+        return IProductDao.findByName(name);
     }
 
     @Override
     public ProductEntity findByID(int id) {
-        return productDao.findByID(id);
+        return IProductDao.findById(id);
     }
 
     @Override
     public List<ProductEntity> getAvailableProduct() {
-        return productDao.getAllAvailableProduct();
+        return IProductDao.getAllAvailableProduct();
     }
 
     @Override
@@ -56,14 +61,14 @@ public class ProductServiceImpl implements ProductService{
         order.setProductId(product_id);
         order.setOrderNum(amount);
         order.setOrderDate(new Date());
-        orderDao.addOrder(order);
+        IOrderDao.save(order);
     }
 
-    public void setProductDao(ProductDao productDao) {
-        this.productDao = productDao;
+    public void setIProductDao(IProductDao IProductDao) {
+        this.IProductDao = IProductDao;
     }
 
-    public void setOrderDao(OrderDao orderDao) {
-        this.orderDao = orderDao;
+    public void setIOrderDao(IOrderDao IOrderDao) {
+        this.IOrderDao = IOrderDao;
     }
 }

@@ -5,6 +5,7 @@ import org.hibernate.annotations.Type;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -16,7 +17,7 @@ import java.util.Date;
  */
 @javax.persistence.Table(name = "product_order", schema = "", catalog = "dessert_house")
 @Entity
-public class ProductOrderEntity {
+public class ProductOrderEntity implements Serializable {
     private int id;
 
     @javax.persistence.Column(name = "id")

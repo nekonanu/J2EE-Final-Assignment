@@ -3,6 +3,7 @@ package cn.edu.nju.bean;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.io.Serializable;
 import java.sql.Date;
 
 /**
@@ -14,7 +15,7 @@ import java.sql.Date;
  */
 @javax.persistence.Table(name = "vip_card", schema = "", catalog = "dessert_house")
 @Entity
-public class VipCardEntity {
+public class VipCardEntity implements Serializable {
     private int id;
 
     @javax.persistence.Column(name = "id")

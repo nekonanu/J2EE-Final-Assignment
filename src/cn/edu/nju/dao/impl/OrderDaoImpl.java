@@ -1,9 +1,7 @@
 package cn.edu.nju.dao.impl;
 
 import cn.edu.nju.bean.ProductOrderEntity;
-import cn.edu.nju.dao.OrderDao;
-import org.hibernate.SessionFactory;
-import org.springframework.beans.factory.annotation.Autowired;
+import cn.edu.nju.dao.IOrderDao;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -14,12 +12,5 @@ import org.springframework.stereotype.Repository;
  * To change this template use File | Settings | File Templates.
  */
 @Repository
-public class OrderDaoImpl  implements OrderDao{
-    @Autowired
-    private SessionFactory sessionFactory;
-
-    @Override
-    public void addOrder(ProductOrderEntity order) {
-        sessionFactory.getCurrentSession().save(order);
-    }
+public class OrderDaoImpl extends BaseDaoSupport<ProductOrderEntity> implements IOrderDao {
 }

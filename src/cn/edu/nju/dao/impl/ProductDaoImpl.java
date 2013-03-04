@@ -1,11 +1,10 @@
 package cn.edu.nju.dao.impl;
 
 import cn.edu.nju.bean.ProductEntity;
-import cn.edu.nju.dao.HibernateUtil;
-import cn.edu.nju.dao.ProductDao;
+import cn.edu.nju.util.HibernateUtil;
+import cn.edu.nju.dao.IProductDao;
 import org.hibernate.Query;
 import org.hibernate.Session;
-import org.hibernate.Transaction;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -19,59 +18,24 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 @Repository
-public class ProductDaoImpl implements ProductDao{
-
-    @Override
-    public void addProduct(ProductEntity product) {
-
-        Session session= HibernateUtil.currentSession();
-        Transaction transaction=session.beginTransaction();
-        session.save(product);
-        transaction.commit();
-        HibernateUtil.closeSession();
-    }
-
-    @Override
-    public void deleteProductByID(int id) {
-        Session session=HibernateUtil.currentSession();
-        Transaction transaction=session.beginTransaction();
-        session.delete("id",id);
-        transaction.commit();
-        HibernateUtil.closeSession();
-    }
-
+public class ProductDaoImpl extends BaseDaoSupport<ProductEntity> implements IProductDao {
     @Override
     public ProductEntity findByName(String name) {
-        Session session=HibernateUtil.currentSession();
-        Query query=session.createQuery("from Product p where p.product_name=:name");
+        Session session=getSession();
+        Query query=session.createQuery("from ProductEntity p where p.productName=:name");
         query.setString("name",name);
         List<ProductEntity> list=query.list();
         if (list.size()!=0)
             return list.get(0);
-        HibernateUtil.closeSession();
-        return null;
-    }
-
-    @Override
-    public ProductEntity findByID(int id) {
-        Session session=HibernateUtil.currentSession();
-        Query query=session.createQuery("from Product p where p.id=:id");
-        query.setInteger("id",id);
-        List<ProductEntity> list=query.list();
-        if (list.size()!=0)
-            return list.get(0);
-        HibernateUtil.closeSession();
         return null;
     }
 
     @Override
     public List<ProductEntity> getAllAvailableProduct() {
-        Session session=HibernateUtil.currentSession();
-        Query query=session.createQuery("from Product p");
+        Session session=getSession();
+        Query query=session.createQuery("from ProductEntity p");
         List<ProductEntity> list=query.list();
         HibernateUtil.closeSession();
         return list;
     }
-
-
 }

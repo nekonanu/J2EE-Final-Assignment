@@ -1,15 +1,12 @@
 package cn.edu.nju.service.impl;
 
 import cn.edu.nju.bean.UserEntity;
-import cn.edu.nju.dao.HibernateUtil;
-import cn.edu.nju.dao.UserDao;
-import cn.edu.nju.dao.VipCardDao;
+import cn.edu.nju.dao.IUserDao;
 import cn.edu.nju.service.UserService;
 import cn.edu.nju.util.LinkedItem;
-import org.hibernate.Query;
-import org.hibernate.Session;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,30 +16,32 @@ import java.util.List;
  * Time: 下午8:02
  * To change this template use File | Settings | File Templates.
  */
+@Service
 public class UserServiceImpl implements UserService {
-    private UserDao userDao;
+    @Autowired
+    private IUserDao IUserDao;
 
-    public UserDao getUserDao() {
-        return userDao;
+    public IUserDao getIUserDao() {
+        return IUserDao;
     }
 
-    public void setUserDao(UserDao userDao) {
-        this.userDao = userDao;
+    public void setIUserDao(IUserDao IUserDao) {
+        this.IUserDao = IUserDao;
     }
 
     @Override
     public void addUser(UserEntity user) {
-        userDao.addUser(user);
+        IUserDao.save(user);
     }
 
     @Override
     public void deleteUserByID(int id) {
-        userDao.deleteUserByID(id);
+        IUserDao.deleteById(id);
     }
 
     @Override
     public UserEntity findUserByID(int id) {
-        return userDao.findUserByID(id);
+        return IUserDao.findById(id);
     }
 
     @Override
@@ -52,11 +51,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public LinkedItem getUserAndCard(int user_id) {
-        return userDao.getUserAndCard(user_id);
+        return IUserDao.getUserAndCard(user_id);
     }
 
     @Override
     public List getAllUserAndCard() {
-        return userDao.getAllUserAndCard();
+        return IUserDao.getAllUserAndCard();
     }
 }

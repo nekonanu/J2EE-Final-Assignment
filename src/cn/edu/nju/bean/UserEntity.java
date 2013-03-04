@@ -3,6 +3,7 @@ package cn.edu.nju.bean;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.io.Serializable;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,7 +14,7 @@ import javax.persistence.Id;
  */
 @javax.persistence.Table(name = "user", schema = "", catalog = "dessert_house")
 @Entity
-public class UserEntity {
+public class UserEntity implements Serializable {
     private int id;
 
     @javax.persistence.Column(name = "id")
