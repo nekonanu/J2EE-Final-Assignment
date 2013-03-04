@@ -13,6 +13,7 @@
           <element id="library" level="project" name="mysql-connector-java-5.1.23-bin" />
           <element id="library" level="project" name="required" />
           <element id="library" level="project" name="mydataSource required" />
+          <element id="library" level="project" name="aspectjrt" />
         </element>
       </element>
     </root>

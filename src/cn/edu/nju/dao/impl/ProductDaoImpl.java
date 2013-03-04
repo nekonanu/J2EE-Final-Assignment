@@ -1,11 +1,12 @@
 package cn.edu.nju.dao.impl;
 
-import cn.edu.nju.bean.Product;
+import cn.edu.nju.bean.ProductEntity;
 import cn.edu.nju.dao.HibernateUtil;
 import cn.edu.nju.dao.ProductDao;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -17,10 +18,11 @@ import java.util.List;
  * Time: 下午5:43
  * To change this template use File | Settings | File Templates.
  */
+@Repository
 public class ProductDaoImpl implements ProductDao{
 
     @Override
-    public void addProduct(Product product) {
+    public void addProduct(ProductEntity product) {
 
         Session session= HibernateUtil.currentSession();
         Transaction transaction=session.beginTransaction();
@@ -39,11 +41,11 @@ public class ProductDaoImpl implements ProductDao{
     }
 
     @Override
-    public Product findByName(String name) {
+    public ProductEntity findByName(String name) {
         Session session=HibernateUtil.currentSession();
         Query query=session.createQuery("from Product p where p.product_name=:name");
         query.setString("name",name);
-        List<Product> list=query.list();
+        List<ProductEntity> list=query.list();
         if (list.size()!=0)
             return list.get(0);
         HibernateUtil.closeSession();
@@ -51,11 +53,11 @@ public class ProductDaoImpl implements ProductDao{
     }
 
     @Override
-    public Product findByID(int id) {
+    public ProductEntity findByID(int id) {
         Session session=HibernateUtil.currentSession();
         Query query=session.createQuery("from Product p where p.id=:id");
         query.setInteger("id",id);
-        List<Product> list=query.list();
+        List<ProductEntity> list=query.list();
         if (list.size()!=0)
             return list.get(0);
         HibernateUtil.closeSession();
@@ -63,10 +65,10 @@ public class ProductDaoImpl implements ProductDao{
     }
 
     @Override
-    public List<Product> getAllAvailableProduct() {
+    public List<ProductEntity> getAllAvailableProduct() {
         Session session=HibernateUtil.currentSession();
         Query query=session.createQuery("from Product p");
-        List<Product> list=query.list();
+        List<ProductEntity> list=query.list();
         HibernateUtil.closeSession();
         return list;
     }

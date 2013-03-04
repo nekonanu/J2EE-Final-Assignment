@@ -1,7 +1,6 @@
 package cn.edu.nju.service.impl;
 
-import cn.edu.nju.bean.User;
-import cn.edu.nju.bean.VipCard;
+import cn.edu.nju.bean.UserEntity;
 import cn.edu.nju.dao.HibernateUtil;
 import cn.edu.nju.dao.UserDao;
 import cn.edu.nju.dao.VipCardDao;
@@ -32,7 +31,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void addUser(User user) {
+    public void addUser(UserEntity user) {
         userDao.addUser(user);
     }
 
@@ -42,7 +41,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User findUserByID(int id) {
+    public UserEntity findUserByID(int id) {
         return userDao.findUserByID(id);
     }
 

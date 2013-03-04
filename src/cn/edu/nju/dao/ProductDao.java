@@ -1,6 +1,6 @@
 package cn.edu.nju.dao;
 
-import cn.edu.nju.bean.Product;
+import cn.edu.nju.bean.ProductEntity;
 
 import java.util.List;
 
@@ -12,9 +12,9 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public interface ProductDao {
-    public void addProduct(Product product);
+    public void addProduct(ProductEntity product);
     public void deleteProductByID(int id);
-    public Product findByName(String name);
-    public Product findByID(int id);
-    public List<Product> getAllAvailableProduct();
+    public ProductEntity findByName(String name);
+    public ProductEntity findByID(int id);
+    public List<ProductEntity> getAllAvailableProduct();
 }

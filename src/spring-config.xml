@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <context:component-scan base-package="cn.edu.nju">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
 
     <bean id="helloService" class="cn.edu.nju.test.HelloService">
         <property name="str"  value="hello world!"/>
     </bean>
 
+    <!--Hiberante Config-->
     <bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
         <property name="url" value="jdbc:mysql://localhost/dessert_house"/>
@@ -18,19 +25,12 @@
         <property name="dataSource">
             <ref bean="myDataSource"/>
         </property>
+        <property name="packagesToScan" value="cn.edu.nju.bean"/>
         <property name="hibernateProperties">
             <props>
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
                 <prop key="hibernate.show_sql">true</prop>
             </props>
-        </property>
-        <property name="mappingResources">
-            <list>
-                <value>cn/edu/nju/bean/Product.hbm.xml</value>
-                <value>cn/edu/nju/bean/User.hbm.xml</value>
-                <value>cn/edu/nju/bean/VipCard.hbm.xml</value>
-                <value>cn/edu/nju/bean/Order.hbm.xml</value>
-            </list>
         </property>
     </bean>
 
@@ -51,4 +51,23 @@
     <bean id="hibernateUtil" class="cn.edu.nju.dao.HibernateUtil">
         <property name="session_factory" ref="mySessionFactory"/>
     </bean>
+
+
+    <aop:aspectj-autoproxy/>
+
+    <!--Transaction Config-->
+    <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="mySessionFactory"/>
+    </bean>
+
+    <tx:advice id="serviceAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="*" propagation="REQUIRED" rollback-for="Exception"/>
+        </tx:attributes>
+    </tx:advice>
+    <aop:config>
+        <aop:pointcut id="allServiceMethod" expression="execution(* cn.edu.nju.service.*.*(..))"/>
+        <aop:advisor advice-ref="serviceAdvice" pointcut-ref="allServiceMethod"/>
+    </aop:config>
+
 </beans>

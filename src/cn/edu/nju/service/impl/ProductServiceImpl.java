@@ -1,12 +1,11 @@
 package cn.edu.nju.service.impl;
 
-import cn.edu.nju.bean.Order;
-import cn.edu.nju.bean.Product;
+import cn.edu.nju.bean.ProductEntity;
+import cn.edu.nju.bean.ProductOrderEntity;
 import cn.edu.nju.dao.OrderDao;
 import cn.edu.nju.dao.ProductDao;
 import cn.edu.nju.service.ProductService;
 
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -26,7 +25,7 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
-    public void addProduct(Product product) {
+    public void addProduct(ProductEntity product) {
         productDao.addProduct(product);
     }
 
@@ -36,27 +35,27 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
-    public Product findByName(String name) {
+    public ProductEntity findByName(String name) {
         return productDao.findByName(name);
     }
 
     @Override
-    public Product findByID(int id) {
+    public ProductEntity findByID(int id) {
         return productDao.findByID(id);
     }
 
     @Override
-    public List<Product> getAvailableProduct() {
+    public List<ProductEntity> getAvailableProduct() {
         return productDao.getAllAvailableProduct();
     }
 
     @Override
     public void sellProduct(int product_id, int user_id, int amount) {
-        Order order=new Order();
-        order.setCustomer_id(user_id);
-        order.setProduct_id(product_id);
-        order.setOrder_num(amount);
-        order.setOrder_date(new Date());
+        ProductOrderEntity order=new ProductOrderEntity();
+        order.setCustomerId(user_id);
+        order.setProductId(product_id);
+        order.setOrderNum(amount);
+        order.setOrderDate(new Date());
         orderDao.addOrder(order);
     }
 

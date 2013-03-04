@@ -1,6 +1,6 @@
 package cn.edu.nju.service;
 
-import cn.edu.nju.bean.User;
+import cn.edu.nju.bean.UserEntity;
 import cn.edu.nju.util.LinkedItem;
 
 import java.util.List;
@@ -13,9 +13,9 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public interface UserService {
-    public void addUser(User user);
+    public void addUser(UserEntity user);
     public void deleteUserByID(int id);
-    public User findUserByID(int id);
+    public UserEntity findUserByID(int id);
     /**
      * 预定铲平
      * @param product_id

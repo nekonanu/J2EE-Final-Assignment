@@ -4,7 +4,8 @@
     <facet type="hibernate" name="Hibernate">
       <configuration>
         <datasource-map>
-          <unit-entry name="mySessionFactory" value="myDataSource" />
+          <unit-entry name="a.xml" value="40ecd3c9-986c-4593-a040-5a616990b764" />
+          <unit-entry name="mySessionFactory" value="40ecd3c9-986c-4593-a040-5a616990b764" />
         </datasource-map>
       </configuration>
     </facet>
@@ -78,6 +79,7 @@
     <orderEntry type="library" name="mysql-connector-java-5.1.23-bin" level="project" />
     <orderEntry type="library" name="required" level="project" />
     <orderEntry type="library" name="mydataSource required" level="project" />
+    <orderEntry type="library" name="aspectjrt" level="project" />
   </component>
 </module>
 

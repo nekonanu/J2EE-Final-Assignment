@@ -1,6 +1,6 @@
 package cn.edu.nju.dao;
 
-import cn.edu.nju.bean.VipCard;
+import cn.edu.nju.bean.VipCardEntity;
 
 /**
  * Created with IntelliJ IDEA.
@@ -10,7 +10,7 @@ import cn.edu.nju.bean.VipCard;
  * To change this template use File | Settings | File Templates.
  */
 public interface VipCardDao {
-    public void addVipCard(VipCard card);
+    public void addVipCard(VipCardEntity card);
     public void deleteVipCard(int id);
-    public VipCard findVipCardByID(int id);
+    public VipCardEntity findVipCardByID(int id);
 }

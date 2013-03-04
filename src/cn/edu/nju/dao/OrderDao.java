@@ -1,6 +1,7 @@
 package cn.edu.nju.dao;
 
-import cn.edu.nju.bean.Order;
+
+import cn.edu.nju.bean.ProductOrderEntity;
 
 /**
  * Created with IntelliJ IDEA.
@@ -10,5 +11,5 @@ import cn.edu.nju.bean.Order;
  * To change this template use File | Settings | File Templates.
  */
 public interface OrderDao {
-    public void addOrder(Order order);
+    public void addOrder(ProductOrderEntity order);
 }
