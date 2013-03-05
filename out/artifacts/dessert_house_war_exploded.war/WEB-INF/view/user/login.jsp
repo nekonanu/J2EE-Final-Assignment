@@ -11,7 +11,7 @@
     <title>Login</title>
 </head>
 <body>
-<form name='f' action='/j_spring_security_check' method='POST' class="form-horizontal">
+<form name='f' action='/dessert_house_war/j_spring_security_check' method='POST' class="form-horizontal">
     <fieldset>
         <legend><i>甜品店</i> &nbsp; &nbsp;&nbsp;用户登录</legend>
         <div class="control-group">

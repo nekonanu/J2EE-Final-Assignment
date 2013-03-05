@@ -34,9 +34,4 @@ public class UserController {
     public String login(){
         return "/user/login";
     }
-
-    @RequestMapping("/")
-    public String index(){
-        return "/user/login";
-    }
 }

@@ -11,9 +11,9 @@
     <beans:bean id="userAuthService" class="cn.edu.nju.security.UserAuthentication"/>
     <security:authentication-manager id="userAuthManager">
         <security:authentication-provider user-service-ref="userAuthService">
-            <security:password-encoder hash="md5">
-                <security:salt-source user-property="username"/>
-            </security:password-encoder>
+            <!--<security:password-encoder hash="md5">-->
+                <!--<security:salt-source user-property="username"/>-->
+            <!--</security:password-encoder>-->
         </security:authentication-provider>
     </security:authentication-manager>
 
@@ -21,7 +21,6 @@
                   pattern="/**" access-denied-page="/login">
        <security:remember-me key="e37f4b31-0c45-11dd-bd0b-0800200c9a66" user-service-ref="userAuthService"/>
        <security:form-login login-page="/user/login" authentication-failure-url="/loginFail"
-                            default-target-url="/home" always-use-default-target="true"/>
+                            default-target-url="/customer/home" always-use-default-target="true"/>
    </security:http>
-
 </beans:beans>

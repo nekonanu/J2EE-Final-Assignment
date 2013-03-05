@@ -20,4 +20,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/customer")
 public class CustomerController {
 
+    @RequestMapping("/home")
+    public String home(){
+        return "/customer/home";
+    }
 }

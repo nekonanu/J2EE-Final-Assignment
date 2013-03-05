@@ -12,5 +12,7 @@
   </head>
   <body>
   <h1>FUCK</h1>
+  <br/>
+  <h1><a href="/user/login">Log In</a></h1>
   </body>
 </html>
