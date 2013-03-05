@@ -1,8 +1,9 @@
+package cn.edu.nju.test;
+
 import cn.edu.nju.bean.Product;
 import cn.edu.nju.bean.User;
 import cn.edu.nju.service.IProductService;
 import cn.edu.nju.service.IUserService;
-import cn.edu.nju.test.HelloService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -15,7 +16,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class Main {
     public static void main(String args[]){
-        ApplicationContext context=new ClassPathXmlApplicationContext("spring-config.xml");
+        ApplicationContext context=new ClassPathXmlApplicationContext("classpath*:/META-INF/spring/spring-config.xml");
         HelloService helloService= (HelloService) context.getBean("helloService");
         helloService.sayHello();
 
