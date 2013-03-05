@@ -19,9 +19,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/customer")
 public class CustomerController {
-
     @RequestMapping("/home")
     public String home(){
         return "/customer/home";
+    }
+
+    @RequestMapping("/signUp")
+    public String signUp(){
+        return "/customer/signUp";
     }
 }
