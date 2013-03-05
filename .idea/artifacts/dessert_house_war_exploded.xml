@@ -14,6 +14,7 @@
           <element id="library" level="project" name="required" />
           <element id="library" level="project" name="mydataSource required" />
           <element id="library" level="project" name="aspectjrt" />
+          <element id="library" level="project" name="jackson-all-1.9.11" />
         </element>
       </element>
     </root>

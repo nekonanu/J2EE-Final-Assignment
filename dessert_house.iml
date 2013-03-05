@@ -17,9 +17,7 @@
         <webroots>
           <root url="file://$MODULE_DIR$/web" relative="/" />
         </webroots>
-        <sourceRoots>
-          <root url="file://$MODULE_DIR$/src" />
-        </sourceRoots>
+        <sourceRoots />
       </configuration>
       <facet type="Struts2" name="Struts 2">
         <configuration>
@@ -58,6 +56,7 @@
       <configuration>
         <fileset id="fileset1" name="XML Application Context" removed="false">
           <file>file://$MODULE_DIR$/src/main/configuration/META-INF/spring/spring-config.xml</file>
+          <file>file://$MODULE_DIR$/src/main/configuration/META-INF/spring/spring-servlet.xml</file>
         </fileset>
       </configuration>
     </facet>
@@ -84,6 +83,7 @@
     <orderEntry type="library" name="required" level="project" />
     <orderEntry type="library" name="mydataSource required" level="project" />
     <orderEntry type="library" name="aspectjrt" level="project" />
+    <orderEntry type="library" name="jackson-all-1.9.11" level="project" />
   </component>
 </module>
 
