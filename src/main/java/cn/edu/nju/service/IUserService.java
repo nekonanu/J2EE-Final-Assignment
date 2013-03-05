@@ -18,8 +18,9 @@ public interface IUserService{
     public void addUser(User user);
     public void deleteUserByID(int id);
     public void update(User user);
-    public void changeAuthority(User user,int type);
+    public void changeAuthority(User user,String type);
     public User findUserByID(int id);
+    public User findUserByName(String name);
 
     /**
      *

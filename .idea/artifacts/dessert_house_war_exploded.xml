@@ -8,13 +8,13 @@
           <element id="module-output" name="dessert_house" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Struts 2" />
-          <element id="library" level="project" name="Spring" />
           <element id="library" level="project" name="mysql-connector-java-5.1.23-bin" />
           <element id="library" level="project" name="required" />
           <element id="library" level="project" name="mydataSource required" />
           <element id="library" level="project" name="aspectjrt" />
           <element id="library" level="project" name="jackson-all-1.9.11" />
+          <element id="library" level="project" name="spring" />
+          <element id="library" level="project" name="aopalliance-1.0" />
         </element>
       </element>
     </root>

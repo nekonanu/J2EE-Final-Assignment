@@ -13,5 +13,6 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public interface IUserDao extends IBaseDao<User>{
-    public void changeAuthority(User user,int type);
+    public void changeAuthority(User user,String type);
+    public User findByName(String name);
 }

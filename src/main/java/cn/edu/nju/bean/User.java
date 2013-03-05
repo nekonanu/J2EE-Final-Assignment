@@ -143,15 +143,15 @@ public class User implements Serializable {
         this.address = address;
     }
 
-    private int type;
+    private String type;
 
-    @javax.persistence.Column(name = "type")
+    @Column(name = "type")
     @Basic
-    public int getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(int type) {
+    public void setType(String type) {
         this.type = type;
     }
 
@@ -207,7 +207,7 @@ public class User implements Serializable {
         result = 31 * result + age;
         result = 31 * result + sex;
         result = 31 * result + (address != null ? address.hashCode() : 0);
-        result = 31 * result + type;
+        result = 31 * result + type.hashCode();
         return result;
     }
 }

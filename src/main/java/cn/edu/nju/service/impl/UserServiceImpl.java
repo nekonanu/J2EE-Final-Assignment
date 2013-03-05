@@ -47,7 +47,7 @@ public class UserServiceImpl implements IUserService {
     }
 
     @Override
-    public void changeAuthority(User user, int type) {
+    public void changeAuthority(User user, String type) {
         userDao.changeAuthority(user, type);
     }
 
@@ -57,8 +57,13 @@ public class UserServiceImpl implements IUserService {
     }
 
     @Override
+    public User findUserByName(String name) {
+        return userDao.findByName(name);
+    }
+
+    @Override
     public void orderProduct(Product product, User user, int product_num) {
-        //To change body of implemented methods use File | Settings | File Templates.
+
     }
 
     @Override

@@ -78,7 +78,7 @@
       <column name="age" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
       <column name="sex" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
       <column name="address" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" />
-      <column name="type" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="type" sqlType="VARCHAR" length="32" precision="0" nullable="false" jdbcType="12" />
       <column name="store_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
       <primary-key name="PRIMARY" columns="id" />
       <exported-key name="holder_id" table="charge_log" schema="" catalog="dessert_house" columns="holder_id" />
@@ -90,7 +90,7 @@
       <column name="holder_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
       <column name="register_date" sqlType="DATE" length="10" precision="0" nullable="false" jdbcType="91" />
       <column name="deadline_date" sqlType="DATE" length="10" precision="0" nullable="false" jdbcType="91" />
-      <column name="status" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12" />
+      <column name="status" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12" def="J2ZyZWV6ZSc=" />
       <column name="remain_amount" sqlType="DOUBLE" length="22" precision="0" nullable="false" jdbcType="8" />
       <primary-key name="PRIMARY" columns="id" />
       <foreign-key name="holder" columns="holder_id" ref-table="user" ref-schema="" ref-catalog="dessert_house" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />

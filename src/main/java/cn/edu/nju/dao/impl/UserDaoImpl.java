@@ -21,9 +21,21 @@ import java.util.List;
 @Repository
 public class UserDaoImpl extends BaseDaoSupport<User> implements IUserDao {
     @Override
-    public void changeAuthority(User user, int type) {
+    public void changeAuthority(User user, String type) {
         Session session=getSession();
         user.setType(type);
         session.update(user);
+    }
+
+    @Override
+    public User findByName(String name) {
+        Session session=getSession();
+        Query query=session.createQuery("from User u where u.userName=:user_name");
+        query.setString("user_name",name);
+        List<User> list=query.list();
+        if(list.size()!=0)
+            return list.get(0);
+        else
+            return null;
     }
 }
