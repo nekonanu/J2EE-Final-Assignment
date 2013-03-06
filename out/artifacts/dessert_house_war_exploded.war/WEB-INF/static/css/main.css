@@ -4,17 +4,17 @@
     top:200px;
 }
 
-#login_body{
+.global-background{
     background-image: url("../img/login_back.jpg");
 }
 
 
 .hero-unit-opacity{
-    opacity: 0.4;
+    opacity: 0.8;
 }
 
 .hero-unit-opacity2{
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .hero-unit-color-gray{
@@ -29,4 +29,29 @@
 #welcome-page{
     position: relative;
     top: 50px;
+}
+
+
+.white-rounded-opacity p{
+    color: #000000;
+}
+
+.normal-center{
+    position:relative;
+    top:100px;
+    left: 27%;
+}
+
+.anti-opacity p h1{
+    opacity: 1.0;
+    color: #000000;
+}
+
+.sign-up-font-setting{
+    font-weight: bold;
+}
+
+.btn-center{
+    position: relative;
+    left: 40%;
 }

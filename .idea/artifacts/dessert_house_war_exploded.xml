@@ -16,6 +16,7 @@
           <element id="library" level="project" name="spring" />
           <element id="library" level="project" name="aopalliance-1.0" />
           <element id="library" level="project" name="jsp-api" />
+          <element id="library" level="project" name="hibernate-validator-4.3.1.Final" />
         </element>
       </element>
     </root>

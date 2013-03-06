@@ -1,13 +1,13 @@
 package cn.edu.nju.controller;
 
-import cn.edu.nju.bean.User;
-import cn.edu.nju.controller.response.UserInfo;
-import cn.edu.nju.service.IUserService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContextHolder;
+import cn.edu.nju.controller.validation.CustomerSignUpForm;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import javax.validation.Valid;
+import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
@@ -24,13 +24,26 @@ public class CustomerController {
         return "/customer/home";
     }
 
-    @RequestMapping("/signUp")
-    public String signUp(){
+    @RequestMapping(value = "signUp",method = RequestMethod.GET)
+    public String signUp(Map model){
+        CustomerSignUpForm customerSignUpForm=new CustomerSignUpForm();
+        model.put( "CustomerSignUpForm",customerSignUpForm);
         return "/customer/signUp";
     }
 
     @RequestMapping(value = "/login")
     public String login(){
         return "/customer/login";
+    }
+
+    @RequestMapping(value = "/signUp",method = RequestMethod.POST)
+    public String postSignUp(@Valid CustomerSignUpForm customerSignUpForm,
+                             BindingResult result){
+        if(result.hasErrors()){
+            System.out.println("HAHAHA!");
+            return "/customer/signUp";
+        }
+        System.out.println("FUCK YOU!");
+        return "/customer/signUpSuccess";
     }
 }

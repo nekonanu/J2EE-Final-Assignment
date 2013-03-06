@@ -12,6 +12,15 @@
         <sourceRoots />
       </configuration>
     </facet>
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset1" name="XML Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/main/configuration/META-INF/spring/spring-servlet.xml</file>
+          <file>file://$MODULE_DIR$/src/main/configuration/META-INF/spring/spring-security.xml</file>
+          <file>file://$MODULE_DIR$/src/main/configuration/META-INF/spring/spring-config.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <content url="file://$MODULE_DIR$">
@@ -30,6 +39,7 @@
     <orderEntry type="library" name="spring" level="project" />
     <orderEntry type="library" name="aopalliance-1.0" level="project" />
     <orderEntry type="library" name="jsp-api" level="project" />
+    <orderEntry type="library" name="hibernate-validator-4.3.1.Final" level="project" />
   </component>
 </module>
 

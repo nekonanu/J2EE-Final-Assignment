@@ -12,13 +12,13 @@
 <head>
     <title>Nekosama|糖果屋</title>
 </head>
-<body>
+<body class="global-background">
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner open">
         <a class="brand" href="#">Nekosama|糖果屋</a>
         <ul class="nav pull-right">
             <li class="active">
-                <a href="#">首页</a>
+                <a href="<%=request.getContextPath()%>">首页</a>
             </li>
             <li class="divider-vertical"></li>
             <li class="dropdown">

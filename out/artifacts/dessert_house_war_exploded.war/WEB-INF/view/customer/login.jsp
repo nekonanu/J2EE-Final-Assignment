@@ -12,7 +12,7 @@
     <title>Nekosama|糖果屋</title>
     <jsp:include page="../../static/common/include.jsp"/>
 </head>
-<body id="login_body">
+<body class="global-background">
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner open">
         <a class="brand" href="#">客户登录</a>
@@ -71,7 +71,7 @@
                             <input name="login" type="submit" value="登陆" class="btn btn-primary"/>
                         </div>
                         <div class="span1">
-                            <button class="btn btn-primary">注册</button>
+                            <a href="<%=request.getContextPath()%>/customer/signUp" class="btn btn-primary">注册</a>
                         </div>
                     </div>
             </div>

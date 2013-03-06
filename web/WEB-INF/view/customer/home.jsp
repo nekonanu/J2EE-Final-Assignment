@@ -18,7 +18,7 @@
         <a class="brand" href="#">Nekosama|糖果屋</a>
         <ul class="nav pull-right">
             <li class="active">
-                <a href="#">首页</a>
+                <a href="<%=request.getContextPath()%>/customer/home">首页</a>
             </li>
             <li class="divider-vertical"></li>
             <li class="dropdown">

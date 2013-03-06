@@ -12,13 +12,13 @@
     <title>Nekosama|糖果屋</title>
     <jsp:include page="../../static/common/include.jsp"/>
 </head>
-<body id="login_body">
+<body class="global-background">
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner open">
         <a class="brand" href="#">管理员登录</a>
         <ul class="nav pull-right">
             <li class="active">
-                <a href="#">首页</a>
+                <a href="<%=request.getContextPath()%>">首页</a>
             </li>
             <li class="dropdown">
                 <a class="dropdown-toggle"
@@ -67,11 +67,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="span1 offset2">
-                        <input name="login" type="submit" value="登陆" class="btn btn-primary"/>
-                    </div>
-                    <div class="span1">
-                        <button class="btn btn-primary">注册</button>
+                    <div class="span1 offset3">
+                        <input name="login" type="submit" value="登陆" class="btn btn-primary btn-large"/>
                     </div>
                 </div>
             </div>

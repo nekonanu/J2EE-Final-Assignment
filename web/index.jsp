@@ -15,7 +15,7 @@
     <title>Nekosama|糖果屋</title>
     <jsp:include page="WEB-INF/static/common/include.jsp"/>
 </head>
-<body id="login_body">
+<body class="global-background">
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner open">
         <a class="brand" href="#">Nekosama|糖果屋</a>
@@ -46,7 +46,7 @@
             有时间，静下来，无论外界有多纷繁复杂、吵闹，只要让自己的心静下来，哪怕只是让屋子里的灯关著，找一个可以看见星空的地方坐下来，把自己的烦恼告诉星空，它能听地懂.夜晚的天空是最干净的，没有杂质的。
         </p>
         <p>你的微笑，是我最大心愿。</p>
-        <p><a class="btn btn-primary btn-large" href="<%=rootPath%>/customer/login">登陆</a></p>
+        <p><a class="btn btn-primary btn-large" href="<%=rootPath%>/customer/login">点击登陆</a></p>
     </div>
 </div>
 </body>
