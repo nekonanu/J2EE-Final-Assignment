@@ -32,7 +32,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="JBoss 7.1.1.Final" level="application_server_libraries" />
     <orderEntry type="library" name="mysql-connector-java-5.1.23-bin" level="project" />
-    <orderEntry type="library" name="required" level="project" />
     <orderEntry type="library" name="mydataSource required" level="project" />
     <orderEntry type="library" name="aspectjrt" level="project" />
     <orderEntry type="library" name="jackson-all-1.9.11" level="project" />
@@ -40,6 +39,7 @@
     <orderEntry type="library" name="aopalliance-1.0" level="project" />
     <orderEntry type="library" name="jsp-api" level="project" />
     <orderEntry type="library" name="hibernate-validator-4.3.1.Final" level="project" />
+    <orderEntry type="library" name="hibernate-required" level="project" />
   </component>
 </module>
 

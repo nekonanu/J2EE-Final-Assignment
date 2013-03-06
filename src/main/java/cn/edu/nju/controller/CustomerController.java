@@ -27,7 +27,7 @@ public class CustomerController {
     @RequestMapping(value = "signUp",method = RequestMethod.GET)
     public String signUp(Map model){
         CustomerSignUpForm customerSignUpForm=new CustomerSignUpForm();
-        model.put( "CustomerSignUpForm",customerSignUpForm);
+        model.put( "customerSignUpForm",customerSignUpForm);
         return "/customer/signUp";
     }
 
@@ -39,6 +39,7 @@ public class CustomerController {
     @RequestMapping(value = "/signUp",method = RequestMethod.POST)
     public String postSignUp(@Valid CustomerSignUpForm customerSignUpForm,
                              BindingResult result){
+        System.out.println(customerSignUpForm.getUserName());
         if(result.hasErrors()){
             System.out.println("HAHAHA!");
             return "/customer/signUp";

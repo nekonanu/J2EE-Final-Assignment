@@ -9,7 +9,6 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="mysql-connector-java-5.1.23-bin" />
-          <element id="library" level="project" name="required" />
           <element id="library" level="project" name="mydataSource required" />
           <element id="library" level="project" name="aspectjrt" />
           <element id="library" level="project" name="jackson-all-1.9.11" />
@@ -17,6 +16,7 @@
           <element id="library" level="project" name="aopalliance-1.0" />
           <element id="library" level="project" name="jsp-api" />
           <element id="library" level="project" name="hibernate-validator-4.3.1.Final" />
+          <element id="library" level="project" name="hibernate-required" />
         </element>
       </element>
     </root>

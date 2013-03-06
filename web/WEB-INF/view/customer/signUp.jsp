@@ -43,11 +43,11 @@ To change this template use File | Settings | File Templates.
         <div class="span6">
             <div class="hero-unit hero-unit-opacity2">
                 <%--<form class="form-horizontal sign-up-font-setting" method="POST" action="">--%>
-                <form:form method="post" action="/customer/signUp" commandName="CustomerSignUpForm">
+                <form:form method="post" action="/customer/signUp" commandName="customerSignUpForm">
                     <fieldset>
                         <legend>快速注册</legend>
                         <div class="control-group">
-                            <label class="control-label" for="inputUserName">您的用户名</label>
+                            <form:label class="control-label" for="inputUserName" path="userName">您的用户名</form:label>
                             <div class="controls">
                                 <%--<input type="text" class="input-xlarge" name="userName" id="inputUserName">--%>
                                 <form:input id="inputUserName" path="userName" cssClass="input-xlarge"/>
@@ -59,7 +59,7 @@ To change this template use File | Settings | File Templates.
                         </div>
 
                         <div class="control-group">
-                            <label class="control-label" for="inputPassword">您的密码</label>
+                            <form:label class="control-label" for="inputPassword" path="password">您的密码</form:label>
                             <div class="controls">
                                 <%--<input type="text" class="input-xlarge" name="password" id="inputPassword">--%>
                                 <form:password path="password" id="inputPassword" cssClass="input-xlarge"/>
@@ -70,14 +70,15 @@ To change this template use File | Settings | File Templates.
                             </div>
                         </div>
                         <div class="control-group">
-                            <label class="control-label" for="confirmPassword">再次输入密码</label>
+                            <form:label class="control-label" for="confirmPassword" path="repeatPassword">再次输入密码</form:label>
                             <div class="controls">
                                 <%--<input type="text" class="input-xlarge" name="password" id="confirmPassword">--%>
-                                <form:password path="passwordConfirm" id="confirmPassword" cssClass="input-xlarge"/>
+                                <form:password path="repeatPassword" id="confirmPassword" cssClass="input-xlarge"/>
                                 <p class="help-block">与上次输入一样</p>
                             </div>
                             <div class="controls">
-                                <form:errors path="passwordConfirm" cssClass="alert alert-error"/>
+                                <form:errors path="repeatPassword" cssClass="alert alert-error"/>
+                                <form:errors path="passwordValid" cssClass="alert alert-error"/>
                             </div>
                         </div>
                         <div class="control-group">
