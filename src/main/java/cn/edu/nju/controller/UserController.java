@@ -29,9 +29,4 @@ public class UserController {
         model.addAttribute("userInfo",userInfo);
         return "/user/userInfo";
     }
-
-    @RequestMapping(value = "/login")
-    public String login(){
-        return "/user/login";
-    }
 }

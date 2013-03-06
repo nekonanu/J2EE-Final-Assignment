@@ -28,4 +28,9 @@ public class CustomerController {
     public String signUp(){
         return "/customer/signUp";
     }
+
+    @RequestMapping(value = "/login")
+    public String login(){
+        return "/customer/login";
+    }
 }

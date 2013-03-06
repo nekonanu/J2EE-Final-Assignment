@@ -15,6 +15,7 @@
           <element id="library" level="project" name="jackson-all-1.9.11" />
           <element id="library" level="project" name="spring" />
           <element id="library" level="project" name="aopalliance-1.0" />
+          <element id="library" level="project" name="jsp-api" />
         </element>
       </element>
     </root>

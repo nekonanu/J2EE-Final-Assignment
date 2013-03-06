@@ -7,3 +7,7 @@
 #login_body{
     background-image: url("../img/login_back.jpg");
 }
+
+.hero-unit-opacity{
+    opacity: 0.4;
+}

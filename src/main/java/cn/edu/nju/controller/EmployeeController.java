@@ -13,4 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/employee")
 public class EmployeeController {
+    @RequestMapping(value = "/login")
+    public String login(){
+        return "/employee/login";
+    }
 }

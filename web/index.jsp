@@ -6,6 +6,9 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    String rootPath=request.getContextPath();
+%>
 <html>
 <head>
     <title>欢迎来到Nekosama的糖果屋</title>
@@ -25,36 +28,14 @@
         </ul>
     </div>
 </div>
-<div id="login_container" class="container-fluid ">
-    <div class="row">
-        <div class="span4 offset1 ">
-            <form class="form-horizontal">
-                <fieldset>
-                    <div class="control-group">
-                        <label class="control-label" for="input01">USERNAME</label>
-                        <div class="controls">
-                            <input type="text" class="input-xlarge" id="input01">
-                            <p class="help-block">请输入用户名</p>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label" for="input01">PASSWORD</label>
-                        <div class="controls">
-                            <input type="text" class="input-xlarge" id="input02">
-                            <p class="help-block">请输入密码</p>
-                        </div>
-                    </div>
-                </fieldset>
-            </form>
-        </div>
-    </div>
-    <div class="row">
-        <div class="span2 offset2">
-            <button class="btn">Login</button>
-        </div>
-        <div class="span4">
-            <button class="btn">Sign up</button>
-        </div>
+<div class="container-fluid">
+    <div class="hero-unit hero-unit-opacity">
+        <h1>Nekosama糖果屋</h1>
+        <p>
+            有时间，静下来，无论外界有多纷繁复杂、吵闹，只要让自己的心静下来，哪怕只是让屋子里的灯关著，找一个可以看见星空的地方坐下来，把自己的烦恼告诉星空，它能听地懂.夜晚的天空是最干净的，没有杂质的。
+        </p>
+        <p>你的微笑，是我最大心愿。</p>
+        <p><a class="btn btn-primary btn-large" href="<%=rootPath%>/customer/login">登陆</a></p>
     </div>
 </div>
 </body>
