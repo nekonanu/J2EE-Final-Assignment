@@ -22,13 +22,23 @@
             <li class="active">
                 <a href="#">首页</a>
             </li>
-            <li>
-                <a href="#">关于</a>
+            <li class="dropdown">
+                <a class="dropdown-toggle"
+                   data-toggle="dropdown"
+                   href="#">
+                    更多
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="<%=rootPath%>/employee/login">管理员登陆</a>
+                    </li>
+                </ul>
             </li>
         </ul>
     </div>
 </div>
-<div class="container-fluid">
+<div id="welcome-page" class="container-fluid">
     <div class="hero-unit hero-unit-opacity">
         <h1>Nekosama糖果屋</h1>
         <p>

@@ -9,24 +9,34 @@
 <html>
 <head>
     <title>欢迎来到Nekosama的糖果屋</title>
-    <jsp:include page="WEB-INF/static/common/include.jsp"/>
+    <jsp:include page="../../static/common/include.jsp"/>
 </head>
 <body id="login_body">
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner open">
-        <a class="brand" href="#">Nekosama的糖果屋</a>
+        <a class="brand" href="#">管理员登录</a>
         <ul class="nav pull-right">
             <li class="active">
                 <a href="#">首页</a>
             </li>
-            <li>
-                <a href="#">关于</a>
+            <li class="dropdown">
+                <a class="dropdown-toggle"
+                   data-toggle="dropdown"
+                   href="#">
+                    更多
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="<%=request.getContextPath()%>/customer/login">用户登录</a>
+                    </li>
+                </ul>
             </li>
         </ul>
     </div>
 </div>
 <div id="login_container" class="container-fluid ">
-    <form class="form-horizontal" action='/dessert_house_war/j_spring_security_check' method='POST'>
+    <form class="form-horizontal" action="dessertHouse/j_spring_security_check" method='POST'>
         <div class="row">
             <div class="span4 offset1 ">
                 <fieldset>

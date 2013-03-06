@@ -1,13 +1,32 @@
 /* add style here */
 #login_container{
     position:relative;
-    top:300px;
+    top:200px;
 }
 
 #login_body{
     background-image: url("../img/login_back.jpg");
 }
 
+
 .hero-unit-opacity{
     opacity: 0.4;
+}
+
+.hero-unit-opacity2{
+    opacity: 0.8;
+}
+
+.hero-unit-color-gray{
+    color: #d3d3d3;
+    background-color: #d3d3d3;
+}
+
+.font-white{
+    color: #add8e6;
+}
+
+#welcome-page{
+    position: relative;
+    top: 50px;
 }

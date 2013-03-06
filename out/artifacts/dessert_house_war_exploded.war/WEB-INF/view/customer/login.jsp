@@ -14,51 +14,65 @@
 <body id="login_body">
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner open">
-        <a class="brand" href="#">Nekosama的糖果屋</a>
+        <a class="brand" href="#">用户登录</a>
         <ul class="nav pull-right">
             <li class="active">
                 <a href="#">首页</a>
             </li>
-            <li>
-                <a href="#">关于</a>
+            <li class="dropdown">
+                <a class="dropdown-toggle"
+                   data-toggle="dropdown"
+                   href="#">
+                    更多
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="<%=request.getContextPath()%>/employee/login">管理员登录</a>
+                    </li>
+                </ul>
             </li>
         </ul>
     </div>
 </div>
 <div id="login_container" class="container-fluid ">
-    <form class="form-horizontal" action='/dessert_house_war/j_spring_security_check' method='POST'>
+    <form class="form-horizontal" action='dessertHouse/j_spring_security_check' method='POST'>
         <div class="row">
-            <div class="span4 offset1 ">
-                <fieldset>
-                    <div class="control-group">
-                        <label class="control-label" for="j_username">USERNAME</label>
-                        <div class="controls">
-                            <input type="text" class="input-xlarge" name='j_username' id="j_username">
-                            <p class="help-block">请输入用户名</p>
+            <div id="loginBox" class="span6 offset1">
+                    <div class="row">
+                        <div class="span2">
+                            <fieldset>
+                                <div class="control-group">
+                                    <label class="control-label font-white" for="j_username">USERNAME</label>
+                                    <div class="controls">
+                                        <input type="text" class="input-xlarge" name='j_username' id="j_username">
+                                        <p class="help-block font-white">请输入用户名</p>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label font-white" for="j_password">PASSWORD</label>
+                                    <div class="controls">
+                                        <input type="text" class="input-xlarge" name='j_password' id="j_password">
+                                        <p class="help-block font-white">请输入密码</p>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="controls font-white" for="remember_me">
+                                        <input id="remember_me" name="_spring_security_remember_me" type="checkbox" value="true"/>
+                                        记住我
+                                    </label>
+                                </div>
+                            </fieldset>
                         </div>
                     </div>
-                    <div class="control-group">
-                        <label class="control-label" for="j_password">PASSWORD</label>
-                        <div class="controls">
-                            <input type="text" class="input-xlarge" name='j_password' id="j_password">
-                            <p class="help-block">请输入密码</p>
+                    <div class="row">
+                        <div class="span1 offset2">
+                            <input name="login" type="submit" value="登陆" class="btn btn-primary"/>
+                        </div>
+                        <div class="span1">
+                            <button class="btn btn-primary">注册</button>
                         </div>
                     </div>
-                    <div class="control-group">
-                        <label class="controls" for="remember_me">
-                            <input id="remember_me" name="_spring_security_remember_me" type="checkbox" value="true"/>
-                            记住我
-                        </label>
-                    </div>
-                </fieldset>
-            </div>
-        </div>
-        <div class="row">
-            <div class="span2 offset3">
-                <input name="login" type="submit" value="登陆" class="btn"/>
-            </div>
-            <div class="span2">
-                <button class="btn">注册</button>
             </div>
         </div>
     </form>
