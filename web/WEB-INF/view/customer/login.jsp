@@ -5,16 +5,17 @@
   Time: 下午5:26
   To change this template use File | Settings | File Templates.
 --%>
+<!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>欢迎来到Nekosama的糖果屋</title>
+    <title>Nekosama|糖果屋</title>
     <jsp:include page="../../static/common/include.jsp"/>
 </head>
 <body id="login_body">
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner open">
-        <a class="brand" href="#">用户登录</a>
+        <a class="brand" href="#">客户登录</a>
         <ul class="nav pull-right">
             <li class="active">
                 <a href="#">首页</a>

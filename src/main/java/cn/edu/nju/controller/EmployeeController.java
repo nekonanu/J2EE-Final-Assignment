@@ -17,4 +17,9 @@ public class EmployeeController {
     public String login(){
         return "/employee/login";
     }
+
+    @RequestMapping("/home")
+    public String home(){
+        return "/employee/home";
+    }
 }

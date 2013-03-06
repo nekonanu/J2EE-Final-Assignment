@@ -5,10 +5,11 @@
   Time: 下午5:26
   To change this template use File | Settings | File Templates.
 --%>
+<!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>欢迎来到Nekosama的糖果屋</title>
+    <title>Nekosama|糖果屋</title>
     <jsp:include page="../../static/common/include.jsp"/>
 </head>
 <body id="login_body">
@@ -28,7 +29,7 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="<%=request.getContextPath()%>/customer/login">用户登录</a>
+                        <a href="<%=request.getContextPath()%>/customer/login">客户登录</a>
                     </li>
                 </ul>
             </li>
@@ -36,39 +37,43 @@
     </div>
 </div>
 <div id="login_container" class="container-fluid ">
-    <form class="form-horizontal" action="dessertHouse/j_spring_security_check" method='POST'>
+    <form class="form-horizontal" action='dessertHouse/j_spring_security_check' method='POST'>
         <div class="row">
-            <div class="span4 offset1 ">
-                <fieldset>
-                    <div class="control-group">
-                        <label class="control-label" for="j_username">USERNAME</label>
-                        <div class="controls">
-                            <input type="text" class="input-xlarge" name='j_username' id="j_username">
-                            <p class="help-block">请输入用户名</p>
-                        </div>
+            <div id="loginBox" class="span6 offset1">
+                <div class="row">
+                    <div class="span2">
+                        <fieldset>
+                            <div class="control-group">
+                                <label class="control-label font-white" for="j_username">USERNAME</label>
+                                <div class="controls">
+                                    <input type="text" class="input-xlarge" name='j_username' id="j_username">
+                                    <p class="help-block font-white">请输入用户名</p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label font-white" for="j_password">PASSWORD</label>
+                                <div class="controls">
+                                    <input type="text" class="input-xlarge" name='j_password' id="j_password">
+                                    <p class="help-block font-white">请输入密码</p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="controls font-white" for="remember_me">
+                                    <input id="remember_me" name="_spring_security_remember_me" type="checkbox" value="true"/>
+                                    记住我
+                                </label>
+                            </div>
+                        </fieldset>
                     </div>
-                    <div class="control-group">
-                        <label class="control-label" for="j_password">PASSWORD</label>
-                        <div class="controls">
-                            <input type="text" class="input-xlarge" name='j_password' id="j_password">
-                            <p class="help-block">请输入密码</p>
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="span1 offset2">
+                        <input name="login" type="submit" value="登陆" class="btn btn-primary"/>
                     </div>
-                    <div class="control-group">
-                        <label class="controls" for="remember_me">
-                            <input id="remember_me" name="_spring_security_remember_me" type="checkbox" value="true"/>
-                            记住我
-                        </label>
+                    <div class="span1">
+                        <button class="btn btn-primary">注册</button>
                     </div>
-                </fieldset>
-            </div>
-        </div>
-        <div class="row">
-            <div class="span2 offset3">
-                <input name="login" type="submit" value="登陆" class="btn"/>
-            </div>
-            <div class="span2">
-                <button class="btn">注册</button>
+                </div>
             </div>
         </div>
     </form>
