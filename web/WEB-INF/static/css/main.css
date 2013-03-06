@@ -1,0 +1,9 @@
+/* add style here */
+#login_container{
+    position:relative;
+    top:300px;
+}
+
+#login_body{
+    background-image: url("../img/login_back.jpg");
+}
