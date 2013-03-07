@@ -21,6 +21,13 @@
         </fileset>
       </configuration>
     </facet>
+    <facet type="hibernate" name="Hibernate">
+      <configuration>
+        <datasource-map>
+          <unit-entry name="mySessionFactory" value="40ecd3c9-986c-4593-a040-5a616990b764" />
+        </datasource-map>
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <content url="file://$MODULE_DIR$">
@@ -39,8 +46,8 @@
     <orderEntry type="library" name="aopalliance-1.0" level="project" />
     <orderEntry type="library" name="jsp-api" level="project" />
     <orderEntry type="library" name="hibernate-validator-4.3.1.Final" level="project" />
-    <orderEntry type="library" name="hibernate-required" level="project" />
     <orderEntry type="library" name="commons-logging-1.1.1" level="project" />
+    <orderEntry type="library" name="Hibernate" level="project" />
   </component>
 </module>
 

@@ -21,7 +21,7 @@
     <schema name="" catalog="test" />
     <schema name="" catalog="world" />
     <table name="charge_log" schema="" catalog="dessert_house" type="TABLE">
-      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="holder_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
       <column name="vip_card_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
       <column name="charge_amount" sqlType="DOUBLE" length="22" precision="0" nullable="false" jdbcType="8" />
@@ -31,7 +31,7 @@
       <index name="vip_card_id_idx" unique="false" columns="vip_card_id" />
     </table>
     <table name="product" schema="" catalog="dessert_house" type="TABLE">
-      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="product_name" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12" />
       <column name="remain_num" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
       <column name="price" sqlType="DOUBLE" length="22" precision="0" nullable="false" jdbcType="8" />
@@ -39,7 +39,7 @@
       <primary-key name="PRIMARY" columns="id" />
     </table>
     <table name="product_order" schema="" catalog="dessert_house" type="TABLE">
-      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="customer_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
       <column name="product_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
       <column name="order_num" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
@@ -50,7 +50,7 @@
       <index name="product_idx" unique="false" columns="product_id" />
     </table>
     <table name="sale" schema="" catalog="dessert_house" type="TABLE">
-      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="customer_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
       <column name="product_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
       <column name="sale_num" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
@@ -59,13 +59,13 @@
       <primary-key name="PRIMARY" columns="id" />
     </table>
     <table name="store" schema="" catalog="dessert_house" type="TABLE">
-      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="store_name" sqlType="VARCHAR" length="32" precision="0" nullable="true" jdbcType="12" />
       <column name="store_location" sqlType="VARCHAR" length="64" precision="0" nullable="true" jdbcType="12" />
       <primary-key name="PRIMARY" columns="id" />
     </table>
     <table name="user" schema="" catalog="dessert_house" type="TABLE">
-      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="user_name" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12" />
       <column name="password" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12" />
       <column name="email" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" />
@@ -76,17 +76,15 @@
       <column name="type" sqlType="VARCHAR" length="32" precision="0" nullable="false" jdbcType="12" />
       <column name="store_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
       <primary-key name="PRIMARY" columns="id" />
-      <exported-key name="holder_id" table="vip_card" schema="" catalog="dessert_house" columns="holder_id" />
+      <index name="vip_card_id" unique="false" columns="vip_card_id" />
     </table>
     <table name="vip_card" schema="" catalog="dessert_house" type="TABLE">
-      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
-      <column name="holder_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="register_date" sqlType="DATE" length="10" precision="0" nullable="false" jdbcType="91" />
       <column name="deadline_date" sqlType="DATE" length="10" precision="0" nullable="false" jdbcType="91" />
       <column name="status" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12" def="J2ZyZWV6ZSc=" />
       <column name="remain_amount" sqlType="DOUBLE" length="22" precision="0" nullable="false" jdbcType="8" />
       <primary-key name="PRIMARY" columns="id" />
-      <foreign-key name="holder_id" columns="holder_id" ref-table="user" ref-schema="" ref-catalog="dessert_house" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
     </table>
     <table name="CHARACTER_SETS" schema="" catalog="information_schema" type="SYSTEM TABLE">
       <column name="CHARACTER_SET_NAME" sqlType="VARCHAR" length="32" precision="0" nullable="false" jdbcType="12" def="Jyc=" />
@@ -2406,5 +2404,16 @@
         <parameter name="count_rewardees" sqlType="INT" length="10" precision="10" nullable="true" jdbcType="4" type="4" index="-1" />
       </prototype>
     </procedure>
+  </data-source>
+  <data-source source="LOCAL" name="myDataSource" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="b1aff9dd-9c2a-45fe-9b78-cced48e155a7">
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://localhost/dessert_house</jdbc-url>
+    <user-name>root</user-name>
+    <user-password>dfc2dfc6dfd8df9bdf93df93df98df9bdf98df93</user-password>
+    <libraries>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.23-bin.jar!/</url>
+      </library>
+    </libraries>
   </data-source>
 </component>

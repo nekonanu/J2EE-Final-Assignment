@@ -51,6 +51,11 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
+    <!--定义404转发页面-->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/view/common/error404.jsp</location>
+    </error-page>
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
@@ -59,7 +64,5 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
-
-
 
 </web-app>

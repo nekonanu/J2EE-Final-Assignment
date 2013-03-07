@@ -22,11 +22,11 @@ public class UserController {
     @Autowired
     private IUserService userService;
 
-    @RequestMapping(value = "/userInfo")
-    public String getUserInfo(Model model){
-        User user = userService.findUserByName(SecurityContextHolder.getContext().getAuthentication().getName());
-        UserInfo userInfo=new UserInfo(user);
-        model.addAttribute("userInfo",userInfo);
-        return "/user/userInfo";
-    }
+//    @RequestMapping(value = "/userInfo")
+//    public String getUserInfo(Model model){
+//        User user = userService.findUserByName(SecurityContextHolder.getContext().getAuthentication().getName());
+//        UserInfo userInfo=new UserInfo(user);
+//        model.addAttribute("userInfo",userInfo);
+//        return "/user/userInfo";
+//    }
 }

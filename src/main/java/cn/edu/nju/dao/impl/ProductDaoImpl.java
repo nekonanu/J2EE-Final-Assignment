@@ -1,7 +1,6 @@
 package cn.edu.nju.dao.impl;
 
 import cn.edu.nju.bean.Product;
-import cn.edu.nju.util.HibernateUtil;
 import cn.edu.nju.dao.IProductDao;
 import org.hibernate.Query;
 import org.hibernate.Session;

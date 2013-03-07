@@ -8,6 +8,10 @@
     background-image: url("../img/login_back.jpg");
 }
 
+.home-background{
+    background: #ff514c url(../img/noise.png);
+}
+
 
 .hero-unit-opacity{
     opacity: 0.8;
@@ -41,6 +45,26 @@
     top:100px;
     left: 27%;
 }
+.home-container{
+    position: relative;
+    top: 50px;
+}
+
+.home-side-bar-rounded{
+    /*width: 250px;*/
+    /*padding: 0;*/
+    background-color: #fff;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+    -moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+    box-shadow: 0 1px 4px rgba(0,0,0,.065);
+}
+
+.home-side-bar-rounded li{
+    cursor: pointer;
+}
 
 .anti-opacity p h1{
     opacity: 1.0;
@@ -55,3 +79,23 @@
     position: relative;
     left: 40%;
 }
+
+/*自定义的navbar*/
+body > .navbar {
+    font-size: 13px;
+}
+
+body > .navbar .brand {
+    padding-right: 0;
+    padding-left: 0;
+    margin-left: 20px;
+    float: left;
+    font-weight: bold;
+    color: #000;
+    text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+

@@ -210,7 +210,7 @@ public class User implements Serializable {
         result = 31 * result + age;
         result = 31 * result + sex;
         result = 31 * result + (address != null ? address.hashCode() : 0);
-        result = 31 * result + type.hashCode();
+        result = 31 * result + (type != null ? type.hashCode() : 0);
         return result;
     }
 }

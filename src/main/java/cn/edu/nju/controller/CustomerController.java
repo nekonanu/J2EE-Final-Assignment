@@ -47,11 +47,31 @@ public class CustomerController {
         System.out.println(productOrders.size());
         return "/customer/home";
     }
+//    Ajax请求的page
+    @RequestMapping(value = "/order",method = RequestMethod.GET)
+    public String orderPage(){
+        return "/customer/order";
+    }
+    @RequestMapping(value = "/userInfo",method = RequestMethod.GET)
+    public String userInfoPage(){
+        return "/customer/userInfo";
+    }
+
+    @RequestMapping(value = "/charge",method = RequestMethod.GET)
+    public String chargePage(){
+        return "/customer/charge";
+    }
+
+    @RequestMapping(value = "/messageBox",method = RequestMethod.GET)
+    public String messageBoxPage(){
+        return "/customer/messageBox";
+    }
 
     @RequestMapping("/home")
     public String home(){
         return "/customer/home";
     }
+
 
     @RequestMapping(value = "signUp",method = RequestMethod.GET)
     public String signUp(Map model){

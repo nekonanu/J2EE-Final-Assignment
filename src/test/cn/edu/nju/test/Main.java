@@ -6,6 +6,7 @@ import cn.edu.nju.service.IProductService;
 import cn.edu.nju.service.IStoreService;
 import cn.edu.nju.service.IUserService;
 import cn.edu.nju.util.HibernateUtil;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -13,6 +14,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -44,11 +46,14 @@ public class Main {
 //            testFindProduct();
         Session session=HibernateUtil.currentSession();
         Transaction tx=session.beginTransaction();
-        Product product= (Product) session.get(Product.class,4);
-        Set<ProductOrder> orders=product.getProductOrder();
-        System.out.println(orders.size());
+//        Product product= (Product) session.get(Product.class,4);
+//        Set<ProductOrder> orders=product.getProductOrder();
+//        System.out.println(orders.size());
+        Query query=session.createQuery("from User u where u.userName='nekosama'");
+        List list=query.list();
         tx.commit();
         HibernateUtil.closeSession();
+        System.out.println(list.size());
 //        System.out.println("get "+productOrders.size());
 
 //        Product productEntity=productService.findByID(4);

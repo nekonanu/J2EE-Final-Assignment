@@ -22,3 +22,4 @@
 <link type="text/css" rel="stylesheet" href="<%=path%>/static/css/bootstrap.css"/>
 <link type="text/css" rel="stylesheet" href="<%=path%>/static/css/bootstrap-responsive.css"/>
 <link type="text/css" rel="stylesheet" href="<%=path%>/static/css/main.css"/>
+<%--<link type="text/css" rel="stylesheet" href="<%=path%>/static/css/doc.css"/>--%>

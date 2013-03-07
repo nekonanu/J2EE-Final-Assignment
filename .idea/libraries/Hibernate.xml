@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="hibernate-required">
+  <library name="Hibernate" type="hibernate">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/lib/hibernate-core/antlr-2.7.7.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/hibernate-core/dom4j-1.6.1.jar!/" />
