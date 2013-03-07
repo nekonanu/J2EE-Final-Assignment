@@ -103,6 +103,7 @@ public class Store implements Serializable {
         if (o == null || getClass() != o.getClass()) return false;
 
         Store store = (Store) o;
+        if(id ==store.id) return true;
 
         if (id != store.id) return false;
         if (storeLocation != null ? !storeLocation.equals(store.storeLocation) : store.storeLocation != null)

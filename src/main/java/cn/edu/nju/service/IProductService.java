@@ -4,6 +4,7 @@ import cn.edu.nju.bean.Product;
 import cn.edu.nju.bean.ProductOrder;
 import cn.edu.nju.bean.Sale;
 import cn.edu.nju.bean.User;
+import org.springframework.ui.Model;
 
 import java.util.Set;
 
@@ -15,6 +16,8 @@ import java.util.Set;
  * To change this template use File | Settings | File Templates.
  */
 public interface IProductService{
+    public void setEAGER(boolean Eager);
+
     public void addProduct(Product product);
     public void deleteProductByID(int id);
     public void update(Product product);
@@ -27,7 +30,8 @@ public interface IProductService{
       * @return
      */
     public Set<Product> getAvailableProduct(int store_id);
-    public void sellProduct(Product product,User user,int amount);
+    public Set<Product> getAvailableProduct(int store_id,Model model,String key);
+    public void orderProduct(Product product,User user,int amount);
     public Set<ProductOrder> getProductOrders(int store_id);
     public Set<Sale> getSales(int store_id);
 

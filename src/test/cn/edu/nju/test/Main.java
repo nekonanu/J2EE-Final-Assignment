@@ -32,28 +32,33 @@ public class Main {
 
     static {
         ApplicationContext context=new ClassPathXmlApplicationContext("classpath*:/META-INF/spring/spring-config.xml");
-//        productService = (IProductService) context.getBean("productService");
-//        userService = (IUserService) context.getBean("userService");
+        productService = (IProductService) context.getBean("productService");
+        userService = (IUserService) context.getBean("userService");
 //        storeService= (IStoreService) context.getBean("storeService");
 //        orderDao=context.getBean(OrderDaoImpl.class);
         HibernateUtil.setSession_factory((SessionFactory) context.getBean("mySessionFactory"));
     }
 
     public static void main(String args[]){
+        Product product=productService.findByID(4);
+        System.out.println("=======");
+        User user=userService.findUserByID(9);
+        System.out.println("=======");
+        productService.orderProduct(product,user,1);
 //        testAddStore("2");
 //        testAddProduct(1);
 //        testAddOrder(4,9,1);
 //            testFindProduct();
-        Session session=HibernateUtil.currentSession();
-        Transaction tx=session.beginTransaction();
+//        Session session=HibernateUtil.currentSession();
+//        Transaction tx=session.beginTransaction();
 //        Product product= (Product) session.get(Product.class,4);
 //        Set<ProductOrder> orders=product.getProductOrder();
 //        System.out.println(orders.size());
-        Query query=session.createQuery("from User u where u.userName='nekosama'");
-        List list=query.list();
-        tx.commit();
-        HibernateUtil.closeSession();
-        System.out.println(list.size());
+//        Query query=session.createQuery("from User u where u.userName='nekosama'");
+//        List list=query.list();
+//        tx.commit();
+//        HibernateUtil.closeSession();
+//        System.out.println(list.size());
 //        System.out.println("get "+productOrders.size());
 
 //        Product productEntity=productService.findByID(4);

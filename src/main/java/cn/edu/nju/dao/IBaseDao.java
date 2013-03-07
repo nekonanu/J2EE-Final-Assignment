@@ -18,6 +18,8 @@ public interface IBaseDao<T> {
 
     void deleteById(int i);
 
+    void merge(T t);
+
     T findById(int i);
 
     List<T> findByCriteria(Criterion... criterions);

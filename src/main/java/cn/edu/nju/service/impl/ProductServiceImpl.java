@@ -1,9 +1,6 @@
 package cn.edu.nju.service.impl;
 
-import cn.edu.nju.bean.Product;
-import cn.edu.nju.bean.ProductOrder;
-import cn.edu.nju.bean.Sale;
-import cn.edu.nju.bean.User;
+import cn.edu.nju.bean.*;
 import cn.edu.nju.dao.IOrderDao;
 import cn.edu.nju.dao.IProductDao;
 import cn.edu.nju.dao.IStoreDao;
@@ -11,6 +8,7 @@ import cn.edu.nju.service.IProductService;
 import cn.edu.nju.service.strategy.IProductStrategy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 
 import java.util.Date;
 import java.util.Set;
@@ -33,8 +31,15 @@ public class ProductServiceImpl implements IProductService {
     @Autowired
     private IProductStrategy productStrategy;
 
+    private boolean eager;
+
     public IProductDao getProductDao() {
         return productDao;
+    }
+
+    @Override
+    public void setEAGER(boolean Eager) {
+        this.eager=Eager;
     }
 
     @Override
@@ -68,12 +73,20 @@ public class ProductServiceImpl implements IProductService {
     }
 
     @Override
-    public void sellProduct(Product product, User user, int amount) {
+    public Set<Product> getAvailableProduct(int store_id, Model model, String key) {
+        Set<Product> products= storeDao.findById(store_id).getProducts();
+        model.addAttribute(key,products);
+        return products;
+    }
+
+    @Override
+    public void orderProduct(Product product, User user, int amount) {
         ProductOrder order=new ProductOrder();
         order.setUser(user);
         order.setProduct(product);
         order.setOrderNum(amount);
         order.setOrderDate(new Date());
+        order.setStore(user.getStore());
         orderDao.save(order);
     }
 
@@ -91,6 +104,8 @@ public class ProductServiceImpl implements IProductService {
     public Set<Product> getHotProducts(int store_id) {
         return productStrategy.filterHotProducts(storeDao.findById(store_id).getProducts());
     }
+
+
 
     public void setProductDao(IProductDao productDao) {
         this.productDao = productDao;

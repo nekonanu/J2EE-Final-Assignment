@@ -48,6 +48,7 @@
     <orderEntry type="library" name="hibernate-validator-4.3.1.Final" level="project" />
     <orderEntry type="library" name="commons-logging-1.1.1" level="project" />
     <orderEntry type="library" name="Hibernate" level="project" />
+    <orderEntry type="library" name="jstl-1.2" level="project" />
   </component>
 </module>
 

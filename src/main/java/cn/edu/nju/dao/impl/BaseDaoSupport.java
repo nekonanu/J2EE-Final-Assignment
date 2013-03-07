@@ -39,6 +39,11 @@ public abstract class BaseDaoSupport<T extends Serializable> implements IBaseDao
     }
 
     @Override
+    public void merge(T t){
+        getSession().merge(t);
+    }
+
+    @Override
     public void save(T t) {
        getSession().save(t);
     }
