@@ -23,6 +23,11 @@ public class VipCardServiceImpl implements IVipCardService {
     private IVipCardDao vipCardDao;
 
     @Override
+    public void addVipCard(VipCard vipCard) {
+        vipCardDao.save(vipCard);
+    }
+
+    @Override
     public void cardCharge(User user, int amount) {
         VipCard vipCard=user.getVipCard();
         vipCardDao.charge(vipCard,amount);

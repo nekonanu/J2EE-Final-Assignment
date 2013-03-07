@@ -2,7 +2,7 @@ package cn.edu.nju.bean;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
 import java.util.Set;
 
 /**
@@ -18,10 +18,19 @@ public class VipCard implements Serializable {
     public static final String FREEZE="freeze";
     public static final String ACTIVATE="activate";
 
+    public VipCard(){}
+    public VipCard(User holder) {
+        this.registerDate=new Date();
+        this.deadlineDate=new Date(System.currentTimeMillis()+365*24*3600*1000);
+        this.status=FREEZE;
+        this.remainAmount=0;
+    }
+
     private int id;
 
     @javax.persistence.Column(name = "id")
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public int getId() {
         return id;
     }
@@ -41,15 +50,15 @@ public class VipCard implements Serializable {
 //    public void setHolderId(int holderId) {
 //        this.holderId = holderId;
 //    }
-    private User user;
+    private User holder;
 
     @OneToOne(mappedBy = "vipCard")
-    public User getUser() {
-        return user;
+    public User getHolder() {
+        return holder;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setHolder(User holder) {
+        this.holder = holder;
     }
 
     private Date registerDate;
@@ -102,7 +111,7 @@ public class VipCard implements Serializable {
 
     private Set<ChargeLog> chargeLogs;
 
-    @OneToMany(mappedBy = "vipCard")
+    @OneToMany(mappedBy = "vipCard",fetch = FetchType.EAGER)
     public Set<ChargeLog> getChargeLogs() {
         return chargeLogs;
     }
@@ -118,7 +127,7 @@ public class VipCard implements Serializable {
 
         VipCard that = (VipCard) o;
 
-        if (user != that.user) return false;
+        if (holder != that.holder) return false;
         if (id != that.id) return false;
         if (Double.compare(that.remainAmount, remainAmount) != 0) return false;
         if (deadlineDate != null ? !deadlineDate.equals(that.deadlineDate) : that.deadlineDate != null) return false;
@@ -133,7 +142,7 @@ public class VipCard implements Serializable {
         int result;
         long temp;
         result = id;
-        result = 31 * result + user.hashCode();
+        result = 31 * result + (holder==null?0:holder.getId());
         result = 31 * result + (registerDate != null ? registerDate.hashCode() : 0);
         result = 31 * result + (deadlineDate != null ? deadlineDate.hashCode() : 0);
         result = 31 * result + (status != null ? status.hashCode() : 0);

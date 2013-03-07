@@ -35,10 +35,12 @@
         </property>
     </bean>
 
+    <!--测试用-->
     <bean id="productService" class="cn.edu.nju.service.impl.ProductServiceImpl">
     </bean>
     <bean id="userService" class="cn.edu.nju.service.impl.UserServiceImpl">
     </bean>
+    <bean id="storeService" class="cn.edu.nju.service.impl.StoreServiceImpl"></bean>
 
     <aop:aspectj-autoproxy/>
 

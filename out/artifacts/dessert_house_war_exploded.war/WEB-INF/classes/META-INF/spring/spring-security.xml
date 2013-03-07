@@ -12,7 +12,7 @@
     <security:authentication-manager id="userAuthManager">
         <security:authentication-provider user-service-ref="userAuthService">
             <!--<security:password-encoder hash="md5">-->
-                <!--<security:salt-source user-property="username"/>-->
+                <!--<security:salt-source holder-property="username"/>-->
             <!--</security:password-encoder>-->
         </security:authentication-provider>
     </security:authentication-manager>

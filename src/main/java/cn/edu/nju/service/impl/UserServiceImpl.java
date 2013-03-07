@@ -33,6 +33,7 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public void addUser(User user) {
+        System.out.println("save");
         userDao.save(user);
     }
 

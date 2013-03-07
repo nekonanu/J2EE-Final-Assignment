@@ -40,6 +40,7 @@
     <orderEntry type="library" name="jsp-api" level="project" />
     <orderEntry type="library" name="hibernate-validator-4.3.1.Final" level="project" />
     <orderEntry type="library" name="hibernate-required" level="project" />
+    <orderEntry type="library" name="commons-logging-1.1.1" level="project" />
   </component>
 </module>
 

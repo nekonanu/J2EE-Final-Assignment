@@ -18,6 +18,7 @@ public class Product implements Serializable {
 
     @javax.persistence.Column(name = "id")
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public int getId() {
         return id;
     }
@@ -28,7 +29,7 @@ public class Product implements Serializable {
 
     private Set<ProductOrder> productOrder;
 
-    @OneToMany(mappedBy = "product")
+    @OneToMany(mappedBy = "product",fetch = FetchType.EAGER)
     public Set<ProductOrder> getProductOrder() {
         return productOrder;
     }
@@ -38,7 +39,7 @@ public class Product implements Serializable {
     }
 
     private Set<Sale> sales;
-    @OneToMany(mappedBy = "product")
+    @OneToMany(mappedBy = "product",fetch = FetchType.EAGER)
     public Set<Sale> getSales() {
         return sales;
     }
@@ -84,7 +85,7 @@ public class Product implements Serializable {
     }
 
     private Store store;
-    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     @JoinColumn(name = "store_id")
     public Store getStore() {
         return store;

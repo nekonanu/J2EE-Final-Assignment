@@ -1,7 +1,7 @@
 package cn.edu.nju.bean;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
 
 /**
  * Created with IntelliJ IDEA.
@@ -16,6 +16,7 @@ public class Sale {
 
     @javax.persistence.Column(name = "id")
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public int getId() {
         return id;
     }
@@ -102,11 +103,11 @@ public class Sale {
     @Override
     public int hashCode() {
         int result = id;
-        result = 31 * result + user.hashCode();
-        result = 31 * result + product.hashCode();
+        result = 31 * result + (user==null?0:user.getId());
+        result = 31 * result + (product==null?0:product.getId());
         result = 31 * result + saleNum;
         result = 31 * result + (saleDate != null ? saleDate.hashCode() : 0);
-        result = 31 * result + store.hashCode();
+        result = 31 * result + (store==null?0:store.getId());
         return result;
     }
 }

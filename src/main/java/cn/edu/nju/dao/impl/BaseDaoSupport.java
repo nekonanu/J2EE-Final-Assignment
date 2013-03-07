@@ -1,5 +1,6 @@
 package cn.edu.nju.dao.impl;
 
+import cn.edu.nju.dao.HibernateUtil;
 import cn.edu.nju.dao.IBaseDao;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -39,7 +40,7 @@ public abstract class BaseDaoSupport<T extends Serializable> implements IBaseDao
 
     @Override
     public void save(T t) {
-        getSession().save(t);
+       getSession().save(t);
     }
 
     @Override

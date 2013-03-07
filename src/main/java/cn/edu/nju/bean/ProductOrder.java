@@ -18,6 +18,7 @@ public class ProductOrder implements Serializable {
 
     @javax.persistence.Column(name = "id")
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public int getId() {
         return id;
     }
@@ -28,7 +29,7 @@ public class ProductOrder implements Serializable {
 
     private User user;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "customer_id")
     public User getUser() {
         return user;
@@ -40,7 +41,7 @@ public class ProductOrder implements Serializable {
 
     private Product product;
 
-    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     @JoinColumn(name = "product_id")
     public Product getProduct() {
         return product;
@@ -75,7 +76,7 @@ public class ProductOrder implements Serializable {
     }
 
     private Store store;
-    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     @JoinColumn(name = "store_id")
     public Store getStore() {
         return store;
@@ -104,8 +105,8 @@ public class ProductOrder implements Serializable {
     @Override
     public int hashCode() {
         int result = id;
-        result = 31 * result + user.hashCode();
-        result = 31 * result + product.hashCode();
+        result = 31 * result + (user==null?0:user.getId());
+        result = 31 * result + (product==null?0:product.getId());
         result = 31 * result + orderNum;
         result = 31 * result + (orderDate != null ? orderDate.hashCode() : 0);
         return result;

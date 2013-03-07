@@ -14,10 +14,25 @@ import java.util.Set;
 @javax.persistence.Table(name = "user", schema = "", catalog = "dessert_house")
 @Entity
 public class User implements Serializable {
+    public static final String CUSTOMER="CUSTOMER";
+    public static final String CASHIER="CASHIER";
+    public static final String MANAGER="MANAGER";
+    public static final String SYSTEM_MANAGER="SYSTEM_MANAGER";
+
+    public User(){}
+    public User(String userName, String password, VipCard vipCard, String type, Store store) {
+        this.userName = userName;
+        this.password = password;
+        this.vipCard = vipCard;
+        this.type = type;
+        this.store = store;
+    }
+
     private int id;
 
     @javax.persistence.Column(name = "id")
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public int getId() {
         return id;
     }
@@ -28,7 +43,7 @@ public class User implements Serializable {
 
     private Set<ProductOrder> productOrderEntities;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user",fetch = FetchType.EAGER)
     public Set<ProductOrder> getProductOrderEntities() {
         return productOrderEntities;
     }
@@ -38,7 +53,7 @@ public class User implements Serializable {
     }
 
     private Set<Sale> sales;
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user",fetch = FetchType.EAGER)
     public Set<Sale> getSales() {
         return sales;
     }
@@ -82,18 +97,6 @@ public class User implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
-
-//    private int vipCardId;
-//
-//    @javax.persistence.Column(name = "vip_card_id")
-//    @Basic
-//    public int getVipCardId() {
-//        return vipCardId;
-//    }
-//
-//    public void setVipCardId(int vipCardId) {
-//        this.vipCardId = vipCardId;
-//    }
 
     private VipCard vipCard;
 
@@ -157,7 +160,7 @@ public class User implements Serializable {
 
     private Set<ChargeLog> chargeLogs;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user",fetch = FetchType.EAGER)
     public Set<ChargeLog> getChargeLogs() {
         return chargeLogs;
     }
@@ -167,7 +170,7 @@ public class User implements Serializable {
     }
 
     private Store store;
-    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     @JoinColumn(name = "store_id")
     public Store getStore() {
         return store;
@@ -203,7 +206,7 @@ public class User implements Serializable {
         result = 31 * result + (userName != null ? userName.hashCode() : 0);
         result = 31 * result + (password != null ? password.hashCode() : 0);
         result = 31 * result + (email != null ? email.hashCode() : 0);
-        result = 31 * result + vipCard.hashCode();
+        result = 31 * result + (vipCard==null?0:vipCard.getId());
         result = 31 * result + age;
         result = 31 * result + sex;
         result = 31 * result + (address != null ? address.hashCode() : 0);

@@ -3,6 +3,7 @@ package cn.edu.nju.util;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * Created with IntelliJ IDEA.
@@ -32,11 +33,11 @@ public class HibernateUtil {
         session.set(null);
     }
 
-    public SessionFactory getSession_factory() {
+    public static SessionFactory getSession_factory() {
         return session_factory;
     }
 
-    public void setSession_factory(SessionFactory session_factory) {
+    public static void setSession_factory(SessionFactory session_factory) {
         HibernateUtil.session_factory = session_factory;
     }
 }

@@ -17,6 +17,7 @@ public class ChargeLog {
 
     @javax.persistence.Column(name = "id")
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public int getId() {
         return id;
     }
@@ -27,7 +28,7 @@ public class ChargeLog {
 
     private User user;
 
-    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     @JoinColumn(name = "holder_id")
     public User getUser() {
         return user;
@@ -39,7 +40,7 @@ public class ChargeLog {
 
     private VipCard vipCard;
 
-    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     @JoinColumn(name = "vip_card_id")
     public VipCard getVipCard() {
         return vipCard;
@@ -94,8 +95,8 @@ public class ChargeLog {
         int result;
         long temp;
         result = id;
-        result = 31 * result + user.hashCode();
-        result = 31 * result + vipCard.hashCode();
+        result = 31 * result + (user==null?0:user.getId());
+        result = 31 * result + (vipCard==null?0:vipCard.getId());
         temp = chargeAmount != +0.0d ? Double.doubleToLongBits(chargeAmount) : 0L;
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         result = 31 * result + (chargeDate != null ? chargeDate.hashCode() : 0);

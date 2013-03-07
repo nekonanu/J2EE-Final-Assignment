@@ -1,9 +1,6 @@
 package cn.edu.nju.bean;
 
-import javax.persistence.Basic;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Set;
 
@@ -16,10 +13,17 @@ import java.util.Set;
  */
 @Entity
 public class Store implements Serializable {
+    public Store(){}
+    public Store(String storeName, String storeLocation) {
+        this.storeName = storeName;
+        this.storeLocation = storeLocation;
+    }
+
     private int id;
 
     @javax.persistence.Column(name = "id")
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public int getId() {
         return id;
     }
@@ -53,7 +57,7 @@ public class Store implements Serializable {
     }
 
     private Set<Product> products;
-    @OneToMany(mappedBy = "store")
+    @OneToMany(mappedBy = "store",fetch = FetchType.EAGER)
     public Set<Product> getProducts() {
         return products;
     }
@@ -63,7 +67,7 @@ public class Store implements Serializable {
     }
 
     private Set<ProductOrder> productOrders;
-    @OneToMany(mappedBy = "store")
+    @OneToMany(mappedBy = "store",fetch = FetchType.EAGER)
     public Set<ProductOrder> getProductOrders() {
         return productOrders;
     }
@@ -72,8 +76,9 @@ public class Store implements Serializable {
         this.productOrders = productOrders;
     }
 
+
     private Set<User> users;
-    @OneToMany(mappedBy = "store")
+    @OneToMany(mappedBy = "store",fetch = FetchType.EAGER)
     public Set<User> getUsers() {
         return users;
     }
@@ -83,7 +88,7 @@ public class Store implements Serializable {
     }
 
     private Set<Sale> sales;
-    @OneToMany(mappedBy = "store")
+    @OneToMany(mappedBy = "store",fetch = FetchType.EAGER)
     public Set<Sale> getSales() {
         return sales;
     }
