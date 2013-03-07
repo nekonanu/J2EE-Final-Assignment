@@ -42,7 +42,6 @@ To change this template use File | Settings | File Templates.
     <div class="row">
         <div class="span6">
             <div class="hero-unit hero-unit-opacity2">
-                <%--<form class="form-horizontal sign-up-font-setting" method="POST" action="">--%>
                 <form:form method="post" action="/customer/signUp" commandName="customerSignUpForm">
                     <fieldset>
                         <legend>快速注册</legend>
@@ -86,7 +85,6 @@ To change this template use File | Settings | File Templates.
                         </div>
                     </fieldset>
                 </form:form>
-                <%--</form>--%>
             </div>
         </div>
     </div>

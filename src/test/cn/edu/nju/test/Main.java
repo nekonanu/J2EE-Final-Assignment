@@ -2,15 +2,10 @@ package cn.edu.nju.test;
 
 import cn.edu.nju.bean.*;
 import cn.edu.nju.dao.IOrderDao;
-import cn.edu.nju.dao.IProductDao;
-import cn.edu.nju.dao.IStoreDao;
-import cn.edu.nju.dao.impl.OrderDaoImpl;
-import cn.edu.nju.dao.impl.StoreDao;
 import cn.edu.nju.service.IProductService;
 import cn.edu.nju.service.IStoreService;
 import cn.edu.nju.service.IUserService;
 import cn.edu.nju.util.HibernateUtil;
-import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;

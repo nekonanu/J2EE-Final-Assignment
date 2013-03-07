@@ -37,5 +37,21 @@
         </ul>
     </div>
 </div>
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span4">
+            <ul class="nav nav-list">
+                <li class="nav-header">欢迎使用</li>
+                <li class="active"><a href="<%=request.getContextPath()%>/customer/home"</li>
+                <li><a href="<%=request.getContextPath()%>/customer/order">订购甜点</a></li>
+            </ul>
+        </div>
+        <div class="span8">
+            <div class="hero-unit hero-unit-opacity2">
+                <p>这是内容</p>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
