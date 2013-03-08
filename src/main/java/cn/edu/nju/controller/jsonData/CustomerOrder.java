@@ -29,4 +29,11 @@ public class CustomerOrder {
     public void setProduct_num(int product_num) {
         this.product_num = product_num;
     }
+
+    public boolean isNumberValid(){
+        if (product_num<=0)
+            return false;
+        else
+            return true;
+    }
 }

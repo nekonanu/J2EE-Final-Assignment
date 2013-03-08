@@ -3,19 +3,27 @@ package cn.edu.nju.controller;
 import cn.edu.nju.bean.*;
 import cn.edu.nju.controller.jsonData.CustomerOrder;
 import cn.edu.nju.controller.jsonData.ChargeForm;
+import cn.edu.nju.controller.jsonData.LoginForm;
 import cn.edu.nju.controller.validation.CustomerSignUpForm;
 import cn.edu.nju.service.IProductService;
 import cn.edu.nju.service.IStoreService;
 import cn.edu.nju.service.IUserService;
 import cn.edu.nju.service.IVipCardService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.WebAuthenticationDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.List;
@@ -41,6 +49,9 @@ public class CustomerController {
     @Autowired
     private IProductService productService;
     private CustomerOrder customerOrders;
+    @Autowired
+    @Qualifier("userAuthManager")
+    protected AuthenticationManager userAuthManager;
 
 
     @RequestMapping("/test")
@@ -67,6 +78,13 @@ public class CustomerController {
     public Map processOrder(@RequestBody List<CustomerOrder> customerOrderList){
         Map map=new HashMap();
         User user = userService.findUserByName(getUserName());
+        for (CustomerOrder order:customerOrderList){
+            if (!order.isNumberValid()){
+                map.put("result","fail");
+                map.put("errorMessage","预定数量必须大于0");
+                return map;
+            }
+        }
         if (productService.customerCanAfford(customerOrderList,user)){
             for (CustomerOrder order:customerOrderList){
                 Product product=productService.findByID(order.getProduct_id());
@@ -152,9 +170,35 @@ public class CustomerController {
         return "/customer/signUp";
     }
 
-    @RequestMapping(value = "/login")
+    @RequestMapping(value = "/login",method = RequestMethod.GET)
     public String login(){
         return "/customer/login";
+    }
+
+    /**
+     * ajax登录验证
+     * @param loginForm
+     * @param request
+     * @param response
+     * @return
+     */
+    @RequestMapping(value = "/login",method = RequestMethod.POST)
+    @ResponseBody
+    public Map login(@RequestBody LoginForm loginForm,
+                     HttpServletRequest request, HttpServletResponse response){
+        Map map=new HashMap();
+        User user=userService.findUserByName(loginForm.getUserName());
+        if (user!=null&&user.getPassword().equals(user.getPassword())){
+            UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(loginForm.getUserName(), loginForm.getPassword());
+            request.getSession();
+            token.setDetails(new WebAuthenticationDetails(request));
+            Authentication authentication = userAuthManager.authenticate(token);
+            SecurityContextHolder.getContext().setAuthentication(authentication);
+            map.put("result","success");
+        }else{
+            map.put("result","fail");
+        }
+        return map;
     }
 
 

@@ -15,7 +15,7 @@
         <p id="errorMessage"></p>
     </div>
     <div class="modal-footer">
-        <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+        <button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">关闭</button>
     </div>
 </div>
 
@@ -28,7 +28,7 @@
         <p id="infoMessage"></p>
     </div>
     <div class="modal-footer">
-        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        <button class="btn btn-success" data-dismiss="modal" aria-hidden="true">关闭</button>
     </div>
 </div>
 

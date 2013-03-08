@@ -10,6 +10,7 @@ import cn.edu.nju.service.IVipCardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -39,6 +40,13 @@ public class VipCardServiceImpl implements IVipCardService {
     public void cardCharge(User user, int amount) {
         VipCard vipCard=user.getVipCard();
         vipCardDao.charge(vipCard,amount);
+        if (vipCard.getStatus().equals(VipCard.FREEZE)){
+            vipCard.setStatus(VipCard.ACTIVATE);
+            Calendar calendar=Calendar.getInstance();
+            calendar.add(Calendar.YEAR,1);
+            vipCard.setDeadlineDate(calendar.getTime());
+        }
+        vipCardDao.update(vipCard);
         ChargeLog chargeLog=new ChargeLog();
         chargeLog.setUser(user);
         chargeLog.setChargeAmount(amount);
