@@ -2,6 +2,8 @@ package cn.edu.nju.service;
 
 import cn.edu.nju.bean.Store;
 
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: nekosama
@@ -11,7 +13,9 @@ import cn.edu.nju.bean.Store;
  */
 public interface IStoreService {
     public void addStore(Store store);
+    public Store findByName(String name);
     public void updateStore(Store store);
     public void deleteStore(int id);
     public Store findByID(int id);
+    public List<Store> getAllStore();
 }

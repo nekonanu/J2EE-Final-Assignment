@@ -6,6 +6,8 @@ import cn.edu.nju.service.IStoreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: nekosama
@@ -24,6 +26,11 @@ public class StoreServiceImpl implements IStoreService {
     }
 
     @Override
+    public Store findByName(String name) {
+        return storeDao.findByName(name);
+    }
+
+    @Override
     public void updateStore(Store store) {
         storeDao.update(store);
     }
@@ -36,5 +43,10 @@ public class StoreServiceImpl implements IStoreService {
     @Override
     public Store findByID(int id) {
         return storeDao.findById(id);
+    }
+
+    @Override
+    public List<Store> getAllStore() {
+        return storeDao.getAllStore();
     }
 }

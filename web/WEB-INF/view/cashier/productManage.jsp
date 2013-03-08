@@ -37,6 +37,35 @@
                 }
             });
         });
+        $(".delete-btn").click(function(){
+            var id = $(this).get(0).getAttribute("product-id");
+            $.ajax({
+                url: "<%=request.getContextPath()%>/cashier/productManage",
+                type:'POST',
+                dataType:'json',
+                contentType:'application/json;charset=UTF-8',
+                data:JSON.stringify({productId:id,productName:"0",productPrice:"0",productRemainNum:"0",op:"delete"}),
+                success:function(data){
+                    if(data.result=="success"){
+                        $("#info").append("修改成功！");
+                        setTimeout(function(){
+                            $.ajax({
+                                type: "GET",
+                                url: "<%=request.getContextPath()%>/cashier/productManage",
+                                success: function(msg){
+                                    $("#contextContainer").empty();
+                                    $("#contextContainer").append(msg);
+                                }
+                            });
+                        },3000);
+                    }else{
+                        $("#errorMessage").empty();
+                        $("#errorMessage").append("有关联数据，无法删除！");
+                        $("#errorModal").modal('show');
+                    }
+                }
+            });
+        });
     });
 </script>
 <div class="row">

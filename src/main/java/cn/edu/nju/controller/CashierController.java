@@ -2,13 +2,17 @@ package cn.edu.nju.controller;
 
 import cn.edu.nju.bean.Product;
 import cn.edu.nju.bean.ProductOrder;
+import cn.edu.nju.bean.Store;
 import cn.edu.nju.bean.User;
 import cn.edu.nju.controller.jsonData.ChangeProductData;
 import cn.edu.nju.controller.jsonData.LoginForm;
+import cn.edu.nju.controller.jsonData.ProductAddData;
 import cn.edu.nju.service.IProductService;
+import cn.edu.nju.service.IStoreService;
 import cn.edu.nju.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -42,7 +46,8 @@ public class CashierController {
     private IUserService userService;
     @Autowired
     private IProductService productService;
-
+    @Autowired
+    private IStoreService storeService;
     @Autowired
     @Qualifier("userAuthManager")
     protected AuthenticationManager userAuthManager;
@@ -75,6 +80,38 @@ public class CashierController {
         return map;
     }
 
+    @RequestMapping(value = "/productAdd",method = RequestMethod.GET)
+    public String productAdd(Model model){
+        List<Store> stores=storeService.getAllStore();
+        model.addAttribute("storeRecords",stores);
+        return "/cashier/productAdd";
+    }
+
+    @RequestMapping(value = "/productAdd",method = RequestMethod.POST)
+    @ResponseBody
+    public Map productAdd(@RequestBody List<ProductAddData> productAddDatas){
+        Map map=new HashMap();
+        for (ProductAddData data:productAddDatas){
+            List<String[]> errors=data.errors();
+            if (errors.size()!=0){
+                map.put("result","fail");
+                map.put("errorType","numberValid");
+                return map;
+            }
+        }
+        for (ProductAddData data:productAddDatas){
+            Product product=new Product();
+            product.setProductName(data.getProductName());
+            product.setRemainNum(Integer.parseInt(data.getProductNum()));
+            product.setPrice(Double.parseDouble(data.getProductPrice()));
+            Store store=storeService.findByName(data.getStoreName());
+            product.setStore(store);
+            productService.addProduct(product);
+            map.put("result","success");
+        }
+        return map;
+    }
+
     @RequestMapping(value = "/productManage",method = RequestMethod.GET)
     public String productManage(Model model){
         User user=userService.findUserByName(getUserName());
@@ -87,9 +124,13 @@ public class CashierController {
     @ResponseBody
     public Map productManage(@RequestBody ChangeProductData changeProductData){
         Map map=new HashMap();
-        if (changeProductData.getOp().equals("change")){
-            productService.deleteProductByID(changeProductData.getProductId());
-            map.put("result","success");
+        if (changeProductData.getOp().equals("delete")){
+            try {
+                productService.deleteProductByID(changeProductData.getProductId());
+                map.put("result","success");
+            } catch (DataIntegrityViolationException exception){
+                map.put("result","fail");
+            }
             return map;
         }
         List<String[]> errors=changeProductData.errors();

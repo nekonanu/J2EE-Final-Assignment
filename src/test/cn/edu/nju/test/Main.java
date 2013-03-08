@@ -2,6 +2,7 @@ package cn.edu.nju.test;
 
 import cn.edu.nju.bean.*;
 import cn.edu.nju.dao.IOrderDao;
+import cn.edu.nju.dao.impl.OrderDaoImpl;
 import cn.edu.nju.service.IProductService;
 import cn.edu.nju.service.IStoreService;
 import cn.edu.nju.service.IUserService;
@@ -34,13 +35,19 @@ public class Main {
         ApplicationContext context=new ClassPathXmlApplicationContext("classpath*:/META-INF/spring/spring-config.xml");
         productService = (IProductService) context.getBean("productService");
         userService = (IUserService) context.getBean("userService");
-//        storeService= (IStoreService) context.getBean("storeService");
-//        orderDao=context.getBean(OrderDaoImpl.class);
+        storeService= (IStoreService) context.getBean("storeService");
+        orderDao=context.getBean(OrderDaoImpl.class);
         HibernateUtil.setSession_factory((SessionFactory) context.getBean("mySessionFactory"));
     }
 
     public static void main(String args[]){
-        productService.deleteProductByID(4);
+        storeService.deleteStore(1);
+
+
+//        orderDao.deleteById(1);
+//        store.setId(2);
+//        storeService.deleteStore(1);
+//        productService.deleteProductByID(4);
 //        System.out.println("=======");
 //        User user=userService.findUserByID(9);
 //        System.out.println("=======");

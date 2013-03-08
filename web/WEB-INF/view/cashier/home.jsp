@@ -25,7 +25,18 @@
                 }
             });
         });
-        <%--销售处理--%>
+        <%--产品添加--%>
+        $("#productAdd").click(function(){
+            $.ajax({
+                type: "GET",
+                url: "<%=request.getContextPath()%>/cashier/productAdd",
+                success: function(msg){
+                    $("#contextContainer").empty();
+                    $("#contextContainer").append(msg);
+                }
+            });
+        });
+        <%--销售删改--%>
         $("#sale").click(function(){
             $.ajax({
                 type: "GET",
@@ -81,7 +92,9 @@
                 <li class="nav-header">欢迎使用</li>
                 <li><a href="<%=request.getContextPath()%>/cashier/home">介绍</a></li>
                 <li class="divider"></li>
-                <li id="productManage"><a>产品管理</a></li>
+                <li id="productAdd"><a>产品添加</a></li>
+                <li id="productManage"><a>产品删改</a></li>
+                <li class="divider"></li>
                 <li id="sale"><a>销售处理</a></li>
             </ul>
         </div>

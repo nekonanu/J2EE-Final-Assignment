@@ -27,4 +27,12 @@ public class StoreDao extends BaseDaoSupport<Store> implements IStoreDao{
             return list.get(0);
         return null;
     }
+
+    @Override
+    public List<Store> getAllStore() {
+        Session session=getSession();
+        Query query=session.createQuery("from Store s");
+        List<Store> list=query.list();
+        return list;
+    }
 }
