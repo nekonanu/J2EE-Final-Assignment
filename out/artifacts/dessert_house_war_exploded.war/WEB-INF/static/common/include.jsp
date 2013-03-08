@@ -17,6 +17,8 @@
 <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script> -->
 <script src="<%=path%>/static/js/jquery.js"></script>
 <script src="<%=path%>/static/js/bootstrap.js"></script>
+<script src="<%=path%>/static/js/jquery-form.js"></script>
+
 
 
 <link type="text/css" rel="stylesheet" href="<%=path%>/static/css/bootstrap.css"/>

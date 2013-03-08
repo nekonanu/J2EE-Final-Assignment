@@ -2,16 +2,12 @@ package cn.edu.nju.controller;
 
 import cn.edu.nju.bean.*;
 import cn.edu.nju.controller.jsonData.CustomerOrder;
-import cn.edu.nju.controller.jsonData.CustomerOrderList;
+import cn.edu.nju.controller.jsonData.ChargeForm;
 import cn.edu.nju.controller.validation.CustomerSignUpForm;
-import cn.edu.nju.dao.HibernateUtil;
 import cn.edu.nju.service.IProductService;
 import cn.edu.nju.service.IStoreService;
 import cn.edu.nju.service.IUserService;
 import cn.edu.nju.service.IVipCardService;
-import cn.edu.nju.util.JsonUtil;
-import org.codehaus.jackson.annotate.JsonAnyGetter;
-import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -19,7 +15,6 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
 import java.util.HashMap;
@@ -76,6 +71,7 @@ public class CustomerController {
             for (CustomerOrder order:customerOrderList){
                 Product product=productService.findByID(order.getProduct_id());
                 productService.orderProduct(product,user,order.getProduct_num());
+                vipCardService.buyByCard(user,product.getPrice()*order.getProduct_num());
             }
             map.put("result","success");
             map.put("infoMessage","恭喜您！订购成功！");
@@ -109,12 +105,33 @@ public class CustomerController {
     }
 
     @RequestMapping(value = "/charge",method = RequestMethod.GET)
-    public String chargePage(Model model){
+    public String chargePage(Model model,Map map){
         User user=userService.findUserByName(getUserName());
         VipCard vipCard=user.getVipCard();
+        ChargeForm chargeForm=new ChargeForm();
+        map.put( "chargeForm",chargeForm);
         model.addAttribute("charge_vipCardRecord",vipCard);
         model.addAttribute("charge_storeRecord",user.getStore());
         return "/customer/charge";
+    }
+
+    @RequestMapping(value = "/charge",method = RequestMethod.POST)
+    @ResponseBody
+    public Map processCharge(@RequestBody ChargeForm chargeForm){
+        List<String[]> errors=chargeForm.errors();
+        Map map=new HashMap();
+        if (errors.size()==0){
+            User user=userService.findUserByName(getUserName());
+            vipCardService.cardCharge(user,Integer.parseInt(chargeForm.getChargeNum()));
+            map.put("result","success");
+        }else {
+            map.put("result","fail");
+            for (int index=0;index<errors.size();index++){
+                map.put("errorType"+index,errors.get(index)[0]);
+                map.put("errorMessage"+index,errors.get(index)[1]);
+            }
+        }
+        return map;
     }
 
     @RequestMapping(value = "/messageBox",method = RequestMethod.GET)
@@ -139,6 +156,8 @@ public class CustomerController {
     public String login(){
         return "/customer/login";
     }
+
+
 
     @RequestMapping(value = "/signUp",method = RequestMethod.POST)
     public String postSignUp(@Valid CustomerSignUpForm customerSignUpForm,

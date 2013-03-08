@@ -1,12 +1,16 @@
 package cn.edu.nju.service.impl;
 
+import cn.edu.nju.bean.ChargeLog;
 import cn.edu.nju.bean.User;
 import cn.edu.nju.bean.VipCard;
+import cn.edu.nju.dao.IChargeLogDao;
 import cn.edu.nju.dao.IUserDao;
 import cn.edu.nju.dao.IVipCardDao;
 import cn.edu.nju.service.IVipCardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Date;
 
 /**
  * Created with IntelliJ IDEA.
@@ -21,6 +25,10 @@ public class VipCardServiceImpl implements IVipCardService {
     private IUserDao userDao;
     @Autowired
     private IVipCardDao vipCardDao;
+    @Autowired
+    private IChargeLogDao chargeLogDao;
+
+
 
     @Override
     public void addVipCard(VipCard vipCard) {
@@ -31,6 +39,19 @@ public class VipCardServiceImpl implements IVipCardService {
     public void cardCharge(User user, int amount) {
         VipCard vipCard=user.getVipCard();
         vipCardDao.charge(vipCard,amount);
+        ChargeLog chargeLog=new ChargeLog();
+        chargeLog.setUser(user);
+        chargeLog.setChargeAmount(amount);
+        chargeLog.setChargeDate(new Date());
+        chargeLog.setVipCard(vipCard);
+        chargeLogDao.save(chargeLog);
+    }
+
+    @Override
+    public void buyByCard(User user, double amount) {
+        VipCard card=user.getVipCard();
+        card.setRemainAmount(card.getRemainAmount()-amount);
+        vipCardDao.update(card);
     }
 
     @Override

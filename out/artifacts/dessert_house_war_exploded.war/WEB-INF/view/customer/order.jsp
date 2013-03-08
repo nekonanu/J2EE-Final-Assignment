@@ -19,7 +19,7 @@
 //            console.log(element);
             for(var i=0;i<size;i++){
                 var id=element.get(i).getAttribute("order-product_id");
-                var num=$(".product_num").get(i).value;
+                var num=$("#product_num"+id).val();
 //                console.log(num);
 
                 console.log("product_id"+id);
@@ -30,13 +30,10 @@
                 console.log(list[i]);
             }
 
-            var postData="{ name: 'John', time: '2pm' }";
-            console.log(list);
             $.ajax({
                 type: "POST",
                 url: "<%=request.getContextPath()%>/customer/order",
                 dataType:'json',
-//                data:JSON.stringify([{product_id:'5',product_num:'2'},{product_id:'1',product_num:'4'}]),
                 data:JSON.stringify(list),
                 contentType:'application/json;charset=UTF-8',
                 success: function(msg){
@@ -74,7 +71,7 @@
                     <td>${record.productName}</td>
                     <td>${record.remainNum}</td>
                     <td>${record.price}</td>
-                    <td><input type="number" class="input-mini product_num" value="0"/> </td>
+                    <td><input id="product_num${record.id}" type="number" class="input-mini product_num" value="0"/> </td>
                     <td><button class="btn btn-primary btn-small" data-toggle="button" order-product_id="${record.id}">预定</button> </td>
                 </tr>
             </c:forEach>

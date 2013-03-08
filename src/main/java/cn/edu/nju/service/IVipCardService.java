@@ -13,6 +13,8 @@ import cn.edu.nju.bean.VipCard;
 public interface IVipCardService{
     public void addVipCard(VipCard vipCard);
     public void cardCharge(User user,int amount);
+
+    public void buyByCard(User user,double amount);
     /**
      * 判断是否过期
      * @param user

@@ -22,7 +22,7 @@
 <div id="infoModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3>出错啦！！</h3>
+        <h3>温馨提示</h3>
     </div>
     <div class="modal-body">
         <p id="infoMessage"></p>

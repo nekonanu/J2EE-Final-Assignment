@@ -1,7 +1,8 @@
 package cn.edu.nju.bean;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.io.Serializable;
+import java.util.Date;
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,7 +13,7 @@ import java.sql.Date;
  */
 @javax.persistence.Table(name = "charge_log", schema = "", catalog = "dessert_house")
 @Entity
-public class ChargeLog {
+public class ChargeLog implements Serializable {
     private int id;
 
     @javax.persistence.Column(name = "id")
