@@ -3,6 +3,7 @@ package cn.edu.nju.dao.impl;
 import cn.edu.nju.dao.HibernateUtil;
 import cn.edu.nju.dao.IBaseDao;
 import org.hibernate.Criteria;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Criterion;
@@ -55,7 +56,7 @@ public abstract class BaseDaoSupport<T extends Serializable> implements IBaseDao
 
     @Override
     public void deleteById(int i) {
-        getSession().delete("id",i);
+        getSession().delete(findById(i));
     }
 
     @Override

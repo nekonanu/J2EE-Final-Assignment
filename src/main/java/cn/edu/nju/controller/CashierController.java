@@ -3,7 +3,9 @@ package cn.edu.nju.controller;
 import cn.edu.nju.bean.Product;
 import cn.edu.nju.bean.ProductOrder;
 import cn.edu.nju.bean.User;
+import cn.edu.nju.controller.jsonData.ChangeProductData;
 import cn.edu.nju.controller.jsonData.LoginForm;
+import cn.edu.nju.service.IProductService;
 import cn.edu.nju.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -22,6 +24,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -37,6 +40,8 @@ import java.util.Set;
 public class CashierController {
     @Autowired
     private IUserService userService;
+    @Autowired
+    private IProductService productService;
 
     @Autowired
     @Qualifier("userAuthManager")
@@ -76,6 +81,29 @@ public class CashierController {
         Set<Product> products=user.getStore().getProducts();
         model.addAttribute("productRecords",products);
         return "/cashier/productManage";
+    }
+
+    @RequestMapping(value = "/productManage",method = RequestMethod.POST)
+    @ResponseBody
+    public Map productManage(@RequestBody ChangeProductData changeProductData){
+        Map map=new HashMap();
+        if (changeProductData.getOp().equals("change")){
+            productService.deleteProductByID(changeProductData.getProductId());
+            map.put("result","success");
+            return map;
+        }
+        List<String[]> errors=changeProductData.errors();
+        if (errors.size()==0){
+            Product product=productService.findByID(changeProductData.getProductId());
+            product.setProductName(changeProductData.getProductName());
+            product.setPrice(Double.parseDouble(changeProductData.getProductPrice()));
+            product.setRemainNum(Integer.parseInt(changeProductData.getProductRemainNum()));
+            productService.update(product);
+            map.put("result","success");
+        }else {
+            map.put("result","fail");
+        }
+        return map;
     }
 
     @RequestMapping(value = "/sale",method = RequestMethod.GET)

@@ -40,11 +40,11 @@ public class Main {
     }
 
     public static void main(String args[]){
-        Product product=productService.findByID(4);
-        System.out.println("=======");
-        User user=userService.findUserByID(9);
-        System.out.println("=======");
-        productService.orderProduct(product,user,1);
+        productService.deleteProductByID(4);
+//        System.out.println("=======");
+//        User user=userService.findUserByID(9);
+//        System.out.println("=======");
+//        productService.orderProduct(product,user,1);
 //        testAddStore("2");
 //        testAddProduct(1);
 //        testAddOrder(4,9,1);

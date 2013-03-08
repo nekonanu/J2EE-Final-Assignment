@@ -6,7 +6,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/helloService.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362044105315" ignored="false" />
     <file path="/spring-config.xml" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362670068161" ignored="false" />
-    <file path="/Main.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362668196547" ignored="false" />
+    <file path="/Main.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362742387304" ignored="false" />
     <file path="/Product.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362670998973" ignored="false" />
     <file path="/ProductDao.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362362953624" ignored="false" />
     <file path="/ProductDaoImpl.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362635975550" ignored="false" />
@@ -49,7 +49,7 @@
     <file path="/IProductDao.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362367947596" ignored="false" />
     <file path="/IUserDao.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362465928664" ignored="false" />
     <file path="/ChargeLogEntity.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362368119259" ignored="false" />
-    <file path="/BaseDaoSupport.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362667797269" ignored="false" />
+    <file path="/BaseDaoSupport.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362743180705" ignored="false" />
     <file path="E:/local workspace/J2EE/dessertHouse/src/main/resources/META-INF/myMessage.properties" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362377734754" ignored="false" />
     <file path="/myMessage.properties" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362377733320" ignored="false" />
     <file path="/jdbc.properties" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362377768284" ignored="false" />
@@ -86,7 +86,7 @@
     <file path="/UserInfo.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362470342896" ignored="false" />
     <file path="/VipCardInfo.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362470262643" ignored="false" />
     <file path="/StoreInfo.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362470202148" ignored="false" />
-    <file path="/CashierController.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362736709770" ignored="false" />
+    <file path="/CashierController.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362742366178" ignored="false" />
     <file path="/EmployeeController.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362730457793" ignored="false" />
     <file path="/UserController.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362480925725" ignored="false" />
     <file path="/login.jsp" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362735704512" ignored="false" />
@@ -128,8 +128,10 @@
     <file path="/dialog.jsp" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362734947802" ignored="false" />
     <file path="/IChargeLogDao.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362723931664" ignored="false" />
     <file path="/ChargeLogDao.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362724071308" ignored="false" />
-    <file path="/productManage.jsp" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362737442406" ignored="false" />
+    <file path="/productManage.jsp" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362742198171" ignored="false" />
     <file path="/loginFail.jsp" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362732022002" ignored="false" />
+    <file path="/changeProductData.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362738397566" ignored="false" />
+    <file path="/ChangeProductData.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362742211447" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,49 +201,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CashierController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/CashierController.java">
+      <file leaf-file-name="ChangeProductData.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/ChangeProductData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="0" selection-start="1939" selection-end="1939" vertical-scroll-proportion="0.0">
+            <state line="20" column="27" selection-start="492" selection-end="492" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1369#1379#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/cashier/home.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="80" selection-start="2246" selection-end="2246" vertical-scroll-proportion="-6.923077">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spring-security.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/configuration/META-INF/spring/spring-security.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="71" selection-start="1723" selection-end="1723" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/customer/home.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="57" selection-start="222" selection-end="222" vertical-scroll-proportion="43.807693">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="productManage.jsp" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/cashier/productManage.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="61" selection-start="1522" selection-end="1522" vertical-scroll-proportion="0.6857671">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -249,7 +216,7 @@
       <file leaf-file-name="CustomerController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/CustomerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="192" column="28" selection-start="7145" selection-end="7145" vertical-scroll-proportion="-6.56">
+            <state line="192" column="71" selection-start="7150" selection-end="7150" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -257,37 +224,75 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/customer/login.jsp">
+      <file leaf-file-name="DispatcherServlet.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/spring-webmvc-3.2.1.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="94" selection-start="3472" selection-end="3472" vertical-scroll-proportion="-26.038462">
+            <state line="111" column="19" selection-start="7547" selection-end="7547" vertical-scroll-proportion="-3.84">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/employee/login.jsp">
+      <file leaf-file-name="FrameworkServlet.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/spring-webmvc-3.2.1.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="62" selection-start="855" selection-end="855" vertical-scroll-proportion="-8.884615">
+            <state line="118" column="28" selection-start="7532" selection-end="7532" vertical-scroll-proportion="-4.16">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="order.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/customer/order.jsp">
+      <file leaf-file-name="CashierController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/CashierController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="0" selection-start="1664" selection-end="1840" vertical-scroll-proportion="-13.730769">
+            <state line="92" column="23" selection-start="3629" selection-end="3629" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/cn/edu/nju/test/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="37" selection-start="1523" selection-end="1523" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dialog.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/common/dialog.jsp">
+      <file leaf-file-name="ProductServiceImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/service/impl/ProductServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="38" selection-start="1139" selection-end="1139" vertical-scroll-proportion="-15.692307">
+            <state line="53" column="24" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IBaseDao.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/dao/IBaseDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="14" selection-start="336" selection-end="336" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseDaoSupport.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/dao/impl/BaseDaoSupport.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="58" column="39" selection-start="1525" selection-end="1525" vertical-scroll-proportion="0.36034483">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="productManage.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/cashier/productManage.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="116" selection-start="1123" selection-end="1125" vertical-scroll-proportion="-12.961538">
               <folding />
             </state>
           </provider>
@@ -320,10 +325,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/service/impl/VipCardServiceImpl.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/view/employee/home.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/view/customer/orderInfo.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/LoginForm.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/view/employee/loginFail.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/view/cashier/login.jsp" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
@@ -332,10 +333,14 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/CustomerController.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/view/customer/login.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/view/employee/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/CashierController.java" />
         <option value="$PROJECT_DIR$/src/main/configuration/META-INF/spring/spring-security.xml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/view/cashier/home.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/changeProductData.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/view/cashier/productManage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/ChangeProductData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/CashierController.java" />
+        <option value="$PROJECT_DIR$/src/test/cn/edu/nju/test/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/dao/impl/BaseDaoSupport.java" />
       </list>
     </option>
   </component>
@@ -663,36 +668,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nju" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dessert_house" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dessert house" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="configuration" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -780,7 +755,7 @@
       <recent name="E:\Dropbox\workplace\J2EE\dessert house\src\main\configuration\META-INF" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 7.0">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1237,8 +1212,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298887" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25119236" sideWeight="0.5964912" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4258373" sideWeight="0.49682036" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25119236" sideWeight="0.6251994" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37480065" sideWeight="0.49682036" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="JavaEE:App" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26947537" sideWeight="0.42424244" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1309,37 +1284,41 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/common/dialog.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="55" selection-start="1041" selection-end="1049" vertical-scroll-proportion="-11.0">
+        <state line="30" column="38" selection-start="1139" selection-end="1139" vertical-scroll-proportion="-16.076923">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/employee/loginFail.jsp">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/employee/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="12" selection-start="276" selection-end="276" vertical-scroll-proportion="-8.5">
-          <folding />
+        <state line="23" column="62" selection-start="855" selection-end="855" vertical-scroll-proportion="-9.0">
+          <folding>
+            <marker date="1362735731591" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1362735731591" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1362735731591" expanded="true" signature="-1:-1" placeholder="{&quot;type&quot;: 'POST'...}" />
+            <marker date="1362735731591" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1362735731591" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1362735731591" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1362735731591" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1362735731591" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1362735731591" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1362735731591" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/EmployeeController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/CustomerOrder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="870" selection-end="870" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/CommonController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0">
+        <state line="33" column="25" selection-start="715" selection-end="715" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/ChargeForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0">
+        <state line="35" column="42" selection-start="825" selection-end="852" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#764#774#0" expanded="true" />
@@ -1347,30 +1326,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/customer/orderInfo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/customer/order.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="1664" selection-end="1840" vertical-scroll-proportion="-13.730769">
+        <state line="20" column="50" selection-start="726" selection-end="738" vertical-scroll-proportion="-9.807693">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/common/dialog.jsp">
+    <entry file="jar://$PROJECT_DIR$/lib/spring-web-3.2.1.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="38" selection-start="1139" selection-end="1139" vertical-scroll-proportion="-15.692307">
+        <state line="33" column="29" selection-start="2403" selection-end="2403" vertical-scroll-proportion="-6.44">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/spring-webmvc-3.2.1.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="19" selection-start="7547" selection-end="7547" vertical-scroll-proportion="-3.84">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/spring-webmvc-3.2.1.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="118" column="28" selection-start="7532" selection-end="7532" vertical-scroll-proportion="-4.16">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/cashier/productManage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="116" selection-start="1123" selection-end="1125" vertical-scroll-proportion="-12.961538">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/ChangeProductData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="27" selection-start="492" selection-end="492" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1369#1379#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/CustomerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="192" column="28" selection-start="7145" selection-end="7145" vertical-scroll-proportion="-6.56">
+        <state line="192" column="71" selection-start="7150" selection-end="7150" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1379,51 +1382,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/CashierController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="0" selection-start="1939" selection-end="1939" vertical-scroll-proportion="0.0">
+        <state line="92" column="23" selection-start="3629" selection-end="3629" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/employee/login.jsp">
+    <entry file="file://$PROJECT_DIR$/src/test/cn/edu/nju/test/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="62" selection-start="855" selection-end="855" vertical-scroll-proportion="-8.884615">
+        <state line="42" column="37" selection-start="1523" selection-end="1523" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/customer/login.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/service/impl/ProductServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="94" selection-start="3472" selection-end="3472" vertical-scroll-proportion="-26.038462">
+        <state line="53" column="24" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/configuration/META-INF/spring/spring-security.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/dao/IBaseDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="71" selection-start="1723" selection-end="1723" vertical-scroll-proportion="0.0">
+        <state line="18" column="14" selection-start="336" selection-end="336" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/customer/home.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/dao/impl/BaseDaoSupport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="57" selection-start="222" selection-end="222" vertical-scroll-proportion="43.807693">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/cashier/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="80" selection-start="2246" selection-end="2246" vertical-scroll-proportion="-6.923077">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/cashier/productManage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="61" selection-start="1522" selection-end="1522" vertical-scroll-proportion="0.6857671">
+        <state line="58" column="39" selection-start="1525" selection-end="1525" vertical-scroll-proportion="0.36034483">
           <folding />
         </state>
       </provider>
