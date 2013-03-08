@@ -28,7 +28,7 @@ public class ChargeLog {
 
     private User user;
 
-    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "holder_id")
     public User getUser() {
         return user;
@@ -40,7 +40,7 @@ public class ChargeLog {
 
     private VipCard vipCard;
 
-    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "vip_card_id")
     public VipCard getVipCard() {
         return vipCard;

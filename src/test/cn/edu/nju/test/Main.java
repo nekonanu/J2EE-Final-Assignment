@@ -124,21 +124,21 @@ public class Main {
 
     }
 
-    public static void testAddOrder(int product_id,int customer_id,int store_id){
-        ProductOrder order=new ProductOrder();
-        order.setOrderDate(new Date());
-        order.setOrderNum(1);
-        order.setUser(userService.findUserByID(customer_id));
-        order.setProduct(productService.findByID(product_id));
-        order.setStore(storeService.findByID(store_id));
-
-        Session session=HibernateUtil.currentSession();
-        Transaction tx=session.beginTransaction();
-        session.save(order);
-        tx.commit();
-        HibernateUtil.closeSession();
-//        orderDao.save(order);
-    }
+//    public static void testAddOrder(int product_id,int customer_id,int store_id){
+//        ProductOrder order=new ProductOrder();
+//        order.setOrderDate(new Date());
+//        order.setOrderNum(1);
+//        order.setUser(userService.findUserByID(customer_id));
+//        order.setProduct(productService.findByID(product_id));
+//        order.setStore(storeService.findByID(store_id));
+//
+//        Session session=HibernateUtil.currentSession();
+//        Transaction tx=session.beginTransaction();
+//        session.save(order);
+//        tx.commit();
+//        HibernateUtil.closeSession();
+////        orderDao.save(order);
+//    }
 
     public static void addChargeLog(){
 

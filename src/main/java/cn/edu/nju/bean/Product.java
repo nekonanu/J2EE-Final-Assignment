@@ -85,7 +85,7 @@ public class Product implements Serializable {
     }
 
     private Store store;
-    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "store_id")
     public Store getStore() {
         return store;

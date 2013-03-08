@@ -29,7 +29,7 @@ public class ProductOrder implements Serializable {
 
     private User user;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "customer_id")
     public User getUser() {
         return user;
@@ -41,7 +41,7 @@ public class ProductOrder implements Serializable {
 
     private Product product;
 
-    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "product_id")
     public Product getProduct() {
         return product;
@@ -76,7 +76,7 @@ public class ProductOrder implements Serializable {
     }
 
     private Store store;
-    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "store_id")
     public Store getStore() {
         return store;
