@@ -4,8 +4,10 @@ import cn.edu.nju.bean.Product;
 import cn.edu.nju.bean.ProductOrder;
 import cn.edu.nju.bean.Sale;
 import cn.edu.nju.bean.User;
+import cn.edu.nju.controller.jsonData.CustomerOrder;
 import org.springframework.ui.Model;
 
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -34,6 +36,7 @@ public interface IProductService{
     public void orderProduct(Product product,User user,int amount);
     public Set<ProductOrder> getProductOrders(int store_id);
     public Set<Sale> getSales(int store_id);
+    public boolean customerCanAfford(List<CustomerOrder> customerOrderList,User user);
 
     /**
      * 分店铺分析热卖产品

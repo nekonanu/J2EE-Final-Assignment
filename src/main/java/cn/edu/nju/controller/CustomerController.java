@@ -19,6 +19,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
 import java.util.HashMap;
@@ -61,35 +62,58 @@ public class CustomerController {
     @RequestMapping(value = "/order",method = RequestMethod.GET)
     public String orderPage(Model model){
         User user=userService.findUserByName(getUserName());
-        productService.getAvailableProduct(user.getStore().getId(),model,"productRecords");
-//        Set<Product> availableProduct = productService.getAvailableProduct(user.getStore().getId());
-//        productService.getAvailableProduct(user.getStore().getId())
-//        productService.createModel("productRecords",model,availableProduct);
-//        Set<Product> products= availableProduct;
-//        model.addAttribute("productRecords",products);
+        Set<Product> products= productService.getAvailableProduct(user.getStore().getId());
+        model.addAttribute("productRecords",products);
         return "/customer/order";
     }
 
     @RequestMapping(value = "/order",method = RequestMethod.POST)
     @ResponseBody
-    private Map processOrder(@RequestBody List<CustomerOrder> customerOrderList){
-        User user = userService.findUserByName(getUserName());
-        for (CustomerOrder order:customerOrderList){
-            Product product=productService.findByID(order.getProduct_id());
-            productService.orderProduct(product,user,order.getProduct_num());
-        }
+    public Map processOrder(@RequestBody List<CustomerOrder> customerOrderList){
         Map map=new HashMap();
-        map.put("result","success");
+        User user = userService.findUserByName(getUserName());
+        if (productService.customerCanAfford(customerOrderList,user)){
+            for (CustomerOrder order:customerOrderList){
+                Product product=productService.findByID(order.getProduct_id());
+                productService.orderProduct(product,user,order.getProduct_num());
+            }
+            map.put("result","success");
+            map.put("infoMessage","恭喜您！订购成功！");
+        }else{
+            map.put("result","fail");
+            map.put("errorMessage","你的账户余额不足！");
+        }
         return map;
     }
 
+    /**
+     * 查看已订购
+     * @param model
+     * @return
+     */
+    @RequestMapping(value = "/orderInfo",method = RequestMethod.GET)
+    public String orderInfo(Model model){
+        User user=userService.findUserByName(getUserName());
+        Set<ProductOrder> orders=user.getProductOrderEntities();
+        model.addAttribute("orderInfoRecords",orders);
+        return "/customer/orderInfo";
+    }
+
+
+
     @RequestMapping(value = "/userInfo",method = RequestMethod.GET)
-    public String userInfoPage(){
+    public String userInfoPage(Model model){
+        User user=userService.findUserByName(getUserName());
+        model.addAttribute("userInfoRecord",user);
         return "/customer/userInfo";
     }
 
     @RequestMapping(value = "/charge",method = RequestMethod.GET)
-    public String chargePage(){
+    public String chargePage(Model model){
+        User user=userService.findUserByName(getUserName());
+        VipCard vipCard=user.getVipCard();
+        model.addAttribute("charge_vipCardRecord",vipCard);
+        model.addAttribute("charge_storeRecord",user.getStore());
         return "/customer/charge";
     }
 

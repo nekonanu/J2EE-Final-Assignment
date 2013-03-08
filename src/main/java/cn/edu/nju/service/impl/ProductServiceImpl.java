@@ -1,6 +1,7 @@
 package cn.edu.nju.service.impl;
 
 import cn.edu.nju.bean.*;
+import cn.edu.nju.controller.jsonData.CustomerOrder;
 import cn.edu.nju.dao.IOrderDao;
 import cn.edu.nju.dao.IProductDao;
 import cn.edu.nju.dao.IStoreDao;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -98,6 +100,19 @@ public class ProductServiceImpl implements IProductService {
     @Override
     public Set<Sale> getSales(int store_id) {
         return storeDao.findById(store_id).getSales();
+    }
+
+    @Override
+    public boolean customerCanAfford(List<CustomerOrder> customerOrderList,User user) {
+        double pay=0;
+        for(CustomerOrder order:customerOrderList){
+            Product product=findByID(order.getProduct_id());
+            pay+=product.getPrice()*order.getProduct_num();
+        }
+        if (user.getVipCard().getRemainAmount()>=pay)
+            return true;
+        else
+            return false;
     }
 
     @Override

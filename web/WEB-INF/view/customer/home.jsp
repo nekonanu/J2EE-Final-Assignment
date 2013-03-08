@@ -21,6 +21,17 @@
                 }
             });
         });
+        <%--查看已订购--%>
+        $("#orderInfo").click(function(){
+            $.ajax({
+                type: "GET",
+                url: "<%=request.getContextPath()%>/customer/orderInfo",
+                success: function(msg){
+                    $("#contextContainer").empty();
+                    $("#contextContainer").append(msg);
+                }
+            });
+        });
         <%--用户信息--%>
         $("#userInfoPage").click(function(){
             $.ajax({
@@ -63,6 +74,7 @@
     <title>Nekosama|糖果屋</title>
 </head>
 <body class="home-background">
+<jsp:include page="../common/dialog.jsp"/>
 <div class="navbar navbar-inverse">
     <div class="navbar-inner open">
         <a class="brand" href="#">Nekosama|糖果屋</a>
@@ -98,9 +110,10 @@
         <div class="span2">
             <ul class="nav nav-list home-side-bar-rounded">
                 <li class="nav-header">欢迎使用</li>
-                <li class="active"><a href="<%=request.getContextPath()%>/customer/home">介绍</a></li>
+                <li><a href="<%=request.getContextPath()%>/customer/home">介绍</a></li>
                 <li class="divider"></li>
                 <li id="orderPage"><a>订购甜点</a></li>
+                <li id="orderInfo"><a>查看订购</a></li>
                 <li class="divider"></li>
                 <li id="userInfoPage"><a>个人信息</a></li>
                 <li id="chargePage"><a>会员充值</a></li>
@@ -109,7 +122,8 @@
         </div>
         <div class="span10">
             <div id="contextContainer" class="hero-unit hero-unit-opacity2">
-
+                <h1>Nekosama的糖果屋</h1>
+                <p>「你要承受你心天的季候，如同你常常承受从田野上度过的四时。你要静守，度过你心里凄凉的冬日。」晚安~</p>
             </div>
         </div>
     </div>

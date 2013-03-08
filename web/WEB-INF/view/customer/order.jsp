@@ -1,4 +1,3 @@
-<%@ page import="java.util.List" %>
 <%--
   Created by IntelliJ IDEA.
   User: nekosama
@@ -42,11 +41,15 @@
                 contentType:'application/json;charset=UTF-8',
                 success: function(msg){
                     if(msg.result=="success"){
-                        alert("cool!");
+                        $("#infoMessage").empty();
+                        $("#infoMessage").append(msg.infoMessage);
+                        $("#infoModal").modal('show');
+                    }else{
+                        console.log(msg.errorMessage);
+                        $("#errorMessage").empty();
+                        $("#errorMessage").append(msg.errorMessage);
+                        $("#errorModal").modal('show');
                     }
-
-//                    $("#contextContainer").empty();
-//                    $("#contextContainer").append(msg);
                 }
             });
         });
