@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: nekosama
-  Date: 13-3-5
-  Time: 下午4:12
+  Date: 13-3-9
+  Time: 下午3:56
   To change this template use File | Settings | File Templates.
 --%>
 <!DOCTYPE html>
@@ -14,18 +14,6 @@
 
 <script type="text/javascript">
     $(document).ready(function(){
-        function getPage(role,path,name){
-            $.ajax({
-                type: "POST",
-                url: "<%=request.getContextPath()%>/"+role+"/"+path,
-                data:{storeName:name},
-                success: function(msg){
-                    $("#contextContainer").empty();
-                    $("#contextContainer").append(msg);
-                }
-            });
-        }
-
         function appendSelector(btn_name){
             $("#contextContainer").empty();
             var control=$("#control");
@@ -42,38 +30,43 @@
             $("#containerSpan select").first().append(storeOption);
         }
 
-        <%--会员统计--%>
-        $("#vipStatistics").click(function(){
-            appendSelector("vipStaBtn");
-            $("#vipStaBtn").click(function(){
+        function getPage(role,path){
+            $.ajax({
+                type: "GET",
+                url: "<%=request.getContextPath()%>/"+role+"/"+path,
+                success: function(msg){
+                    $("#contextContainer").empty();
+                    $("#contextContainer").append(msg);
+                }
+            });
+        }
+
+        $("#adminStoreAdd").click(function(){
+            getPage("systemManager","storeAdd");
+        });
+
+        $("#adminStoreMana").click(function(){
+            getPage("systemManager","storeManage");
+        });
+        $("#adminUserAdd").click(function(){
+            getPage("systemManager","userAdd");
+        });
+        $("#adminAuthMana").click(function(){
+            appendSelector("adminAuthManaBtn");
+            $("#adminAuthManaBtn").click(function(){
                 var name=$("#select-label").val();
-                getPage("manager","vipSta",name);
+                $.ajax({
+                    type: "POST",
+                    url: "<%=request.getContextPath()%>/systemManager/adminManage",
+                    data:{storeName:name},
+                    success: function(msg){
+                        $("#contextContainer").empty();
+                        $("#contextContainer").append(msg);
+                    }
+                });
             });
         });
-        <%--预定统计--%>
-        $("#orderStatistics").click(function(){
-            appendSelector("oderStaBtn");
-            $("#oderStaBtn").click(function(){
-                var name=$("#select-label").val();
-                getPage("manager","orderSta",name);
-            });
-        });
-        <%--售出统计--%>
-        $("#saleStatistics").click(function(){
-            appendSelector("saleStaBtn");
-            $("#saleStaBtn").click(function(){
-                var name=$("#select-label").val();
-                getPage("manager","saleSta",name);
-            });
-        });
-        <%--热卖统计--%>
-        $("#hotStatistics").click(function(){
-            appendSelector("hotStaBtn");
-            $("#hotStaBtn").click(function(){
-                var name=$("#select-label").val();
-                getPage("manager","hotSta",name);
-            });
-        });
+
     });
 </script>
 <html>
@@ -93,7 +86,7 @@
             </li>
             <li class="divider-vertical"></li>
             <li class="active">
-                <a href="<%=request.getContextPath()%>/manager/home">首页</a>
+                <a href="<%=request.getContextPath()%>/systemManager/home">首页</a>
             </li>
             <li class="divider-vertical"></li>
             <li class="dropdown">
@@ -105,7 +98,7 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="<%=request.getContextPath()%>/manager/logout">注销</a>
+                        <a href="<%=request.getContextPath()%>/systemManager/logout">注销</a>
                     </li>
                 </ul>
             </li>
@@ -117,13 +110,13 @@
         <div class="span2">
             <ul class="nav nav-list home-side-bar-rounded">
                 <li class="nav-header">欢迎使用</li>
-                <li><a href="<%=request.getContextPath()%>/manager/home">介绍</a></li>
+                <li><a href="<%=request.getContextPath()%>/systemManager/home">介绍</a></li>
                 <li class="divider"></li>
-                <li id="vipStatistics"><a>会员统计</a></li>
+                <li id="adminStoreAdd"><a>店面添加</a></li>
+                <li id="adminStoreMana"><a>店面删改</a></li>
                 <li class="divider"></li>
-                <li id="orderStatistics"><a>预定统计</a></li>
-                <li id="saleStatistics"><a>售出统计</a></li>
-                <li id="hotStatistics"><a>热卖分析</a></li>
+                <li id="adminUserAdd"><a>添加用户</a></li>
+                <li id="adminAuthMana"><a>权限管理</a></li>
             </ul>
         </div>
         <div id="containerSpan" class="span10">
@@ -135,12 +128,12 @@
     </div>
 </div>
 <select id="storeName" class="hide">
-    <c:forEach var="record" items="${managerStoreRecords}" varStatus="index">
+    <c:forEach var="record" items="${adminStoreRecords}" varStatus="index">
         <option>${record.storeName}</option>
     </c:forEach>
 </select>
 <select id="storeID" class="hide">
-    <c:forEach var="record" items="${managerStoreRecords}" varStatus="index">
+    <c:forEach var="record" items="${adminStoreRecords}" varStatus="index">
         <option>${record.id}</option>
     </c:forEach>
 </select>

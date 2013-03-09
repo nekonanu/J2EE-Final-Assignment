@@ -28,7 +28,7 @@
     <file path="/SystemManager.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362050814261" ignored="false" />
     <file path="/User.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362706125839" ignored="false" />
     <file path="/VipCardDao.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362367970699" ignored="false" />
-    <file path="/Dummy.txt" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362811296312" ignored="false" />
+    <file path="/Dummy.txt" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362813230379" ignored="false" />
     <file path="/UserDaoImpl.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362465944988" ignored="false" />
     <file path="/User.hbm.xml" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362215916182" ignored="false" />
     <file path="/UserService.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362392268648" ignored="false" />
@@ -78,7 +78,7 @@
     <file path="E:/local workspace/J2EE/dessertHouse/src/main/java/com/lecoding/components/UserAuthService.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362446540524" ignored="false" />
     <file path="/UserAuthService.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362446533717" ignored="false" />
     <file path="/web.xml" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362638667341" ignored="false" />
-    <file path="/spring-security.xml" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362800504209" ignored="false" />
+    <file path="/spring-security.xml" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362815565278" ignored="false" />
     <file path="E:/local workspace/J2EE/dessertHouse/src/main/java/com/lecoding/controllers/CustomerController.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362656414448" ignored="false" />
     <file path="/UserAuthentication.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362466187985" ignored="false" />
     <file path="/IUserService.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362465969524" ignored="false" />
@@ -90,7 +90,7 @@
     <file path="/EmployeeController.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362730457793" ignored="false" />
     <file path="/UserController.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362480925725" ignored="false" />
     <file path="/login.jsp" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362735704512" ignored="false" />
-    <file path="/home.jsp" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362810913358" ignored="false" />
+    <file path="/home.jsp" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362817069839" ignored="false" />
     <file path="/index.jsp" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362733817818" ignored="false" />
     <file path="/include.jsp" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362639413823" ignored="false" />
     <file path="/spring-servlet.xml" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362535464698" ignored="false" />
@@ -138,7 +138,7 @@
     <file path="/SaleData.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362795758106" ignored="false" />
     <file path="/ISaleDao.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362796574083" ignored="false" />
     <file path="/SaleDaoImpl.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362796689135" ignored="false" />
-    <file path="/ManagerController.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362812599919" ignored="false" />
+    <file path="/ManagerController.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362817412656" ignored="false" />
     <file path="/vipSta.jsp" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362811609540" ignored="false" />
     <file path="/orderSta.jsp" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362811816846" ignored="false" />
     <file path="/saleSta.jsp" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362811976437" ignored="false" />
@@ -146,6 +146,11 @@
     <file path="/productStrategyImpl.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362812562620" ignored="false" />
     <file path="/HotStaInfo.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362812244386" ignored="false" />
     <file path="/IProductStrategy.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362812367441" ignored="false" />
+    <file path="/SystemManagerController.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362819622381" ignored="false" />
+    <file path="/ChangeStoreData.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362817813743" ignored="false" />
+    <file path="/StoreAddData.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362818114439" ignored="false" />
+    <file path="/UserAddData.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362818760263" ignored="false" />
+    <file path="/AuthChangeData.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362819497829" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,10 +235,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ManagerController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/ManagerController.java">
+      <file leaf-file-name="SystemManagerController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/SystemManagerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="35" selection-start="4086" selection-end="4086" vertical-scroll-proportion="0.0">
+            <state line="35" column="13" selection-start="1286" selection-end="1286" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -241,86 +246,88 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="storeAdd.jsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/systemManager/storeAdd.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="13" selection-start="639" selection-end="639" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="home.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/manager/home.jsp">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/cashier/home.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="29" selection-start="1206" selection-end="1206" vertical-scroll-proportion="-0.65384614">
+            <state line="25" column="15" selection-start="637" selection-end="932" vertical-scroll-proportion="-6.5384617">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vipSta.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/manager/vipSta.jsp">
+      <file leaf-file-name="home.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/systemManager/home.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="149" selection-end="1733" vertical-scroll-proportion="-0.65384614">
+            <state line="46" column="45" selection-start="1905" selection-end="1905" vertical-scroll-proportion="-6.5384617">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HotStaInfo.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/response/HotStaInfo.java">
+      <file leaf-file-name="UserAddData.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/UserAddData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="25" selection-start="299" selection-end="308" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductServiceImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/service/impl/ProductServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="145" column="14" selection-start="4118" selection-end="4118" vertical-scroll-proportion="0.0">
+            <state line="91" column="33" selection-start="1906" selection-end="1906" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#3178#3192#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IProductStrategy.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/service/strategy/IProductStrategy.java">
+      <file leaf-file-name="ProductAddData.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/ProductAddData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="25" selection-start="359" selection-end="359" vertical-scroll-proportion="0.0">
+            <state line="51" column="4" selection-start="1116" selection-end="1793" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IProductService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/service/IProductService.java">
+      <file leaf-file-name="ManagerController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/ManagerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="25" selection-start="1397" selection-end="1407" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="productStrategyImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/service/strategy/impl/productStrategyImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="20" selection-start="1368" selection-end="1368" vertical-scroll-proportion="0.0">
+            <state line="72" column="40" selection-start="2799" selection-end="2799" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#990#1002#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hotSta.jsp" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/manager/hotSta.jsp">
+      <file leaf-file-name="CashierController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/CashierController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="20" selection-start="475" selection-end="475" vertical-scroll-proportion="0.5920398">
-              <folding />
+            <state line="144" column="56" selection-start="5657" selection-end="5657" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="saleSta.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/manager/saleSta.jsp">
+      <file leaf-file-name="AuthChangeData.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/AuthChangeData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="18" selection-start="473" selection-end="473" vertical-scroll-proportion="-8.5">
+            <state line="9" column="27" selection-start="208" selection-end="222" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -353,22 +360,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/web/WEB-INF/view/cashier/sale.jsp" />
-        <option value="$PROJECT_DIR$/src/test/cn/edu/nju/test/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/bean/ProductOrder.java" />
-        <option value="$PROJECT_DIR$/src/main/configuration/META-INF/spring/spring-security.xml" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/view/manager/VipSta.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/view/manager/home.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/view/manager/vipSta.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/view/manager/orderSta.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/view/manager/saleSta.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/response/HotStaInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/service/IProductService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/service/strategy/IProductStrategy.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/service/strategy/impl/productStrategyImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/service/impl/ProductServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/ManagerController.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/view/manager/hotSta.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/configuration/META-INF/spring/spring-security.xml" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/view/systemManager/home.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/ManagerController.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/view/manager/home.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/ChangeStoreData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/StoreAddData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/UserAddData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/AuthChangeData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/SystemManagerController.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/view/systemManager/storeAdd.jsp" />
       </list>
     </option>
   </component>
@@ -549,7 +556,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="manager" />
+              <option name="myItemId" value="systemManager" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -627,142 +634,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dessert_house" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dessert house" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nju" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="strategy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dessert_house" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dessert house" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nju" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="strategy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dessert_house" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dessert house" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nju" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dessert_house" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dessert house" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nju" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -797,7 +668,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="response" />
+              <option name="myItemId" value="jsonData" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -824,36 +695,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="META-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dessert_house" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dessert house" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="configuration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="META-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spring" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1349,20 +1190,20 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1891892" sideWeight="0.68261564" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960254" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24242425" sideWeight="0.7718601" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31578946" sideWeight="0.7718601" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40988836" sideWeight="0.22257552" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24801272" sideWeight="0.31578946" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27662957" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.49682036" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19617225" sideWeight="0.49682036" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25039873" sideWeight="0.49682036" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24801272" sideWeight="0.307815" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24801272" sideWeight="0.2998405" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298887" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2607313" sideWeight="0.75757575" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2607313" sideWeight="0.68421054" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6586922" sideWeight="0.49682036" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="JavaEE:App" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26947537" sideWeight="0.42424244" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -1434,122 +1275,122 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/CustomerController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/service/IUserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="13" selection-start="1603" selection-end="1603" vertical-scroll-proportion="0.0">
+        <state line="18" column="25" selection-start="416" selection-end="416" vertical-scroll-proportion="0.3810345">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/customer/orderInfo.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/service/IStoreService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="215" selection-end="420" vertical-scroll-proportion="-5.230769">
+        <state line="16" column="22" selection-start="374" selection-end="374" vertical-scroll-proportion="0.41034484">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/customer/signUp.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/CustomerOrderList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="24" selection-start="1543" selection-end="1543" vertical-scroll-proportion="-8.5">
+        <state line="11" column="13" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/CommonController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/CustomerOrder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0">
+        <state line="12" column="13" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/CashierController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/StoreAddData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="42" selection-start="2371" selection-end="2371" vertical-scroll-proportion="0.0">
+        <state line="13" column="34" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/SaleData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="13" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/ProductAddData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="4" selection-start="1116" selection-end="1793" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/UserAddData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="33" selection-start="1906" selection-end="1906" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/manager/orderSta.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="149" selection-end="1476" vertical-scroll-proportion="-4.576923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/response/HotStaInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="25" selection-start="299" selection-end="308" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/service/IProductService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="25" selection-start="1397" selection-end="1407" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/service/strategy/IProductStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="25" selection-start="359" selection-end="359" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/service/strategy/impl/productStrategyImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="20" selection-start="1368" selection-end="1368" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#990#1002#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/service/impl/ProductServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="14" selection-start="4118" selection-end="4118" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#3178#3192#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/ManagerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="35" selection-start="4086" selection-end="4086" vertical-scroll-proportion="0.0">
+        <state line="72" column="40" selection-start="2799" selection-end="2799" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/manager/home.jsp">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/cashier/home.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="29" selection-start="1206" selection-end="1206" vertical-scroll-proportion="-0.65384614">
+        <state line="25" column="15" selection-start="637" selection-end="932" vertical-scroll-proportion="-6.5384617">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/manager/vipSta.jsp">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/systemManager/home.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="149" selection-end="1733" vertical-scroll-proportion="-0.65384614">
+        <state line="46" column="45" selection-start="1905" selection-end="1905" vertical-scroll-proportion="-6.5384617">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/manager/saleSta.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/CashierController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="18" selection-start="473" selection-end="473" vertical-scroll-proportion="-8.5">
+        <state line="144" column="56" selection-start="5657" selection-end="5657" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/AuthChangeData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="27" selection-start="208" selection-end="222" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/manager/hotSta.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="20" selection-start="475" selection-end="475" vertical-scroll-proportion="0.5920398">
+        <state line="20" column="13" selection-start="639" selection-end="639" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/SystemManagerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="13" selection-start="1286" selection-end="1286" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/systemManager/storeAdd.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

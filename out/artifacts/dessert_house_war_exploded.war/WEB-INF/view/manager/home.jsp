@@ -19,8 +19,6 @@
                 type: "POST",
                 url: "<%=request.getContextPath()%>/"+role+"/"+path,
                 data:{storeName:name},
-//                dataType:'json',
-//                contentType:'application/json;charset=UTF-8',
                 success: function(msg){
                     $("#contextContainer").empty();
                     $("#contextContainer").append(msg);
@@ -32,7 +30,6 @@
             $("#contextContainer").empty();
             var control=$("#control");
             control.remove();
-//            $("#containerSpan").empty();
             $("#containerSpan").prepend("<div id='control' class='control-group'></div>");
             var child= $("#containerSpan").find(".control-group").first();
             child.append("<label class='control-label' for='select-label'>请选择店面</label>");
