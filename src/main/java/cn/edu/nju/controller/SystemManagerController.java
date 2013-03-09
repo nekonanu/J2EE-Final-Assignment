@@ -75,17 +75,22 @@ public class SystemManagerController {
 
     @RequestMapping(value = "/storeAdd",method = RequestMethod.POST)
     @ResponseBody
-    public Map storeAdd(@RequestBody StoreAddData data){
+    public Map storeAdd(@RequestBody List<StoreAddData>  datas){
         Map map=new HashMap();
-        Store valid=storeService.findByName(data.getStoreName());
-        if (valid!=null){
-            map.put("result","fail");
-            return map;
+        for (StoreAddData data:datas){
+            Store valid=storeService.findByName(data.getStoreName());
+            if (valid!=null){
+                map.put("result","fail");
+                return map;
+            }
         }
-        Store store=new Store();
-        store.setStoreName(data.getStoreName());
-        store.setStoreLocation(data.getStoreLocation());
-        storeService.addStore(store);
+
+        for (StoreAddData data:datas){
+            Store store=new Store();
+            store.setStoreName(data.getStoreName());
+            store.setStoreLocation(data.getStoreLocation());
+            storeService.addStore(store);
+        }
         map.put("result","success");
         return map;
     }

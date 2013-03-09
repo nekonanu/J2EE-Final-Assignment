@@ -24,11 +24,9 @@
             for(var i=0;i<index;i++){
                 var name=$("#name"+(i+1)).val();
                 var location=$("#location"+(i+1)).val();
-                if(name!=""&&location!=""){
-                    list[i]={
-                        storeName:name,
-                        storeLocation:location
-                    }
+                list[i]={
+                    storeName:name,
+                    storeLocation:location
                 }
             }
             $.ajax({
