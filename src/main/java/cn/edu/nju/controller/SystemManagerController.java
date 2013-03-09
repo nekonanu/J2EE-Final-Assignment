@@ -181,7 +181,13 @@ public class SystemManagerController {
     @ResponseBody
     public Map adminManage(@RequestBody AuthChangeData data){
         Map map=new HashMap();
-        User user=userService.findUserByName(data.getUserName());
+        User valid=userService.findUserByName(getUserName());
+        User user=userService.findUserByID(data.getUserID());
+        if (user.getId()==valid.getId()){
+            map.put("result","fail");
+            map.put("errorMessage","不能更改自己的权限！");
+            return map;
+        }
         user.setType(data.getType());
         userService.update(user);
         map.put("result","success");

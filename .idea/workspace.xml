@@ -146,14 +146,15 @@
     <file path="/productStrategyImpl.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362812562620" ignored="false" />
     <file path="/HotStaInfo.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362812244386" ignored="false" />
     <file path="/IProductStrategy.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362812367441" ignored="false" />
-    <file path="/SystemManagerController.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362819964690" ignored="false" />
+    <file path="/SystemManagerController.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362829953959" ignored="false" />
     <file path="/ChangeStoreData.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362817813743" ignored="false" />
     <file path="/StoreAddData.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362818114439" ignored="false" />
     <file path="/UserAddData.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362818760263" ignored="false" />
-    <file path="/AuthChangeData.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362819497829" ignored="false" />
+    <file path="/AuthChangeData.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362829683036" ignored="false" />
     <file path="/storeAdd.jsp" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362820562200" ignored="false" />
     <file path="/storeManage.jsp" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362822044062" ignored="false" />
     <file path="/userAdd.jsp" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362824586210" ignored="false" />
+    <file path="/adminManage.jsp" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362829877805" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,20 +214,6 @@
       </breakpoint>
     </breakpoint_any>
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/CashierController.java" line="128" class="cn.edu.nju.controller.CashierController" package="cn.edu.nju.controller">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/SystemManagerController.java" line="79" class="cn.edu.nju.controller.SystemManagerController" package="cn.edu.nju.controller">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
@@ -269,6 +256,20 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/SystemManagerController.java" line="182" class="cn.edu.nju.controller.SystemManagerController" package="cn.edu.nju.controller">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
     </line_breakpoints>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
@@ -283,7 +284,7 @@
       <file leaf-file-name="userAdd.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/systemManager/userAdd.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="54" selection-start="4299" selection-end="4299" vertical-scroll-proportion="-11.115385">
+            <state line="16" column="28" selection-start="596" selection-end="596" vertical-scroll-proportion="9.153846">
               <folding />
             </state>
           </provider>
@@ -292,10 +293,57 @@
       <file leaf-file-name="SystemManagerController.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/SystemManagerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="145" column="25" selection-start="5457" selection-end="5457" vertical-scroll-proportion="0.5255682">
+            <state line="192" column="0" selection-start="7233" selection-end="7233" vertical-scroll-proportion="0.33236152">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthChangeData.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/AuthChangeData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="23" selection-start="268" selection-end="272" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="adminManage.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/systemManager/adminManage.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="67" selection-start="1328" selection-end="1340" vertical-scroll-proportion="-13.076923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CashierController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/CashierController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="128" column="0" selection-start="5032" selection-end="5032" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SaleData.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/SaleData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="22" selection-start="291" selection-end="298" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="productManage.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/cashier/productManage.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="52" selection-start="1353" selection-end="1372" vertical-scroll-proportion="-11.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -305,7 +353,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="22" column="32" selection-start="538" selection-end="538" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1591#1601#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -314,8 +362,19 @@
       <file leaf-file-name="home.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/systemManager/home.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="129" column="21" selection-start="4875" selection-end="4884" vertical-scroll-proportion="-5.8461537">
+            <state line="58" column="33" selection-start="2377" selection-end="2378" vertical-scroll-proportion="-8.423077">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ManagerController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/ManagerController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="13" selection-start="1312" selection-end="1312" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -347,7 +406,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/service/impl/ProductServiceImpl.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/view/manager/hotSta.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/configuration/META-INF/spring/spring-security.xml" />
@@ -357,12 +415,13 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/ChangeStoreData.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/StoreAddData.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/UserAddData.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/AuthChangeData.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/view/systemManager/storeAdd.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/view/cashier/productAdd.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/view/systemManager/storeManage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/SystemManagerController.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/view/systemManager/userAdd.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/AuthChangeData.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/view/systemManager/adminManage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/SystemManagerController.java" />
       </list>
     </option>
   </component>
@@ -640,40 +699,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dessert_house" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dessert house" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nju" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsonData" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1195,7 +1220,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1891892" sideWeight="0.68261564" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960254" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37639552" sideWeight="0.7718601" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35725677" sideWeight="0.7718601" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40988836" sideWeight="0.22257552" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24801272" sideWeight="0.31578946" order="5" side_tool="true" content_ui="tabs" />
@@ -1208,7 +1233,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298887" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30763116" sideWeight="0.6236045" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30763116" sideWeight="0.64274323" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6586922" sideWeight="0.49682036" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="JavaEE:App" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26947537" sideWeight="0.42424244" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -1280,54 +1305,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/customer/orderInfo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="30" selection-start="825" selection-end="825" vertical-scroll-proportion="-10.192307">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/manager/vipSta.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="27" selection-start="677" selection-end="677" vertical-scroll-proportion="-13.076923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/manager/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="12" selection-start="960" selection-end="1841" vertical-scroll-proportion="-11.769231">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/manager/orderSta.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="6" selection-start="1476" selection-end="1476" vertical-scroll-proportion="0.8158845">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/ChangeStoreData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="32" selection-start="300" selection-end="313" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/cashier/productManage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="36" selection-start="1843" selection-end="1843" vertical-scroll-proportion="-1.9615384">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/CashierController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="16" selection-start="5781" selection-end="6036" vertical-scroll-proportion="0.5255732">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1366,32 +1347,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/systemManager/home.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/UserAddData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="21" selection-start="4875" selection-end="4884" vertical-scroll-proportion="-5.8461537">
-          <folding />
+        <state line="22" column="32" selection-start="538" selection-end="538" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1591#1601#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/systemManager/userAdd.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="54" selection-start="4299" selection-end="4299" vertical-scroll-proportion="-11.115385">
+        <state line="16" column="28" selection-start="596" selection-end="596" vertical-scroll-proportion="9.153846">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/UserAddData.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/ManagerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="32" selection-start="538" selection-end="538" vertical-scroll-proportion="0.0">
+        <state line="35" column="13" selection-start="1312" selection-end="1312" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/systemManager/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="33" selection-start="2377" selection-end="2378" vertical-scroll-proportion="-8.423077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/SaleData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="22" selection-start="291" selection-end="298" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/CashierController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="128" column="0" selection-start="5032" selection-end="5032" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/AuthChangeData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="23" selection-start="268" selection-end="272" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/cashier/productManage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="52" selection-start="1353" selection-end="1372" vertical-scroll-proportion="-11.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/systemManager/adminManage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="67" selection-start="1328" selection-end="1340" vertical-scroll-proportion="-13.076923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/SystemManagerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="25" selection-start="5457" selection-end="5457" vertical-scroll-proportion="0.5255682">
+        <state line="192" column="0" selection-start="7233" selection-end="7233" vertical-scroll-proportion="0.33236152">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

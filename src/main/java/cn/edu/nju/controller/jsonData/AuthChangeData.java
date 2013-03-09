@@ -8,15 +8,15 @@ package cn.edu.nju.controller.jsonData;
  * To change this template use File | Settings | File Templates.
  */
 public class AuthChangeData {
-    private String userName;
+    private int userID;
     private String type;
 
-    public String getUserName() {
-        return userName;
+    public int getUserID() {
+        return userID;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUserID(int userID) {
+        this.userID = userID;
     }
 
     public String getType() {
