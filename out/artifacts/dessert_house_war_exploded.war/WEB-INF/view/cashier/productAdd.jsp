@@ -35,11 +35,13 @@
                 var num=$("#num"+(i+1)).val();
                 var store_name=$("#storeName"+(i+1)).val();
                 console.log(name);
-                list[i]={
-                    productName:name,
-                    productPrice:price,
-                    productNum:num,
-                    storeName:store_name
+                if (name!=""&&store_name!=""){
+                    list[i]={
+                        productName:name,
+                        productPrice:price,
+                        productNum:num,
+                        storeName:store_name
+                    }
                 }
             }
             $.ajax({

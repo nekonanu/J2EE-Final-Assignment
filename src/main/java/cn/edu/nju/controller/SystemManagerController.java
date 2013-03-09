@@ -8,6 +8,7 @@ import cn.edu.nju.service.IStoreService;
 import cn.edu.nju.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -113,8 +114,12 @@ public class SystemManagerController {
             storeService.updateStore(store);
             map.put("result","success");
         }else if (datas.getOp().equals("delete")){
-            storeService.deleteStore(datas.getStoreID());
-            map.put("result","success");
+            try {
+                storeService.deleteStore(datas.getStoreID());
+                map.put("result","success");
+            } catch (DataIntegrityViolationException exception){
+                map.put("result","fail");
+            }
         }else {
             map.put("result","fail");
         }
