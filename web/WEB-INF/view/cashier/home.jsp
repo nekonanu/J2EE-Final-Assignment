@@ -40,7 +40,7 @@
         $("#sale").click(function(){
             $.ajax({
                 type: "GET",
-                url: "<%=request.getContextPath()%>/customer/sale",
+                url: "<%=request.getContextPath()%>/cashier/sale",
                 success: function(msg){
                     $("#contextContainer").empty();
                     $("#contextContainer").append(msg);

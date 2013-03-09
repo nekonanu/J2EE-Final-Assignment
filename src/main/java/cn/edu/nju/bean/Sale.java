@@ -1,6 +1,7 @@
 package cn.edu.nju.bean;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -11,7 +12,7 @@ import java.util.Date;
  * To change this template use File | Settings | File Templates.
  */
 @Entity
-public class Sale {
+public class Sale implements Serializable {
     private int id;
 
     @javax.persistence.Column(name = "id")

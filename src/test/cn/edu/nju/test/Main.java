@@ -2,7 +2,9 @@ package cn.edu.nju.test;
 
 import cn.edu.nju.bean.*;
 import cn.edu.nju.dao.IOrderDao;
+import cn.edu.nju.dao.ISaleDao;
 import cn.edu.nju.dao.impl.OrderDaoImpl;
+import cn.edu.nju.dao.impl.SaleDaoImpl;
 import cn.edu.nju.service.IProductService;
 import cn.edu.nju.service.IStoreService;
 import cn.edu.nju.service.IUserService;
@@ -30,6 +32,7 @@ public class Main {
     public static IUserService userService;
     public static IStoreService storeService;
     public static IOrderDao orderDao;
+    public static ISaleDao saleDao;
 
     static {
         ApplicationContext context=new ClassPathXmlApplicationContext("classpath*:/META-INF/spring/spring-config.xml");
@@ -37,11 +40,21 @@ public class Main {
         userService = (IUserService) context.getBean("userService");
         storeService= (IStoreService) context.getBean("storeService");
         orderDao=context.getBean(OrderDaoImpl.class);
+        saleDao=context.getBean(SaleDaoImpl.class);
         HibernateUtil.setSession_factory((SessionFactory) context.getBean("mySessionFactory"));
     }
 
     public static void main(String args[]){
-        storeService.deleteStore(1);
+        productService.saleProduct(1);
+//        Session session=HibernateUtil.currentSession();
+//        ProductOrder order= (ProductOrder) session.get(ProductOrder.class,1);
+//        Sale sale=new Sale();
+//        sale.setStore(order.getStore());
+//        sale.setUser(order.getUser());
+//        sale.setProduct(order.getProduct());
+//        sale.setSaleDate(new Date());
+//        sale.setSaleNum(order.getOrderNum());
+//        session.save(sale);
 
 
 //        orderDao.deleteById(1);

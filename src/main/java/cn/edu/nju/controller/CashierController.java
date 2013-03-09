@@ -7,6 +7,7 @@ import cn.edu.nju.bean.User;
 import cn.edu.nju.controller.jsonData.ChangeProductData;
 import cn.edu.nju.controller.jsonData.LoginForm;
 import cn.edu.nju.controller.jsonData.ProductAddData;
+import cn.edu.nju.controller.jsonData.SaleData;
 import cn.edu.nju.service.IProductService;
 import cn.edu.nju.service.IStoreService;
 import cn.edu.nju.service.IUserService;
@@ -112,6 +113,25 @@ public class CashierController {
         return map;
     }
 
+    @RequestMapping(value = "/sale",method = RequestMethod.GET)
+    public String salePage(Model model){
+        Store store=userService.findUserByName(getUserName()).getStore();
+        Set<ProductOrder> orders= productService.getUncheckedProductOrders(store.getId());
+        model.addAttribute("saleOrderRecords",orders);
+        return "/cashier/sale";
+    }
+
+    @RequestMapping(value = "/sale",method = RequestMethod.POST)
+    @ResponseBody
+    public Map processSale(@RequestBody List<SaleData> saleDatas){
+        Map map=new HashMap();
+        for(SaleData data:saleDatas){
+            productService.saleProduct(data.getOrderID());
+        }
+        map.put("result","success");
+        return map;
+    }
+
     @RequestMapping(value = "/productManage",method = RequestMethod.GET)
     public String productManage(Model model){
         User user=userService.findUserByName(getUserName());
@@ -147,13 +167,13 @@ public class CashierController {
         return map;
     }
 
-    @RequestMapping(value = "/sale",method = RequestMethod.GET)
-    public String sale(Model model){
-        User user=userService.findUserByName(getUserName());
-        Set<ProductOrder> orders=user.getStore().getProductOrders();
-        model.addAttribute("orderManageRecords",orders);
-        return "/cashier/sale";
-    }
+//    @RequestMapping(value = "/sale",method = RequestMethod.GET)
+//    public String sale(Model model){
+//        User user=userService.findUserByName(getUserName());
+//        Set<ProductOrder> orders=user.getStore().getProductOrders();
+//        model.addAttribute("orderManageRecords",orders);
+//        return "/cashier/sale";
+//    }
 
     @RequestMapping(value = "/home",method = RequestMethod.GET)
     public String home(){

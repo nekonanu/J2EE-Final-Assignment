@@ -34,9 +34,11 @@ public interface IProductService{
     public Set<Product> getAvailableProduct(int store_id);
     public Set<Product> getAvailableProduct(int store_id,Model model,String key);
     public void orderProduct(Product product,User user,int amount);
-    public Set<ProductOrder> getProductOrders(int store_id);
+    public void saleProduct(int orderID);
+    public Set<ProductOrder> getUncheckedProductOrders(int store_id);
     public Set<Sale> getSales(int store_id);
     public boolean customerCanAfford(List<CustomerOrder> customerOrderList,User user);
+
 
     /**
      * 分店铺分析热卖产品

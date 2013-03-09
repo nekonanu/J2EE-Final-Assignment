@@ -75,6 +75,21 @@ public class ProductOrder implements Serializable {
         this.orderDate = orderDate;
     }
 
+    private String orderCheck;
+
+    @javax.persistence.Column(name = "order_check")
+    @Basic
+    public String getOrderCheck() {
+        return orderCheck;
+    }
+
+    public void setOrderCheck(String orderCheck) {
+        this.orderCheck = orderCheck;
+    }
+
+
+
+
     private Store store;
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "store_id")

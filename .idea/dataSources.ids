@@ -27,8 +27,8 @@
       <column name="charge_amount" sqlType="DOUBLE" length="22" precision="0" nullable="false" jdbcType="8" />
       <column name="charge_date" sqlType="DATE" length="10" precision="0" nullable="false" jdbcType="91" />
       <primary-key name="PRIMARY" columns="id" />
-      <index name="holder_id_idx" unique="false" columns="holder_id" />
-      <index name="vip_card_id_idx" unique="false" columns="vip_card_id" />
+      <foreign-key name="holder" columns="holder_id" ref-table="user" ref-schema="" ref-catalog="dessert_house" ref-columns="id" update-rule="0" delete-rule="3" deferrability="2" />
+      <foreign-key name="vip_card" columns="vip_card_id" ref-table="vip_card" ref-schema="" ref-catalog="dessert_house" ref-columns="id" update-rule="0" delete-rule="3" deferrability="2" />
     </table>
     <table name="product" schema="" catalog="dessert_house" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
@@ -37,7 +37,9 @@
       <column name="price" sqlType="DOUBLE" length="22" precision="0" nullable="false" jdbcType="8" />
       <column name="store_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
       <primary-key name="PRIMARY" columns="id" />
-      <foreign-key name="store_id" columns="store_id" ref-table="store" ref-schema="" ref-catalog="dessert_house" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="store" columns="store_id" ref-table="store" ref-schema="" ref-catalog="dessert_house" ref-columns="id" update-rule="0" delete-rule="3" deferrability="2" />
+      <exported-key name="product" table="product_order" schema="" catalog="dessert_house" columns="product_id" />
+      <exported-key name="product1" table="sale" schema="" catalog="dessert_house" columns="product_id" />
     </table>
     <table name="product_order" schema="" catalog="dessert_house" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
@@ -46,9 +48,11 @@
       <column name="order_num" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
       <column name="order_date" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91" />
       <column name="store_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="order_check" sqlType="VARCHAR" length="16" precision="0" nullable="true" jdbcType="12" />
       <primary-key name="PRIMARY" columns="id" />
-      <index name="customer_idx" unique="false" columns="customer_id" />
-      <index name="product_idx" unique="false" columns="product_id" />
+      <foreign-key name="customer" columns="customer_id" ref-table="user" ref-schema="" ref-catalog="dessert_house" ref-columns="id" update-rule="0" delete-rule="3" deferrability="2" />
+      <foreign-key name="product" columns="product_id" ref-table="product" ref-schema="" ref-catalog="dessert_house" ref-columns="id" update-rule="0" delete-rule="3" deferrability="2" />
+      <foreign-key name="store_id" columns="store_id" ref-table="store" ref-schema="" ref-catalog="dessert_house" ref-columns="id" update-rule="0" delete-rule="3" deferrability="2" />
     </table>
     <table name="sale" schema="" catalog="dessert_house" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
@@ -58,14 +62,19 @@
       <column name="sale_date" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91" />
       <column name="store_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
       <primary-key name="PRIMARY" columns="id" />
+      <foreign-key name="customer1" columns="customer_id" ref-table="user" ref-schema="" ref-catalog="dessert_house" ref-columns="id" update-rule="0" delete-rule="3" deferrability="2" />
+      <foreign-key name="product1" columns="product_id" ref-table="product" ref-schema="" ref-catalog="dessert_house" ref-columns="id" update-rule="0" delete-rule="3" deferrability="2" />
+      <foreign-key name="store1" columns="store_id" ref-table="store" ref-schema="" ref-catalog="dessert_house" ref-columns="id" update-rule="0" delete-rule="3" deferrability="2" />
     </table>
     <table name="store" schema="" catalog="dessert_house" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="store_name" sqlType="VARCHAR" length="32" precision="0" nullable="true" jdbcType="12" />
       <column name="store_location" sqlType="VARCHAR" length="64" precision="0" nullable="true" jdbcType="12" />
       <primary-key name="PRIMARY" columns="id" />
-      <exported-key name="store_id" table="product" schema="" catalog="dessert_house" columns="store_id" />
-      <exported-key name="store" table="user" schema="" catalog="dessert_house" columns="store_id" />
+      <exported-key name="store" table="product" schema="" catalog="dessert_house" columns="store_id" />
+      <exported-key name="store_id" table="product_order" schema="" catalog="dessert_house" columns="store_id" />
+      <exported-key name="store1" table="sale" schema="" catalog="dessert_house" columns="store_id" />
+      <exported-key name="store2" table="user" schema="" catalog="dessert_house" columns="store_id" />
     </table>
     <table name="user" schema="" catalog="dessert_house" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
@@ -79,8 +88,11 @@
       <column name="type" sqlType="VARCHAR" length="32" precision="0" nullable="false" jdbcType="12" />
       <column name="store_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
       <primary-key name="PRIMARY" columns="id" />
-      <foreign-key name="store" columns="store_id" ref-table="store" ref-schema="" ref-catalog="dessert_house" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
-      <index name="vip_card_id" unique="false" columns="vip_card_id" />
+      <foreign-key name="card" columns="vip_card_id" ref-table="vip_card" ref-schema="" ref-catalog="dessert_house" ref-columns="id" update-rule="0" delete-rule="3" deferrability="2" />
+      <foreign-key name="store2" columns="store_id" ref-table="store" ref-schema="" ref-catalog="dessert_house" ref-columns="id" update-rule="0" delete-rule="3" deferrability="2" />
+      <exported-key name="holder" table="charge_log" schema="" catalog="dessert_house" columns="holder_id" />
+      <exported-key name="customer" table="product_order" schema="" catalog="dessert_house" columns="customer_id" />
+      <exported-key name="customer1" table="sale" schema="" catalog="dessert_house" columns="customer_id" />
     </table>
     <table name="vip_card" schema="" catalog="dessert_house" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
@@ -89,6 +101,8 @@
       <column name="status" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12" def="J2ZyZWV6ZSc=" />
       <column name="remain_amount" sqlType="DOUBLE" length="22" precision="0" nullable="false" jdbcType="8" />
       <primary-key name="PRIMARY" columns="id" />
+      <exported-key name="vip_card" table="charge_log" schema="" catalog="dessert_house" columns="vip_card_id" />
+      <exported-key name="card" table="user" schema="" catalog="dessert_house" columns="vip_card_id" />
     </table>
     <table name="CHARACTER_SETS" schema="" catalog="information_schema" type="SYSTEM TABLE">
       <column name="CHARACTER_SET_NAME" sqlType="VARCHAR" length="32" precision="0" nullable="false" jdbcType="12" def="Jyc=" />
