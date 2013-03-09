@@ -2,6 +2,7 @@ package cn.edu.nju.service.impl;
 
 import cn.edu.nju.bean.*;
 import cn.edu.nju.controller.jsonData.CustomerOrder;
+import cn.edu.nju.controller.response.HotStaInfo;
 import cn.edu.nju.dao.IOrderDao;
 import cn.edu.nju.dao.IProductDao;
 import cn.edu.nju.dao.ISaleDao;
@@ -141,7 +142,7 @@ public class ProductServiceImpl implements IProductService {
     }
 
     @Override
-    public Set<Product> getHotProducts(int store_id) {
+    public Set<HotStaInfo> getHotProducts(int store_id) {
         return productStrategy.filterHotProducts(storeDao.findById(store_id).getProducts());
     }
 

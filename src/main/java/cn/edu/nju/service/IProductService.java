@@ -5,6 +5,7 @@ import cn.edu.nju.bean.ProductOrder;
 import cn.edu.nju.bean.Sale;
 import cn.edu.nju.bean.User;
 import cn.edu.nju.controller.jsonData.CustomerOrder;
+import cn.edu.nju.controller.response.HotStaInfo;
 import org.springframework.ui.Model;
 
 import java.util.List;
@@ -45,5 +46,5 @@ public interface IProductService{
      * @param store_id
      * @return
      */
-    public Set<Product> getHotProducts(int store_id);
+    public Set<HotStaInfo> getHotProducts(int store_id);
 }

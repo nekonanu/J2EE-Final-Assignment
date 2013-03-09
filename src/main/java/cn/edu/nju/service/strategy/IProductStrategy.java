@@ -1,6 +1,7 @@
 package cn.edu.nju.service.strategy;
 
 import cn.edu.nju.bean.Product;
+import cn.edu.nju.controller.response.HotStaInfo;
 
 import java.util.Set;
 
@@ -12,5 +13,5 @@ import java.util.Set;
  * To change this template use File | Settings | File Templates.
  */
 public interface IProductStrategy {
-    public Set<Product> filterHotProducts(Set<Product> allProducts);
+    public Set<HotStaInfo> filterHotProducts(Set<Product> allProducts);
 }
