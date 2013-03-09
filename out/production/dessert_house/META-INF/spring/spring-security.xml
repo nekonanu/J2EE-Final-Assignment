@@ -20,7 +20,8 @@
    <security:http auto-config="true" use-expressions="true" authentication-manager-ref="userAuthManager"
                   pattern="/customer/**" access-denied-page="/customer/login">
        <security:intercept-url pattern="/customer/login" access="permitAll"/>
-       <security:intercept-url pattern="/customer/**" access="hasAnyRole('CUSTOMER','CASHIER','MANAGER','SYSTEM_MANAGER')"/>
+       <security:intercept-url pattern="/customer/signUp" access="permitAll"/>
+       <security:intercept-url pattern="/customer/**" access="hasRole('CUSTOMER')"/>
        <security:form-login login-page="/customer/login"/>
        <security:logout invalidate-session="true" logout-url="/customer/logout" logout-success-url="/"/>
    </security:http>
@@ -29,7 +30,7 @@
     <security:http auto-config="true" use-expressions="true" authentication-manager-ref="userAuthManager"
                    pattern="/cashier/**" access-denied-page="/employee/login">
         <security:intercept-url pattern="/cashier/login" access="permitAll"/>
-        <security:intercept-url pattern="/cashier/**" access="hasAnyRole('CASHIER','MANAGER','SYSTEM_MANAGER')"/>
+        <security:intercept-url pattern="/cashier/**" access="hasRole('CASHIER')"/>
         <security:logout invalidate-session="true" logout-url="/cashier/logout" logout-success-url="/"/>
         <security:form-login login-page="/employee/login"/>
     </security:http>
@@ -37,7 +38,7 @@
     <security:http auto-config="true" use-expressions="true" authentication-manager-ref="userAuthManager"
                    pattern="/manager/**" access-denied-page="/employee/login">
         <security:intercept-url pattern="/manager/login" access="permitAll"/>
-        <security:intercept-url pattern="/manager/**" access="hasAnyRole('MANAGER','SYSTEM_MANAGER')"/>
+        <security:intercept-url pattern="/manager/**" access="hasRole('MANAGER')"/>
         <security:form-login login-page="/employee/login"/>
         <security:logout invalidate-session="true" logout-url="/manager/logout" logout-success-url="/"/>
     </security:http>
