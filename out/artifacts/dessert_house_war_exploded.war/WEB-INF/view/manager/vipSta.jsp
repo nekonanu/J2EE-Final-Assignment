@@ -36,7 +36,7 @@
                     <td>${record.vipCard.remainAmount}</td>
                     <td><fmt:formatDate value="${record.vipCard.registerDate}" type="both"/></td>
                     <td><fmt:formatDate value="${record.vipCard.deadlineDate}" type="both"/></td>
-                    <td><c:if test="${record.vipCard.status=='freeze'}">否</c:if><c:if test="${record.vipCard.status=='active'}">是</c:if> </td>
+                    <td><c:if test="${record.vipCard.status=='freeze'}">否</c:if><c:if test="${record.vipCard.status=='activate'}">是</c:if> </td>
                 </tr>
             </c:forEach>
             </tbody>

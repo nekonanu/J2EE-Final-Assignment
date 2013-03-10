@@ -13,7 +13,17 @@
     $(document).ready(function(){
         $(".change-btn").click(function(){
             var id = $(this).get(0).getAttribute("user-id");
-            var type=$("#admin"+id).val();
+            var tmpType=$("#admin"+id).val();
+            var type;
+            if(tmpType=="客户"){
+                type="CUSTOMER";
+            }else if(tmpType=="店员"){
+                type="CASHIER";
+            }else if(tmpType=="经理"){
+                type="MANAGER";
+            }else if(tmpType=="管理员"){
+                type="SYSTEM_MANAGER";
+            }
             $.ajax({
                 url: "<%=request.getContextPath()%>/systemManager/processAdminManage",
                 type:'POST',

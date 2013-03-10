@@ -78,7 +78,7 @@
                         <div class="control-group">
                             <label class="control-label font-white" for="password">密码</label>
                             <div class="controls">
-                                <input type="text" class="input-xlarge" name='password' id="password">
+                                <input type="password" class="input-xlarge" name='password' id="password">
                             </div>
                         </div>
                         <div class="control-group">

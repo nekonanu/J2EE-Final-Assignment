@@ -9,7 +9,9 @@
 }
 
 .home-background{
-    background: #ff514c url(../img/noise.png);
+
+    background-image: url("../img/back1.jpg");
+    /*background: #ff514c url(../img/noise.png);*/
 }
 
 
@@ -98,4 +100,11 @@ body > .navbar .brand {
     transition: all .2s linear;
 }
 
-
+.transition-container {
+    height: auto;
+    margin: 0 auto;
+    box-shadow: 2px 5px 10px #CCC;
+    transition: height 0.3s ease;
+    -webkit-transition: height 0.3s ease;
+    -moz-transition: height 0.3s ease;
+}

@@ -121,7 +121,7 @@
             </ul>
         </div>
         <div class="span10">
-            <div id="contextContainer" class="hero-unit hero-unit-opacity2">
+            <div id="contextContainer" class="hero-unit hero-unit-opacity2  transition-container">
                 <h1>Nekosama的糖果屋</h1>
                 <p>「你要承受你心天的季候，如同你常常承受从田野上度过的四时。你要静守，度过你心里凄凉的冬日。」晚安~</p>
             </div>
