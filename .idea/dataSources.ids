@@ -50,6 +50,7 @@
       <column name="order_date" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91" />
       <column name="store_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
       <column name="order_check" sqlType="VARCHAR" length="16" precision="0" nullable="true" jdbcType="12" />
+      <column name="pay" sqlType="DOUBLE" length="22" precision="0" nullable="true" jdbcType="8" />
       <primary-key name="PRIMARY" columns="id" />
       <foreign-key name="customer" columns="customer_id" ref-table="user" ref-schema="" ref-catalog="dessert_house" ref-columns="id" update-rule="0" delete-rule="3" deferrability="2" />
       <foreign-key name="product" columns="product_id" ref-table="product" ref-schema="" ref-catalog="dessert_house" ref-columns="id" update-rule="0" delete-rule="3" deferrability="2" />
@@ -62,6 +63,7 @@
       <column name="sale_num" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
       <column name="sale_date" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91" />
       <column name="store_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="pay" sqlType="DOUBLE" length="22" precision="0" nullable="true" jdbcType="8" />
       <primary-key name="PRIMARY" columns="id" />
       <foreign-key name="customer1" columns="customer_id" ref-table="user" ref-schema="" ref-catalog="dessert_house" ref-columns="id" update-rule="0" delete-rule="3" deferrability="2" />
       <foreign-key name="product1" columns="product_id" ref-table="product" ref-schema="" ref-catalog="dessert_house" ref-columns="id" update-rule="0" delete-rule="3" deferrability="2" />

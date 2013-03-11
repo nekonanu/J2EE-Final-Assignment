@@ -26,6 +26,17 @@ public class Sale implements Serializable {
         this.id = id;
     }
 
+    private double pay;
+    @javax.persistence.Column(name = "pay")
+    @Basic
+    public double getPay() {
+        return pay;
+    }
+
+    public void setPay(double pay) {
+        this.pay = pay;
+    }
+
     private User user;
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "customer_id")

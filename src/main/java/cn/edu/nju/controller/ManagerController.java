@@ -3,6 +3,8 @@ package cn.edu.nju.controller;
 import cn.edu.nju.bean.*;
 import cn.edu.nju.controller.jsonData.LoginForm;
 import cn.edu.nju.controller.response.HotStaInfo;
+import cn.edu.nju.controller.response.OrderStaData;
+import cn.edu.nju.controller.response.OrderTypePieData;
 import cn.edu.nju.controller.response.VipStaRegisterData;
 import cn.edu.nju.service.IProductService;
 import cn.edu.nju.service.IStoreService;
@@ -20,10 +22,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -91,7 +90,16 @@ public class ManagerController {
      public String orderStatistics(@RequestParam("storeName") String storeName,Model model){
         Store store= storeService.findByName(storeName);
         Set<ProductOrder> orders=store.getProductOrders();
+        Calendar calendar=Calendar.getInstance();
+        calendar.add(Calendar.MONTH,-1);
+        Date begin=calendar.getTime();
+        calendar=Calendar.getInstance();
+        Date end=calendar.getTime();
+        List<OrderStaData> orderStaData=productService.getOrderStaData(begin,end,store.getId());
+        model.addAttribute("orderLineRecords",orderStaData);
         model.addAttribute("orderStaRecords",orders);
+        List<OrderTypePieData> orderTypePieDatas=productService.getOrderTypePercent(begin,end,store.getId());
+        model.addAttribute("orderTypePieRecords",orderTypePieDatas);
         return "/manager/orderSta";
     }
 

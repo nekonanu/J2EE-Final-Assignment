@@ -6,8 +6,11 @@ import cn.edu.nju.bean.Sale;
 import cn.edu.nju.bean.User;
 import cn.edu.nju.controller.jsonData.CustomerOrder;
 import cn.edu.nju.controller.response.HotStaInfo;
+import cn.edu.nju.controller.response.OrderStaData;
+import cn.edu.nju.controller.response.OrderTypePieData;
 import org.springframework.ui.Model;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
@@ -49,4 +52,8 @@ public interface IProductService{
     public Set<HotStaInfo> getHotProducts(int store_id);
 
     public List<String> getAllProductType();
+
+    public List<OrderStaData> getOrderStaData(Date begin,Date end,int storeID);
+
+    public List<OrderTypePieData> getOrderTypePercent(Date begin,Date end,int storeID);
 }

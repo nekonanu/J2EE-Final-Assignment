@@ -3,6 +3,8 @@ package cn.edu.nju.service.impl;
 import cn.edu.nju.bean.*;
 import cn.edu.nju.controller.jsonData.CustomerOrder;
 import cn.edu.nju.controller.response.HotStaInfo;
+import cn.edu.nju.controller.response.OrderStaData;
+import cn.edu.nju.controller.response.OrderTypePieData;
 import cn.edu.nju.dao.IOrderDao;
 import cn.edu.nju.dao.IProductDao;
 import cn.edu.nju.dao.ISaleDao;
@@ -93,6 +95,7 @@ public class ProductServiceImpl implements IProductService {
         order.setOrderDate(new Date());
         order.setStore(user.getStore());
         order.setOrderCheck("false");
+        order.setPay(product.getPrice()*user.getVipCard().getCutoff()*amount);
         orderDao.save(order);
         productDao.update(product);
     }
@@ -106,6 +109,7 @@ public class ProductServiceImpl implements IProductService {
         sale.setUser(order.getUser());
         sale.setProduct(order.getProduct());
         sale.setSaleDate(new Date());
+        sale.setPay(order.getPay());
         sale.setSaleNum(order.getOrderNum());
         saleDao.save(sale);
         orderDao.update(order);
@@ -151,6 +155,68 @@ public class ProductServiceImpl implements IProductService {
     @Override
     public List<String> getAllProductType() {
         return productDao.getAllProductType();
+    }
+
+    @Override
+    public List<OrderStaData> getOrderStaData(Date begin, Date end,int storeID){
+        List<ProductOrder> orders=orderDao.findBetweenDate(begin,end,storeID);
+        Map<Date,Double> map=new HashMap();
+        List<OrderStaData> datas=new ArrayList<OrderStaData>();
+        for (ProductOrder order:orders){
+            if (map.get(order.getOrderDate())!=null){
+                map.put(order.getOrderDate(),map.get(order.getOrderDate())+order.getPay());
+            }else{
+                map.put(order.getOrderDate(),order.getPay());
+            }
+        }
+        Set set = map.entrySet();
+        for (Iterator iterator = set.iterator();iterator.hasNext();){
+            Map.Entry entry= (Map.Entry) iterator.next();
+            Date date=((Map.Entry<Date, Double>) entry).getKey();
+            Double totalPay= ((Map.Entry<Date, Double>) entry).getValue();
+
+            OrderStaData staData=new OrderStaData();
+            Calendar calendar=Calendar.getInstance();
+            calendar.setTime(date);
+            staData.setDate(date);
+            staData.setPay(totalPay);
+            staData.setYear(calendar.get(Calendar.YEAR));
+            staData.setMonth(calendar.get(Calendar.MONTH)+1);
+            staData.setDay(calendar.get(Calendar.DATE));
+            datas.add(staData);
+        }
+        Collections.sort(datas,new OrderStaData());
+        return datas;
+    }
+
+    @Override
+    public List<OrderTypePieData> getOrderTypePercent(Date begin, Date end, int storeID) {
+        List<ProductOrder> orders=orderDao.findBetweenDate(begin,end,storeID);
+        int totalNum=0;
+        for (ProductOrder order:orders){
+            totalNum+=order.getOrderNum();
+        }
+        Map<String,Integer> map=new HashMap<String, Integer>();
+        List<OrderTypePieData> datas=new ArrayList<OrderTypePieData>();
+        for (ProductOrder order:orders){
+            if (map.get(order.getProduct().getProductType())!=null){
+                map.put(order.getProduct().getProductType(),map.get(order.getProduct().getProductType())+order.getOrderNum());
+            }else{
+                map.put(order.getProduct().getProductType(),order.getOrderNum());
+            }
+        }
+        Set set = map.entrySet();
+        for (Iterator iterator = set.iterator();iterator.hasNext();){
+            Map.Entry entry= (Map.Entry) iterator.next();
+            String type=((Map.Entry<String,Integer>) entry).getKey();
+            Integer num= ((Map.Entry<String,Integer>) entry).getValue();
+            OrderTypePieData data=new OrderTypePieData();
+            data.setType(type);
+            double percent=(double)num/(double)totalNum;
+            data.setPercent(percent);
+            datas.add(data);
+        }
+        return datas;
     }
 
 

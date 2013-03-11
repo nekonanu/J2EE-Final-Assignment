@@ -21,7 +21,7 @@ public class OrderDaoImpl extends BaseDaoSupport<ProductOrder> implements IOrder
     @Override
     public List<ProductOrder> findBetweenDate(Date begin, Date end,int store_id) {
         Session session=getSession();
-        Query query=session.createQuery("from ProductOrder po where po.orderDate>:beginDate and po.orderDate<:endDate and po.store.id=:storeID");
+        Query query=session.createQuery("from ProductOrder po where po.orderDate>=:beginDate and po.orderDate<=:endDate and po.store.id=:storeID");
         query.setDate("beginDate",begin);
         query.setInteger("storeID",store_id);
         query.setDate("endDate",end);

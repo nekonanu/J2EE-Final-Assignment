@@ -1,6 +1,8 @@
 package cn.edu.nju.test;
 
 import cn.edu.nju.bean.*;
+import cn.edu.nju.controller.response.OrderStaData;
+import cn.edu.nju.controller.response.OrderTypePieData;
 import cn.edu.nju.controller.response.VipStaRegisterData;
 import cn.edu.nju.dao.IOrderDao;
 import cn.edu.nju.dao.ISaleDao;
@@ -17,6 +19,7 @@ import org.hibernate.Transaction;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
@@ -46,7 +49,12 @@ public class Main {
     }
 
     public static void main(String args[]){
-        List<VipStaRegisterData> list=userService.getRegisterFrequency(1);
+        Calendar calendar=Calendar.getInstance();
+        calendar.add(Calendar.MONTH,-1);
+        Date begin=calendar.getTime();
+        calendar=Calendar.getInstance();
+        Date end=calendar.getTime();
+        List<OrderTypePieData> list=productService.getOrderTypePercent(begin, end, 1);
 //        productService.saleProduct(1);
 //        Session session=HibernateUtil.currentSession();
 //        ProductOrder order= (ProductOrder) session.get(ProductOrder.class,1);
