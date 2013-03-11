@@ -11,13 +11,14 @@
           <element id="library" level="project" name="mydataSource required" />
           <element id="library" level="project" name="aspectjrt" />
           <element id="library" level="project" name="jackson-all-1.9.11" />
-          <element id="library" level="project" name="spring" />
+          <element id="library" level="project" name="spring-scheduler" />
           <element id="library" level="project" name="aopalliance-1.0" />
           <element id="library" level="project" name="jsp-api" />
           <element id="library" level="project" name="hibernate-validator-4.3.1.Final" />
           <element id="library" level="project" name="commons-logging-1.1.1" />
           <element id="library" level="project" name="Hibernate" />
           <element id="library" level="project" name="jstl-1.2" />
+          <element id="library" level="project" name="spring" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="dessert_house/web/Web" />

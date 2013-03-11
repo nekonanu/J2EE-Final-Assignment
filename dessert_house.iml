@@ -49,6 +49,7 @@
     <orderEntry type="library" name="commons-logging-1.1.1" level="project" />
     <orderEntry type="library" name="Hibernate" level="project" />
     <orderEntry type="library" name="jstl-1.2" level="project" />
+    <orderEntry type="library" name="spring-scheduler" level="project" />
   </component>
 </module>
 

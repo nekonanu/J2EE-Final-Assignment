@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="spring-scheduler">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/spring scheduler/quartz-1.8.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring scheduler/spring-context-support-3.2.1.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
