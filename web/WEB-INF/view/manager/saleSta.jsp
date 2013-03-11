@@ -10,6 +10,110 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
+<script type="text/javascript">
+    $(document).ready(function(){
+        var orderTypePie;
+        var orderLine;
+        initOrderLine(orderLine);
+        initOrderTypePie(orderTypePie);
+
+        function initOrderTypePie(chart){
+            var list=new Array();
+            var type_element=$("#orderTypeData")[0];
+            var percent_element=$("#orderPercentData")[0];
+            for(var i=0;i<type_element.options.length;i++){
+                list[i]=[type_element.options[i].text,parseFloat(percent_element.options[i].text)];
+            }
+
+            chart = new Highcharts.Chart({
+                chart: {
+                    renderTo: 'orderTypeChart',
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false
+                },
+                title: {
+                    text: '售出类型统计'
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage}%</b>',
+                    percentageDecimals: 1
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            color: '#000000',
+                            connectorColor: '#000000'
+                        }
+                    }
+                },
+                series: [{
+                    type: 'pie',
+                    name: '售出类型统计',
+                    data: list
+                }]
+            });
+        }
+
+        function initOrderLine(chart){
+            var list=new Array();
+            var num=$("#orderPay")[0];
+            var year=$("#orderYear")[0];
+            var month=$("#orderMonth")[0];
+            var day=$("#orderDay")[0];
+            for(var i=0;i<num.options.length;i++){
+                list[i]=[Date.UTC(parseInt(year.options[i].text),parseInt(month.options[i].text),parseInt(day.options[i].text)),parseInt(num.options[i].text)];
+            }
+
+            chart = new Highcharts.Chart({
+                chart: {
+                    renderTo: 'orderLineChart',
+                    type: 'spline'
+                },
+                title: {
+                    text: '售出交易量分析'
+                },
+                xAxis: {
+                    type: 'datetime'
+//                    dateTimeLabelFormats: { // don't display the dummy year
+//                        month: '%e. %b',
+//                        year: '%b'
+//                    }
+                },
+                yAxis: {
+                    title: {
+                        text: '当日售出总交易量'
+                    },
+                    min: 0
+                },
+                tooltip: {
+                    formatter: function() {
+                        return '<b>'+ this.series.name +'</b><br/>'+
+                                Highcharts.dateFormat('%e. %b', this.x) +': '+ this.y +' m';
+                    }
+                },
+
+                series: [{
+                    name: '交易量',
+                    data: list
+                }]
+            });
+        }
+    });
+</script>
+
+<div id="orderTypeChart" class="row">
+
+</div>
+<div id="orderLineChart" class="row">
+
+</div>
+
+
+
 <div class="row">
     <fieldset>
         <legend>售出信息</legend>
@@ -37,3 +141,35 @@
         </table>
     </fieldset>
 </div>
+
+<select id="orderTypeData" class="hide">
+    <c:forEach var="record" items="${saleTypePieRecords}" varStatus="index">
+        <option>${record.type}</option>
+    </c:forEach>
+</select>
+<select id="orderPercentData" class="hide">
+    <c:forEach var="record" items="${saleTypePieRecords}" varStatus="index">
+        <option>${record.percent}</option>
+    </c:forEach>
+</select>
+
+<select id="orderPay" class="hide">
+    <c:forEach var="record" items="${saleLineRecords}" varStatus="index">
+        <option>${record.pay}</option>
+    </c:forEach>
+</select>
+<select id="orderYear" class="hide">
+    <c:forEach var="record" items="${saleLineRecords}" varStatus="index">
+        <option>${record.year}</option>
+    </c:forEach>
+</select>
+<select id="orderMonth" class="hide">
+    <c:forEach var="record" items="${saleLineRecords}" varStatus="index">
+        <option>${record.month}</option>
+    </c:forEach>
+</select>
+<select id="orderDay" class="hide">
+    <c:forEach var="record" items="${saleLineRecords}" varStatus="index">
+        <option>${record.day}</option>
+    </c:forEach>
+</select>

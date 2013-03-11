@@ -3,8 +3,8 @@ package cn.edu.nju.service.impl;
 import cn.edu.nju.bean.*;
 import cn.edu.nju.controller.jsonData.CustomerOrder;
 import cn.edu.nju.controller.response.HotStaInfo;
-import cn.edu.nju.controller.response.OrderStaData;
-import cn.edu.nju.controller.response.OrderTypePieData;
+import cn.edu.nju.controller.response.OrderSaleStaData;
+import cn.edu.nju.controller.response.OrderSaleTypePieData;
 import cn.edu.nju.dao.IOrderDao;
 import cn.edu.nju.dao.IProductDao;
 import cn.edu.nju.dao.ISaleDao;
@@ -158,10 +158,10 @@ public class ProductServiceImpl implements IProductService {
     }
 
     @Override
-    public List<OrderStaData> getOrderStaData(Date begin, Date end,int storeID){
+    public List<OrderSaleStaData> getOrderStaData(Date begin, Date end,int storeID){
         List<ProductOrder> orders=orderDao.findBetweenDate(begin,end,storeID);
         Map<Date,Double> map=new HashMap();
-        List<OrderStaData> datas=new ArrayList<OrderStaData>();
+        List<OrderSaleStaData> datas=new ArrayList<OrderSaleStaData>();
         for (ProductOrder order:orders){
             if (map.get(order.getOrderDate())!=null){
                 map.put(order.getOrderDate(),map.get(order.getOrderDate())+order.getPay());
@@ -175,7 +175,7 @@ public class ProductServiceImpl implements IProductService {
             Date date=((Map.Entry<Date, Double>) entry).getKey();
             Double totalPay= ((Map.Entry<Date, Double>) entry).getValue();
 
-            OrderStaData staData=new OrderStaData();
+            OrderSaleStaData staData=new OrderSaleStaData();
             Calendar calendar=Calendar.getInstance();
             calendar.setTime(date);
             staData.setDate(date);
@@ -185,19 +185,19 @@ public class ProductServiceImpl implements IProductService {
             staData.setDay(calendar.get(Calendar.DATE));
             datas.add(staData);
         }
-        Collections.sort(datas,new OrderStaData());
+        Collections.sort(datas,new OrderSaleStaData());
         return datas;
     }
 
     @Override
-    public List<OrderTypePieData> getOrderTypePercent(Date begin, Date end, int storeID) {
+    public List<OrderSaleTypePieData> getOrderTypePercent(Date begin, Date end, int storeID) {
         List<ProductOrder> orders=orderDao.findBetweenDate(begin,end,storeID);
         int totalNum=0;
         for (ProductOrder order:orders){
             totalNum+=order.getOrderNum();
         }
         Map<String,Integer> map=new HashMap<String, Integer>();
-        List<OrderTypePieData> datas=new ArrayList<OrderTypePieData>();
+        List<OrderSaleTypePieData> datas=new ArrayList<OrderSaleTypePieData>();
         for (ProductOrder order:orders){
             if (map.get(order.getProduct().getProductType())!=null){
                 map.put(order.getProduct().getProductType(),map.get(order.getProduct().getProductType())+order.getOrderNum());
@@ -210,7 +210,69 @@ public class ProductServiceImpl implements IProductService {
             Map.Entry entry= (Map.Entry) iterator.next();
             String type=((Map.Entry<String,Integer>) entry).getKey();
             Integer num= ((Map.Entry<String,Integer>) entry).getValue();
-            OrderTypePieData data=new OrderTypePieData();
+            OrderSaleTypePieData data=new OrderSaleTypePieData();
+            data.setType(type);
+            double percent=(double)num/(double)totalNum;
+            data.setPercent(percent);
+            datas.add(data);
+        }
+        return datas;
+    }
+
+    @Override
+    public List<OrderSaleStaData> getSaleStaData(Date begin, Date end, int storeID) {
+        List<Sale> orders=saleDao.findBetweenDate(begin,end,storeID);
+        Map<Date,Double> map=new HashMap();
+        List<OrderSaleStaData> datas=new ArrayList<OrderSaleStaData>();
+        for (Sale order:orders){
+            if (map.get(order.getSaleDate())!=null){
+                map.put(order.getSaleDate(),map.get(order.getSaleDate())+order.getPay());
+            }else{
+                map.put(order.getSaleDate(),order.getPay());
+            }
+        }
+        Set set = map.entrySet();
+        for (Iterator iterator = set.iterator();iterator.hasNext();){
+            Map.Entry entry= (Map.Entry) iterator.next();
+            Date date=((Map.Entry<Date, Double>) entry).getKey();
+            Double totalPay= ((Map.Entry<Date, Double>) entry).getValue();
+
+            OrderSaleStaData staData=new OrderSaleStaData();
+            Calendar calendar=Calendar.getInstance();
+            calendar.setTime(date);
+            staData.setDate(date);
+            staData.setPay(totalPay);
+            staData.setYear(calendar.get(Calendar.YEAR));
+            staData.setMonth(calendar.get(Calendar.MONTH)+1);
+            staData.setDay(calendar.get(Calendar.DATE));
+            datas.add(staData);
+        }
+        Collections.sort(datas,new OrderSaleStaData());
+        return datas;
+    }
+
+    @Override
+    public List<OrderSaleTypePieData> getSaleTypePercent(Date begin, Date end, int storeID) {
+        List<Sale> orders=saleDao.findBetweenDate(begin,end,storeID);
+        int totalNum=0;
+        for (Sale order:orders){
+            totalNum+=order.getSaleNum();
+        }
+        Map<String,Integer> map=new HashMap<String, Integer>();
+        List<OrderSaleTypePieData> datas=new ArrayList<OrderSaleTypePieData>();
+        for (Sale order:orders){
+            if (map.get(order.getProduct().getProductType())!=null){
+                map.put(order.getProduct().getProductType(),map.get(order.getProduct().getProductType())+order.getSaleNum());
+            }else{
+                map.put(order.getProduct().getProductType(),order.getSaleNum());
+            }
+        }
+        Set set = map.entrySet();
+        for (Iterator iterator = set.iterator();iterator.hasNext();){
+            Map.Entry entry= (Map.Entry) iterator.next();
+            String type=((Map.Entry<String,Integer>) entry).getKey();
+            Integer num= ((Map.Entry<String,Integer>) entry).getValue();
+            OrderSaleTypePieData data=new OrderSaleTypePieData();
             data.setType(type);
             double percent=(double)num/(double)totalNum;
             data.setPercent(percent);

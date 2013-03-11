@@ -7,7 +7,7 @@ package cn.edu.nju.controller.response;
  * Time: 下午4:28
  * To change this template use File | Settings | File Templates.
  */
-public class OrderTypePieData {
+public class OrderSaleTypePieData {
     private String type;
     private double percent;
 

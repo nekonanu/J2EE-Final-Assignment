@@ -3,8 +3,8 @@ package cn.edu.nju.controller;
 import cn.edu.nju.bean.*;
 import cn.edu.nju.controller.jsonData.LoginForm;
 import cn.edu.nju.controller.response.HotStaInfo;
-import cn.edu.nju.controller.response.OrderStaData;
-import cn.edu.nju.controller.response.OrderTypePieData;
+import cn.edu.nju.controller.response.OrderSaleStaData;
+import cn.edu.nju.controller.response.OrderSaleTypePieData;
 import cn.edu.nju.controller.response.VipStaRegisterData;
 import cn.edu.nju.service.IProductService;
 import cn.edu.nju.service.IStoreService;
@@ -95,11 +95,11 @@ public class ManagerController {
         Date begin=calendar.getTime();
         calendar=Calendar.getInstance();
         Date end=calendar.getTime();
-        List<OrderStaData> orderStaData=productService.getOrderStaData(begin,end,store.getId());
-        model.addAttribute("orderLineRecords",orderStaData);
+        List<OrderSaleStaData> orderSaleStaData =productService.getOrderStaData(begin,end,store.getId());
+        model.addAttribute("orderLineRecords", orderSaleStaData);
         model.addAttribute("orderStaRecords",orders);
-        List<OrderTypePieData> orderTypePieDatas=productService.getOrderTypePercent(begin,end,store.getId());
-        model.addAttribute("orderTypePieRecords",orderTypePieDatas);
+        List<OrderSaleTypePieData> orderSaleTypePieDatas =productService.getOrderTypePercent(begin,end,store.getId());
+        model.addAttribute("orderTypePieRecords", orderSaleTypePieDatas);
         return "/manager/orderSta";
     }
 
@@ -108,6 +108,16 @@ public class ManagerController {
         Store store= storeService.findByName(storeName);
         Set<Sale> sales=store.getSales();
         model.addAttribute("saleStaRecords",sales);
+
+        Calendar calendar=Calendar.getInstance();
+        calendar.add(Calendar.MONTH,-1);
+        Date begin=calendar.getTime();
+        calendar=Calendar.getInstance();
+        Date end=calendar.getTime();
+        List<OrderSaleStaData> saleStaData=productService.getSaleStaData(begin, end, store.getId());
+        List<OrderSaleTypePieData> saleTypePieDatas=productService.getSaleTypePercent(begin, end, store.getId());
+        model.addAttribute("saleLineRecords",saleStaData);
+        model.addAttribute("saleTypePieRecords",saleTypePieDatas);
         return "/manager/saleSta";
     }
 

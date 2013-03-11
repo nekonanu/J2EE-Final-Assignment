@@ -10,7 +10,7 @@ import java.util.Date;
  * Time: 下午3:47
  * To change this template use File | Settings | File Templates.
  */
-public class OrderStaData implements Comparator{
+public class OrderSaleStaData implements Comparator{
     private double pay;
     private int year;
     private int month;
@@ -59,8 +59,8 @@ public class OrderStaData implements Comparator{
 
     @Override
     public int compare(Object o1, Object o2) {
-        Date date1=((OrderStaData)o1).getDate();
-        Date date2=((OrderStaData)o2).getDate();
+        Date date1=((OrderSaleStaData)o1).getDate();
+        Date date2=((OrderSaleStaData)o2).getDate();
         return date1.compareTo(date2);
     }
 }

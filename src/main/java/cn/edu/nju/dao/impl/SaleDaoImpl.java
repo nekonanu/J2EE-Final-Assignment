@@ -1,10 +1,13 @@
 package cn.edu.nju.dao.impl;
 
+import cn.edu.nju.bean.ProductOrder;
 import cn.edu.nju.bean.Sale;
 import cn.edu.nju.dao.ISaleDao;
 import org.hibernate.Query;
+import org.hibernate.Session;
 import org.springframework.stereotype.Repository;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -25,5 +28,16 @@ public class SaleDaoImpl extends BaseDaoSupport<Sale> implements ISaleDao{
         }else {
             return true;
         }
+    }
+
+    @Override
+    public List<Sale> findBetweenDate(Date begin, Date end, int store_id) {
+        Session session=getSession();
+        Query query=session.createQuery("from Sale s where s.saleDate>=:beginDate and s.saleDate<=:endDate and s.store.id=:storeID");
+        query.setDate("beginDate",begin);
+        query.setInteger("storeID",store_id);
+        query.setDate("endDate",end);
+        List list=query.list();
+        return list;
     }
 }

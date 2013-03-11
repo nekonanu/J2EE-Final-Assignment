@@ -1,9 +1,7 @@
 package cn.edu.nju.test;
 
 import cn.edu.nju.bean.*;
-import cn.edu.nju.controller.response.OrderStaData;
-import cn.edu.nju.controller.response.OrderTypePieData;
-import cn.edu.nju.controller.response.VipStaRegisterData;
+import cn.edu.nju.controller.response.OrderSaleTypePieData;
 import cn.edu.nju.dao.IOrderDao;
 import cn.edu.nju.dao.ISaleDao;
 import cn.edu.nju.dao.impl.OrderDaoImpl;
@@ -12,17 +10,14 @@ import cn.edu.nju.service.IProductService;
 import cn.edu.nju.service.IStoreService;
 import cn.edu.nju.service.IUserService;
 import cn.edu.nju.util.HibernateUtil;
-import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA.
@@ -54,7 +49,7 @@ public class Main {
         Date begin=calendar.getTime();
         calendar=Calendar.getInstance();
         Date end=calendar.getTime();
-        List<OrderTypePieData> list=productService.getOrderTypePercent(begin, end, 1);
+        List<OrderSaleTypePieData> list=productService.getOrderTypePercent(begin, end, 1);
 //        productService.saleProduct(1);
 //        Session session=HibernateUtil.currentSession();
 //        ProductOrder order= (ProductOrder) session.get(ProductOrder.class,1);
