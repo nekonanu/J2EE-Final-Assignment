@@ -29,4 +29,11 @@ public class ProductDaoImpl extends BaseDaoSupport<Product> implements IProductD
         return null;
     }
 
+    @Override
+    public List<String> getAllProductType() {
+        Session session=getSession();
+        Query query=session.createQuery("select distinct p.productType from Product p");
+        return query.list();
+    }
+
 }

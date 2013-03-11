@@ -20,9 +20,11 @@
         <tr>
             <th>商品ID</th>
             <th>名称</th>
+            <th>类型</th>
             <th>商品单价</th>
             <th>预定数量</th>
             <th>预定时间</th>
+            <th>是否发货</th>
         </tr>
         </thead>
         <tbody>
@@ -30,9 +32,14 @@
             <tr>
                 <td>${record.product.id}</td>
                 <td>${record.product.productName}</td>
+                <td>${record.product.productType}</td>
                 <td>${record.product.price}</td>
                 <td>${record.orderNum}</td>
                 <td><fmt:formatDate value="${record.orderDate}" type="both"/></td>
+                <td>
+                    <c:if test="${record.orderCheck=='true'}">已发货</c:if>
+                    <c:if test="${record.orderCheck=='false'}">未发货</c:if>
+                </td>
             </tr>
         </c:forEach>
         </tbody>

@@ -16,6 +16,15 @@ public class ProductAddData {
     private String productPrice;
     private String productNum;
     private String storeName;
+    private String productType;
+
+    public String getProductType() {
+        return productType;
+    }
+
+    public void setProductType(String productType) {
+        this.productType = productType;
+    }
 
     public String getProductName() {
         return productName;

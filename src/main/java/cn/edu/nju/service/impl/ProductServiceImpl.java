@@ -85,6 +85,7 @@ public class ProductServiceImpl implements IProductService {
 
     @Override
     public void orderProduct(Product product, User user, int amount) {
+        product.setRemainNum(product.getRemainNum()-amount);
         ProductOrder order=new ProductOrder();
         order.setUser(user);
         order.setProduct(product);
@@ -93,6 +94,7 @@ public class ProductServiceImpl implements IProductService {
         order.setStore(user.getStore());
         order.setOrderCheck("false");
         orderDao.save(order);
+        productDao.update(product);
     }
 
     @Override
@@ -146,6 +148,10 @@ public class ProductServiceImpl implements IProductService {
         return productStrategy.filterHotProducts(storeDao.findById(store_id).getProducts());
     }
 
+    @Override
+    public List<String> getAllProductType() {
+        return productDao.getAllProductType();
+    }
 
 
     public void setProductDao(IProductDao productDao) {

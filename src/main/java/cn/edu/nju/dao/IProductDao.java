@@ -13,4 +13,5 @@ import java.util.List;
  */
 public interface IProductDao extends IBaseDao<Product>{
     public Product findByName(String name);
+    public List<String> getAllProductType();
 }

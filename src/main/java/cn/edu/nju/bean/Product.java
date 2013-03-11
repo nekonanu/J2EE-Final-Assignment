@@ -27,6 +27,18 @@ public class Product implements Serializable {
         this.id = id;
     }
 
+    private String productType;
+
+    @javax.persistence.Column(name = "product_type")
+    @Basic
+    public String getProductType() {
+        return productType;
+    }
+
+    public void setProductType(String productType) {
+        this.productType = productType;
+    }
+
     private Set<ProductOrder> productOrder;
 
     @OneToMany(mappedBy = "product",fetch = FetchType.EAGER)

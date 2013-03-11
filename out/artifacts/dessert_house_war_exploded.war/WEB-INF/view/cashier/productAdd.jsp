@@ -19,6 +19,14 @@
             element.append("<td><input id='name"+index+"' class='input-xlarge' type='text'/></td>");
             element.append("<td><input id='price"+index+"' class='input-mini' type='text'/></td>");
             element.append("<td><input id='num"+index+"' class='input-mini' type='text'/></td>");
+
+            var storeOption="";
+            var select=$("#productType")[0];
+            for(var i=0;i<select.options.length;i++){
+                storeOption+="<option>"+select.options[i].text+"</option>";
+            }
+            element.append("<td><select id='productSelector"+index+"' class='input-medium'>"+storeOption+"</select></td>");
+
             var storeOption="";
             var select=$("#storeData")[0];
             for(var i=0;i<select.options.length;i++){
@@ -34,13 +42,15 @@
                 var price=$("#price"+(i+1)).val();
                 var num=$("#num"+(i+1)).val();
                 var store_name=$("#storeName"+(i+1)).val();
+                var productType=$("#productSelector"+(i+1)).val();
                 console.log(name);
                 if (name!=""&&store_name!=""){
                     list[i]={
                         productName:name,
                         productPrice:price,
                         productNum:num,
-                        storeName:store_name
+                        storeName:store_name,
+                        productType:productType
                     }
                 }
             }
@@ -73,6 +83,7 @@
             <th>商品名称</th>
             <th>商品单价</th>
             <th>库存数量</th>
+            <th>类别</th>
             <th>所属店铺</th>
         </tr>
         </thead>
@@ -91,5 +102,10 @@
 <select id="storeData" class="hide">
     <c:forEach var="record" items="${storeRecords}" varStatus="index">
         <option>${record.storeName}</option>
+    </c:forEach>
+</select>
+<select id="productType" class="hide">
+    <c:forEach var="record" items="${productTypeRecords}" varStatus="index">
+        <option>${record}</option>
     </c:forEach>
 </select>

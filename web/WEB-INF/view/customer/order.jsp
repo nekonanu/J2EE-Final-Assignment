@@ -58,6 +58,7 @@
             <tr>
                 <th>商品ID</th>
                 <th>名称</th>
+                <th>类型</th>
                 <th>剩余数量</th>
                 <th>价格</th>
                 <th>预定数量</th>
@@ -69,6 +70,7 @@
                 <tr>
                     <td>${record.id}</td>
                     <td>${record.productName}</td>
+                    <td>${record.productType}</td>
                     <td>${record.remainNum}</td>
                     <td>${record.price}</td>
                     <td><input id="product_num${record.id}" type="number" class="input-mini product_num" value="0"/> </td>

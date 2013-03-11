@@ -36,6 +36,7 @@
       <column name="remain_num" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
       <column name="price" sqlType="DOUBLE" length="22" precision="0" nullable="false" jdbcType="8" />
       <column name="store_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="product_type" sqlType="VARCHAR" length="32" precision="0" nullable="false" jdbcType="12" />
       <primary-key name="PRIMARY" columns="id" />
       <foreign-key name="store" columns="store_id" ref-table="store" ref-schema="" ref-catalog="dessert_house" ref-columns="id" update-rule="0" delete-rule="3" deferrability="2" />
       <exported-key name="product" table="product_order" schema="" catalog="dessert_house" columns="product_id" />

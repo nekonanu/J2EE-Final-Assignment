@@ -16,7 +16,16 @@ public class ChangeProductData {
     private String productName;
     private String productPrice;
     private String productRemainNum;
+    private String productType;
     private String op;
+
+    public String getProductType() {
+        return productType;
+    }
+
+    public void setProductType(String productType) {
+        this.productType = productType;
+    }
 
     public String getOp() {
         return op;

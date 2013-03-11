@@ -47,4 +47,6 @@ public interface IProductService{
      * @return
      */
     public Set<HotStaInfo> getHotProducts(int store_id);
+
+    public List<String> getAllProductType();
 }

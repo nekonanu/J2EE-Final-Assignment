@@ -84,6 +84,8 @@ public class CashierController {
     @RequestMapping(value = "/productAdd",method = RequestMethod.GET)
     public String productAdd(Model model){
         List<Store> stores=storeService.getAllStore();
+        List<String> productType=productService.getAllProductType();
+        model.addAttribute("productTypeRecords",productType);
         model.addAttribute("storeRecords",stores);
         return "/cashier/productAdd";
     }
@@ -107,6 +109,7 @@ public class CashierController {
             product.setPrice(Double.parseDouble(data.getProductPrice()));
             Store store=storeService.findByName(data.getStoreName());
             product.setStore(store);
+            product.setProductType(data.getProductType());
             productService.addProduct(product);
             map.put("result","success");
         }
@@ -137,6 +140,8 @@ public class CashierController {
         User user=userService.findUserByName(getUserName());
         Set<Product> products=user.getStore().getProducts();
         model.addAttribute("productRecords",products);
+        List<String> productType=productService.getAllProductType();
+        model.addAttribute("productTypeRecords",productType);
         return "/cashier/productManage";
     }
 
@@ -159,6 +164,7 @@ public class CashierController {
             product.setProductName(changeProductData.getProductName());
             product.setPrice(Double.parseDouble(changeProductData.getProductPrice()));
             product.setRemainNum(Integer.parseInt(changeProductData.getProductRemainNum()));
+            product.setProductType(changeProductData.getProductType());
             productService.update(product);
             map.put("result","success");
         }else {
