@@ -6,11 +6,12 @@
 
 .global-background{
     background-image: url("../img/login_back.jpg");
+    background-attachment: fixed;
 }
 
 .home-background{
-
     background-image: url("../img/back1.jpg");
+    background-attachment: fixed;
     /*background: #ff514c url(../img/noise.png);*/
 }
 

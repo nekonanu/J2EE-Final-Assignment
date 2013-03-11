@@ -2,6 +2,8 @@ package cn.edu.nju.dao;
 
 import cn.edu.nju.bean.VipCard;
 
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: nekosama
@@ -23,4 +25,6 @@ public interface IVipCardDao extends IBaseDao<VipCard>{
      * @param vipCard
      */
     public void freeze(VipCard vipCard);
+
+    public List<Object[]> statisticRegister(int store_id);
 }

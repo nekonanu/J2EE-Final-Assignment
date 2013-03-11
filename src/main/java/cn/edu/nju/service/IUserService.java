@@ -3,6 +3,7 @@ package cn.edu.nju.service;
 import cn.edu.nju.bean.Product;
 import cn.edu.nju.bean.User;
 import cn.edu.nju.bean.VipCard;
+import cn.edu.nju.controller.response.VipStaRegisterData;
 
 import java.util.List;
 import java.util.Set;
@@ -30,4 +31,7 @@ public interface IUserService{
      */
     public void orderProduct(Product product,User user,int product_num);
     public Set<User> getAllUser(int store_id);
+    public Set<User> getActiveUsers(int store_id);
+
+    public List<VipStaRegisterData> getRegisterFrequency(int store_id);
 }

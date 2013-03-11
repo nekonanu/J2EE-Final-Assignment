@@ -15,4 +15,5 @@ import java.util.List;
 public interface IUserDao extends IBaseDao<User>{
     public void changeAuthority(User user,String type);
     public User findByName(String name);
+
 }

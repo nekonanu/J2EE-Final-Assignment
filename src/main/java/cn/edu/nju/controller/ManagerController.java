@@ -3,6 +3,7 @@ package cn.edu.nju.controller;
 import cn.edu.nju.bean.*;
 import cn.edu.nju.controller.jsonData.LoginForm;
 import cn.edu.nju.controller.response.HotStaInfo;
+import cn.edu.nju.controller.response.VipStaRegisterData;
 import cn.edu.nju.service.IProductService;
 import cn.edu.nju.service.IStoreService;
 import cn.edu.nju.service.IUserService;
@@ -76,6 +77,13 @@ public class ManagerController {
         Store store= storeService.findByName(storeName);
         Set<User> users=store.getUsers();
         model.addAttribute("vipStaRecords",users);
+        Set<User> activeUsers=userService.getActiveUsers(store.getId());
+        double active=(double)activeUsers.size()/(double)users.size();
+        double freeze=1-active;
+        model.addAttribute("vipStaActive",active);
+        model.addAttribute("vipStaFreeze",freeze);
+        List<VipStaRegisterData> vipStaRegisterDatas=userService.getRegisterFrequency(store.getId());
+        model.addAttribute("vipStaRegisterRecords",vipStaRegisterDatas);
         return "/manager/vipSta";
     }
 

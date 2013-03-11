@@ -1,6 +1,7 @@
 package cn.edu.nju.test;
 
 import cn.edu.nju.bean.*;
+import cn.edu.nju.controller.response.VipStaRegisterData;
 import cn.edu.nju.dao.IOrderDao;
 import cn.edu.nju.dao.ISaleDao;
 import cn.edu.nju.dao.impl.OrderDaoImpl;
@@ -45,7 +46,8 @@ public class Main {
     }
 
     public static void main(String args[]){
-        productService.saleProduct(1);
+        List<VipStaRegisterData> list=userService.getRegisterFrequency(1);
+//        productService.saleProduct(1);
 //        Session session=HibernateUtil.currentSession();
 //        ProductOrder order= (ProductOrder) session.get(ProductOrder.class,1);
 //        Sale sale=new Sale();

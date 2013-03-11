@@ -9,31 +9,64 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var chart;
+        initChart(chart);
 
-<div class="row">
-    <fieldset>
-        <legend>热卖分析</legend>
-        <table class="table table-striped table-bordered table-hover">
-            <thead>
-            <tr>
-                <th>商品名</th>
-                <th>商品单价</th>
-                <th>库存数量</th>
-                <th>预定总量</th>
-                <th>售出总量</th>
-            </tr>
-            </thead>
-            <tbody>
-            <c:forEach var="record" items="${hotStaRecords}" varStatus="index">
-                <tr>
-                    <td>${record.product.productName}</td>
-                    <td>${record.product.price}</td>
-                    <td>${record.product.remainNum}</td>
-                    <td>${record.order_num}</td>
-                    <td>${record.sale_num}</td>
-                </tr>
-            </c:forEach>
-            </tbody>
-        </table>
-    </fieldset>
+        function initChart(chart){
+            // Radialize the colors
+
+
+            // Build the chart
+            chart = new Highcharts.Chart({
+                chart: {
+                    renderTo: 'chartContainer',
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false
+                },
+                title: {
+                    text: 'Browser market shares at a specific website, 2010'
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage}%</b>',
+                    percentageDecimals: 1
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            color: '#000000',
+                            connectorColor: '#000000'
+                        }
+                    }
+                },
+                series: [{
+                    type: 'pie',
+                    name: 'Browser share',
+                    data: [
+                        ['Firefox',   45.0],
+                        ['IE',       26.8],
+                        {
+                            name: 'Chrome',
+                            y: 12.8,
+                            sliced: true,
+                            selected: true
+                        },
+                        ['Safari',    8.5],
+                        ['Opera',     6.2],
+                        ['Others',   0.7]
+                    ]
+                }]
+            });
+        }
+    });
+
+</script>
+
+<div id="chartContainer" class="row">
+
 </div>

@@ -18,7 +18,12 @@
 <script src="<%=path%>/static/js/jquery.js"></script>
 <script src="<%=path%>/static/js/bootstrap.js"></script>
 <script src="<%=path%>/static/js/jquery-form.js"></script>
+
 <script src="<%=path%>/static/js/highCharts/highcharts.js"></script>
+<script src="<%=path%>/static/js/highCharts/modules/data.js"></script>
+<script src="<%=path%>/static/js/highCharts/modules/exporting.js"></script>
+<%--<script src="<%=path%>/static/js/highCharts/modules/canvas-tools.js"></script>--%>
+
 
 
 

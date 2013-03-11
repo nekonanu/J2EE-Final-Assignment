@@ -6,11 +6,11 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/helloService.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362044105315" ignored="false" />
     <file path="/spring-config.xml" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362670068161" ignored="false" />
-    <file path="/Main.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362798297873" ignored="false" />
+    <file path="/Main.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362978504356" ignored="false" />
     <file path="/Product.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362670998973" ignored="false" />
     <file path="/ProductDao.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362362953624" ignored="false" />
     <file path="/ProductDaoImpl.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362635975550" ignored="false" />
-    <file path="/fragment.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362795771963" ignored="false" />
+    <file path="/fragment.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362978707847" ignored="false" />
     <file path="/HibernateUtil.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362626208639" ignored="false" />
     <file path="/Product.hbm.xml" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362215913497" ignored="false" />
     <file path="/ProductService.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362392247449" ignored="false" />
@@ -32,8 +32,8 @@
     <file path="/UserDaoImpl.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362465944988" ignored="false" />
     <file path="/User.hbm.xml" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362215916182" ignored="false" />
     <file path="/UserService.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362392268648" ignored="false" />
-    <file path="/UserServiceImpl.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362623305138" ignored="false" />
-    <file path="/VipCardDaoImpl.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362388981707" ignored="false" />
+    <file path="/UserServiceImpl.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362982915810" ignored="false" />
+    <file path="/VipCardDaoImpl.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362983003252" ignored="false" />
     <file path="/VipCardService.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362388762208" ignored="false" />
     <file path="/LinkedItem.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362206238033" ignored="false" />
     <file path="/OrderDao.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362362938471" ignored="false" />
@@ -47,7 +47,7 @@
     <file path="/IBaseDao.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362667738187" ignored="false" />
     <file path="/IOrderDao.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362367937349" ignored="false" />
     <file path="/IProductDao.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362367947596" ignored="false" />
-    <file path="/IUserDao.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362465928664" ignored="false" />
+    <file path="/IUserDao.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362977879783" ignored="false" />
     <file path="/ChargeLogEntity.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362368119259" ignored="false" />
     <file path="/BaseDaoSupport.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362743180705" ignored="false" />
     <file path="E:/local workspace/J2EE/dessertHouse/src/main/resources/META-INF/myMessage.properties" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362377734754" ignored="false" />
@@ -81,7 +81,7 @@
     <file path="/spring-security.xml" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362830877943" ignored="false" />
     <file path="E:/local workspace/J2EE/dessertHouse/src/main/java/com/lecoding/controllers/CustomerController.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362656414448" ignored="false" />
     <file path="/UserAuthentication.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362466187985" ignored="false" />
-    <file path="/IUserService.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362465969524" ignored="false" />
+    <file path="/IUserService.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362977229165" ignored="false" />
     <file path="/CustomerController.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362969407268" ignored="false" />
     <file path="/UserInfo.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362470342896" ignored="false" />
     <file path="/VipCardInfo.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362470262643" ignored="false" />
@@ -94,7 +94,7 @@
     <file path="/index.jsp" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362922244305" ignored="false" />
     <file path="/include.jsp" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362973076488" ignored="false" />
     <file path="/spring-servlet.xml" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362535464698" ignored="false" />
-    <file path="/main.css" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362921816195" ignored="false" />
+    <file path="/main.css" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362982754840" ignored="false" />
     <file path="/application.xml" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362547763170" ignored="false" />
     <file path="$PROJECT_DIR$/META-INF/application.xml" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362548744344" ignored="false" />
     <file path="E:/local workspace/J2EE/dessertHouse/src/main/resources/META-INF/spring/spring-security.xml" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362553683034" ignored="false" />
@@ -138,11 +138,11 @@
     <file path="/SaleData.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362795758106" ignored="false" />
     <file path="/ISaleDao.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362796574083" ignored="false" />
     <file path="/SaleDaoImpl.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362796689135" ignored="false" />
-    <file path="/ManagerController.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362817412656" ignored="false" />
-    <file path="/vipSta.jsp" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362969449120" ignored="false" />
+    <file path="/ManagerController.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362982676360" ignored="false" />
+    <file path="/vipSta.jsp" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362982447511" ignored="false" />
     <file path="/orderSta.jsp" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362811816846" ignored="false" />
     <file path="/saleSta.jsp" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362811976437" ignored="false" />
-    <file path="/hotSta.jsp" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362812712218" ignored="false" />
+    <file path="/hotSta.jsp" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362975090698" ignored="false" />
     <file path="/productStrategyImpl.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362812562620" ignored="false" />
     <file path="/HotStaInfo.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362812244386" ignored="false" />
     <file path="/IProductStrategy.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362812367441" ignored="false" />
@@ -157,6 +157,7 @@
     <file path="/adminManage.jsp" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362973208861" ignored="false" />
     <file path="E:/local workspace/J2EE/dessertHouse/src/main/webapp/WEB-INF/views/customer/main.jsp" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362921760063" ignored="false" />
     <file path="/UserManageData.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362969900275" ignored="false" />
+    <file path="/VipStaRegisterData.java" changelist="db633afd-e27b-40b7-bc16-4f2afd2386c7" time="1362978630576" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,6 +226,20 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/test/cn/edu/nju/test/Main.java" line="48" class="cn.edu.nju.test.Main" package="cn.edu.nju.test">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
     </line_breakpoints>
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
@@ -269,48 +284,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CustomerController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/CustomerController.java">
+      <file leaf-file-name="UserDaoImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/dao/impl/UserDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="235" column="46" selection-start="8750" selection-end="8831" vertical-scroll-proportion="-8.56">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VipCard.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/bean/VipCard.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="29" selection-start="785" selection-end="785" vertical-scroll-proportion="0.0">
+            <state line="32" column="48" selection-start="879" selection-end="879" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SystemManagerController.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/SystemManagerController.java">
+      <file leaf-file-name="VipCardDaoImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/dao/impl/VipCardDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="195" column="27" selection-start="7353" selection-end="7353" vertical-scroll-proportion="0.3618582">
+            <state line="41" column="26" selection-start="1023" selection-end="1023" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserManageData.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/UserManageData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="21" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userAdd.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/systemManager/userAdd.jsp">
+      <file leaf-file-name="hotSta.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/manager/hotSta.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
@@ -318,47 +311,70 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="include.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/static/common/include.jsp">
+      <file leaf-file-name="vipSta.jsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/manager/vipSta.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="26" selection-start="263" selection-end="263" vertical-scroll-proportion="-7.1923075">
+            <state line="66" column="12" selection-start="2339" selection-end="2339" vertical-scroll-proportion="0.4857143">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="charge.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/customer/charge.jsp">
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/cn/edu/nju/test/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="16" selection-start="2486" selection-end="3095" vertical-scroll-proportion="-12.692307">
+            <state line="115" column="51" selection-start="4366" selection-end="4366" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userInfo.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/customer/userInfo.jsp">
+      <file leaf-file-name="IStoreDao.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/dao/IStoreDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="19" selection-start="2948" selection-end="2948" vertical-scroll-proportion="-14.0">
+            <state line="13" column="17" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adminManage.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/systemManager/adminManage.jsp">
+      <file leaf-file-name="IVipCardDao.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/dao/IVipCardDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="72" selection-start="2588" selection-end="2588" vertical-scroll-proportion="-5.769231">
+            <state line="28" column="38" selection-start="566" selection-end="566" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IVipCardService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/service/IVipCardService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="17" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="signUp.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/customer/signUp.jsp">
+      <file leaf-file-name="IUserService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/service/IUserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="35" column="46" selection-start="972" selection-end="972" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserServiceImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/service/impl/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="97" column="46" selection-start="2460" selection-end="2460" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#1958#1964#0" expanded="true" />
+                <element signature="e#2390#2410#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -390,22 +406,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/view/customer/login.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/view/employee/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/service/impl/ProductServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/CustomerController.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/view/manager/vipSta.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/view/systemManager/home.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/UserManageData.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/service/IVipCardService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/service/impl/VipCardServiceImpl.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/view/customer/charge.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/view/customer/userInfo.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/bean/VipCard.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/SystemManagerController.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/static/common/include.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/view/systemManager/adminManage.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/static/common/include.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/view/manager/hotSta.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/service/IUserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/dao/impl/UserDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/dao/IUserDao.java" />
+        <option value="$PROJECT_DIR$/src/test/cn/edu/nju/test/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/response/VipStaRegisterData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/ManagerController.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/static/css/main.css" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/dao/IVipCardDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/nju/dao/impl/VipCardDaoImpl.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/view/manager/vipSta.jsp" />
       </list>
     </option>
   </component>
@@ -585,59 +601,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="systemManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dessert_house" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dessert house" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="customer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dessert_house" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dessert house" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="manager" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -660,32 +624,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dessert_house" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dessert house" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -700,6 +638,14 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -726,6 +672,66 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="nju" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dessert_house" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dessert house" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nju" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dessert_house" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dessert house" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nju" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -756,6 +762,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dessert_house" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dessert house" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nju" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="response" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1218,6 +1258,11 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SliceManager">
+    <option name="analysisUIOptions">
+      <AnalysisUIOptions />
+    </option>
+  </component>
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
@@ -1265,35 +1310,35 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1320" height="784" extended-state="7" />
+    <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.49682036" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298887" sideWeight="0.6315789" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298887" sideWeight="0.8628389" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2591415" sideWeight="0.36044657" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1891892" sideWeight="0.8596491" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960254" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21212122" sideWeight="0.7718601" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19298245" sideWeight="0.7718601" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40988836" sideWeight="0.22257552" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24801272" sideWeight="0.31578946" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27662957" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.49682036" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25039873" sideWeight="0.49682036" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39872408" sideWeight="0.49682036" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24801272" sideWeight="0.307815" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24801272" sideWeight="0.2998405" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298887" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25516692" sideWeight="0.7878788" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23923445" sideWeight="0.49682036" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26709062" sideWeight="0.80701756" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47208932" sideWeight="0.49682036" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="JavaEE:App" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26947537" sideWeight="0.42424244" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1359,118 +1404,121 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/ChargeForm.java">
+    <entry file="jar://$PROJECT_DIR$/lib/spring-aop-3.2.1.RELEASE.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="19" selection-start="703" selection-end="703" vertical-scroll-proportion="0.0">
+        <state line="21" column="28" selection-start="1063" selection-end="1063" vertical-scroll-proportion="-6.84">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/ChangeStoreData.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/response/VipStaRegisterData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0">
+        <state line="39" column="26" selection-start="718" selection-end="718" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/ChangeProductData.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/manager/orderSta.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="4" selection-start="1293" selection-end="1976" vertical-scroll-proportion="0.0">
+        <state line="27" column="86" selection-start="842" selection-end="911" vertical-scroll-proportion="-9.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/manager/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="34" selection-start="1611" selection-end="1611" vertical-scroll-proportion="-10.346154">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/ManagerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="79" selection-start="3136" selection-end="3136" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/static/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="40" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/dao/impl/UserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="48" selection-start="879" selection-end="879" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/service/IVipCardService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="40" selection-start="319" selection-end="319" vertical-scroll-proportion="0.36520076">
+        <state line="12" column="17" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/service/impl/VipCardServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/service/IUserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="33" selection-start="904" selection-end="904" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/customer/charge.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="16" selection-start="2486" selection-end="3095" vertical-scroll-proportion="-12.692307">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/customer/userInfo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="19" selection-start="2948" selection-end="2948" vertical-scroll-proportion="-14.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/customer/signUp.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/bean/VipCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="29" selection-start="785" selection-end="785" vertical-scroll-proportion="0.0">
+        <state line="35" column="46" selection-start="972" selection-end="972" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="16" selection-start="827" selection-end="827" vertical-scroll-proportion="0.33195877">
+        <state line="97" column="46" selection-start="2460" selection-end="2460" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1958#1964#0" expanded="true" />
+            <element signature="e#2390#2410#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/cn/edu/nju/test/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="51" selection-start="4366" selection-end="4366" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/CustomerController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/dao/IStoreDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="235" column="46" selection-start="8750" selection-end="8831" vertical-scroll-proportion="-8.56">
+        <state line="13" column="17" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/dao/IVipCardDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="38" selection-start="566" selection-end="566" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/static/common/include.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/dao/impl/VipCardDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="26" selection-start="263" selection-end="263" vertical-scroll-proportion="-7.1923075">
+        <state line="41" column="26" selection-start="1023" selection-end="1023" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/systemManager/userAdd.jsp">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/manager/hotSta.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/systemManager/adminManage.jsp">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/view/manager/vipSta.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="72" selection-start="2588" selection-end="2588" vertical-scroll-proportion="-5.769231">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/jsonData/UserManageData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="21" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/nju/controller/SystemManagerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="195" column="27" selection-start="7353" selection-end="7353" vertical-scroll-proportion="0.3618582">
+        <state line="66" column="12" selection-start="2339" selection-end="2339" vertical-scroll-proportion="0.4857143">
           <folding />
         </state>
       </provider>

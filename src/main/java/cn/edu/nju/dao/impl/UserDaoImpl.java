@@ -38,4 +38,6 @@ public class UserDaoImpl extends BaseDaoSupport<User> implements IUserDao {
         else
             return null;
     }
+
+
 }
