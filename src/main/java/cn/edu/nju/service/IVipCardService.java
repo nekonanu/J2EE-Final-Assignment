@@ -11,6 +11,7 @@ import cn.edu.nju.bean.VipCard;
  * To change this template use File | Settings | File Templates.
  */
 public interface IVipCardService{
+    public void updata(VipCard vipCard);
     public void addVipCard(VipCard vipCard);
     public void cardCharge(User user,int amount);
 

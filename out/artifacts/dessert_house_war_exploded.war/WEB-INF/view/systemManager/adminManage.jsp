@@ -15,6 +15,7 @@
             var id = $(this).get(0).getAttribute("user-id");
             var tmpType=$("#admin"+id).val();
             var type;
+            var cutoff=$("#cutoff"+id).val();
             if(tmpType=="客户"){
                 type="CUSTOMER";
             }else if(tmpType=="店员"){
@@ -29,7 +30,7 @@
                 type:'POST',
                 dataType:'json',
                 contentType:'application/json;charset=UTF-8',
-                data:JSON.stringify({userID:id,type:type}),
+                data:JSON.stringify({userID:id,cutoff:cutoff,type:type}),
                 success:function(data){
                     if(data.result=="success"){
                         $("#info").append("修改成功！");
@@ -53,6 +54,8 @@
         <tr>
             <th>用户ID</th>
             <th>用户名</th>
+            <th>折扣率</th>
+            <th>会员级别</th>
             <th>权限信息</th>
             <th>更改</th>
         </tr>
@@ -62,6 +65,8 @@
             <tr>
                 <td>${record.id}</td>
                 <td>${record.userName}</td>
+                <td><input id="cutoff${record.id}" type="text" value="${record.vipCard.cutoff}"></td>
+                <td><select id="vipLevel${record.id}" class="input-small"><option>普通</option><option>黄金</option><option>铂金</option></select> </td>
                 <td>
                     <select id="admin${record.id}">
                         <c:choose>

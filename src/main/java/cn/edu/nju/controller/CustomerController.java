@@ -78,6 +78,11 @@ public class CustomerController {
     public Map processOrder(@RequestBody List<CustomerOrder> customerOrderList){
         Map map=new HashMap();
         User user = userService.findUserByName(getUserName());
+        if (user.getVipCard().getStatus().equals(VipCard.FREEZE)){
+            map.put("result","fail");
+            map.put("errorMessage","会员卡未激活，无法购买");
+            return map;
+        }
         for (CustomerOrder order:customerOrderList){
             if (!order.isNumberValid()){
                 map.put("result","fail");
@@ -88,8 +93,13 @@ public class CustomerController {
         if (productService.customerCanAfford(customerOrderList,user)){
             for (CustomerOrder order:customerOrderList){
                 Product product=productService.findByID(order.getProduct_id());
+                if(product.getRemainNum()<order.getProduct_num()){
+                    map.put("result","fail");
+                    map.put("errorMessage","对不起，库存数量不足！");
+                    return map;
+                }
                 productService.orderProduct(product,user,order.getProduct_num());
-                vipCardService.buyByCard(user,product.getPrice()*order.getProduct_num());
+                vipCardService.buyByCard(user,product.getPrice()*order.getProduct_num()*user.getVipCard().getCutoff());
             }
             map.put("result","success");
             map.put("infoMessage","恭喜您！订购成功！");

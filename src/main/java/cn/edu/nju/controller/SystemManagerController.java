@@ -1,11 +1,12 @@
 package cn.edu.nju.controller;
 
-import cn.edu.nju.bean.ProductOrder;
 import cn.edu.nju.bean.Store;
 import cn.edu.nju.bean.User;
+import cn.edu.nju.bean.VipCard;
 import cn.edu.nju.controller.jsonData.*;
 import cn.edu.nju.service.IStoreService;
 import cn.edu.nju.service.IUserService;
+import cn.edu.nju.service.IVipCardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -42,6 +43,8 @@ public class SystemManagerController {
     private IUserService userService;
     @Autowired
     private IStoreService storeService;
+    @Autowired
+    private IVipCardService vipCardService;
 
     @RequestMapping("/home")
     public String home(Model model){
@@ -163,6 +166,8 @@ public class SystemManagerController {
             user.setType(data.getType());
             Store store=storeService.findByID(data.getStoreID());
             user.setStore(store);
+            VipCard vipCard=new VipCard(user);
+            vipCardService.addVipCard(vipCard);
             userService.addUser(user);
         }
         map.put("result","success");
@@ -179,7 +184,7 @@ public class SystemManagerController {
 
     @RequestMapping(value = "/processAdminManage")
     @ResponseBody
-    public Map adminManage(@RequestBody AuthChangeData data){
+    public Map adminManage(@RequestBody UserManageData data){
         Map map=new HashMap();
         User valid=userService.findUserByName(getUserName());
         User user=userService.findUserByID(data.getUserID());
@@ -188,8 +193,17 @@ public class SystemManagerController {
             map.put("errorMessage","不能更改自己的权限！");
             return map;
         }
+
+        List<String[]> errors=data.errors();
+        if (errors.size()!=0){
+            map.put("result","fail");
+            map.put("errorMessage",errors.get(0)[1]);
+        }
         user.setType(data.getType());
+        VipCard vipCard=user.getVipCard();
+        vipCard.setCutoff(Double.parseDouble(data.getCutoff()));
         userService.update(user);
+        vipCardService.updata(vipCard);
         map.put("result","success");
         return map;
     }

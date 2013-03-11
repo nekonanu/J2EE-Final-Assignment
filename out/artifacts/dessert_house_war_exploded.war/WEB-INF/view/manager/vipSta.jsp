@@ -21,6 +21,7 @@
                 <th>年龄</th>
                 <th>性别</th>
                 <th>余额</th>
+                <th>折扣率</th>
                 <th>注册时间</th>
                 <th>到期时间</th>
                 <th>是否激活</th>
@@ -34,6 +35,7 @@
                     <td>${record.age}</td>
                     <td><c:if test="${record.sex==0}">女</c:if><c:if test="${record.sex==1}">男</c:if> </td>
                     <td>${record.vipCard.remainAmount}</td>
+                    <td>${record.vipCard.cutoff}</td>
                     <td><fmt:formatDate value="${record.vipCard.registerDate}" type="both"/></td>
                     <td><fmt:formatDate value="${record.vipCard.deadlineDate}" type="both"/></td>
                     <td><c:if test="${record.vipCard.status=='freeze'}">否</c:if><c:if test="${record.vipCard.status=='activate'}">是</c:if> </td>

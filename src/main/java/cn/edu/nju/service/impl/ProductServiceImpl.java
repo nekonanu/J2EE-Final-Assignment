@@ -135,7 +135,7 @@ public class ProductServiceImpl implements IProductService {
             Product product=findByID(order.getProduct_id());
             pay+=product.getPrice()*order.getProduct_num();
         }
-        if (user.getVipCard().getRemainAmount()>=pay)
+        if ((user.getVipCard().getRemainAmount()*user.getVipCard().getCutoff())>=pay)
             return true;
         else
             return false;

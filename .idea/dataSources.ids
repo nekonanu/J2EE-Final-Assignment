@@ -100,6 +100,7 @@
       <column name="deadline_date" sqlType="DATE" length="10" precision="0" nullable="false" jdbcType="91" />
       <column name="status" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12" def="J2ZyZWV6ZSc=" />
       <column name="remain_amount" sqlType="DOUBLE" length="22" precision="0" nullable="false" jdbcType="8" />
+      <column name="cutoff" sqlType="DOUBLE" length="22" precision="0" nullable="false" jdbcType="8" />
       <primary-key name="PRIMARY" columns="id" />
       <exported-key name="vip_card" table="charge_log" schema="" catalog="dessert_house" columns="vip_card_id" />
       <exported-key name="card" table="user" schema="" catalog="dessert_house" columns="vip_card_id" />

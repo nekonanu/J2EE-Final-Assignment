@@ -30,6 +30,10 @@ public class VipCardServiceImpl implements IVipCardService {
     private IChargeLogDao chargeLogDao;
 
 
+    @Override
+    public void updata(VipCard vipCard) {
+        vipCardDao.update(vipCard);
+    }
 
     @Override
     public void addVipCard(VipCard vipCard) {

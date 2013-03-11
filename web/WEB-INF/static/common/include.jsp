@@ -18,6 +18,7 @@
 <script src="<%=path%>/static/js/jquery.js"></script>
 <script src="<%=path%>/static/js/bootstrap.js"></script>
 <script src="<%=path%>/static/js/jquery-form.js"></script>
+<script src="<%=path%>/static/js/highCharts/highcharts.js"></script>
 
 
 

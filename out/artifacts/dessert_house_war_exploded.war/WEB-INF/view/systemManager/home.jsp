@@ -116,7 +116,7 @@
                 <li id="adminStoreMana"><a>店面删改</a></li>
                 <li class="divider"></li>
                 <li id="adminUserAdd"><a>添加用户</a></li>
-                <li id="adminAuthMana"><a>权限管理</a></li>
+                <li id="adminAuthMana"><a>用户管理</a></li>
             </ul>
         </div>
         <div id="containerSpan" class="span10">

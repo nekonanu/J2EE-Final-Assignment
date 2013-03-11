@@ -52,6 +52,23 @@
         </div>
     </div>
     <div class="control-group">
+        <label class="control-label" for="isActive">是否激活</label>
+        <div class="controls">
+            <c:if test="${userInfoRecord.vipCard.status=='freeze'}">
+                <input type="email" class="input-xlarge uneditable-input alert" disabled="true" id="isActive"  value="未激活"/>
+            </c:if>
+            <c:if test="${userInfoRecord.vipCard.status=='activate'}">
+                <input type="email" class="input-xlarge uneditable-input" disabled="true" id="isActive"  value="已激活"/>
+            </c:if>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="cutoff">折扣率</label>
+        <div class="controls">
+            <input type="email" class="input-xlarge uneditable-input" disabled="true" id="cutoff"  value="${userInfoRecord.vipCard.cutoff}"/>
+        </div>
+    </div>
+    <div class="control-group">
         <label class="control-label" for="register_date">会员卡注册日期</label>
         <div class="controls">
             <input type="email" class="input-xlarge uneditable-input" disabled="true" id="register_date"  value="<fmt:formatDate value="${userInfoRecord.vipCard.registerDate}" type="both"/>"/>

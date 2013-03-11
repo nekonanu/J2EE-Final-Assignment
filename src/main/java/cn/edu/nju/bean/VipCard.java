@@ -24,6 +24,7 @@ public class VipCard implements Serializable {
         this.deadlineDate=new Date(System.currentTimeMillis()+365*24*3600*1000);
         this.status=FREEZE;
         this.remainAmount=0;
+        this.setCutoff(0.9);
     }
 
     private int id;
@@ -95,6 +96,18 @@ public class VipCard implements Serializable {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    private double cutoff;
+
+    @javax.persistence.Column(name = "cutoff")
+    @Basic
+    public double getCutoff() {
+        return cutoff;
+    }
+
+    public void setCutoff(double cutoff) {
+        this.cutoff = cutoff;
     }
 
     private double remainAmount;
