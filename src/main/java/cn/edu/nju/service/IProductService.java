@@ -5,6 +5,7 @@ import cn.edu.nju.bean.ProductOrder;
 import cn.edu.nju.bean.Sale;
 import cn.edu.nju.bean.User;
 import cn.edu.nju.controller.jsonData.CustomerOrder;
+import cn.edu.nju.controller.response.HotStaData;
 import cn.edu.nju.controller.response.HotStaInfo;
 import cn.edu.nju.controller.response.OrderSaleStaData;
 import cn.edu.nju.controller.response.OrderSaleTypePieData;
@@ -49,7 +50,7 @@ public interface IProductService{
      * @param store_id
      * @return
      */
-    public Set<HotStaInfo> getHotProducts(int store_id);
+    public List<HotStaData> getHotProducts(int store_id);
 
     public List<String> getAllProductType();
 
@@ -60,4 +61,6 @@ public interface IProductService{
     public List<OrderSaleStaData> getSaleStaData(Date begin,Date end,int storeID);
 
     public List<OrderSaleTypePieData> getSaleTypePercent(Date begin,Date end,int storeID);
+
+
 }

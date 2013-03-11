@@ -2,10 +2,7 @@ package cn.edu.nju.controller;
 
 import cn.edu.nju.bean.*;
 import cn.edu.nju.controller.jsonData.LoginForm;
-import cn.edu.nju.controller.response.HotStaInfo;
-import cn.edu.nju.controller.response.OrderSaleStaData;
-import cn.edu.nju.controller.response.OrderSaleTypePieData;
-import cn.edu.nju.controller.response.VipStaRegisterData;
+import cn.edu.nju.controller.response.*;
 import cn.edu.nju.service.IProductService;
 import cn.edu.nju.service.IStoreService;
 import cn.edu.nju.service.IUserService;
@@ -124,8 +121,8 @@ public class ManagerController {
     @RequestMapping(value = "/hotSta")
     public String hotStatistics(@RequestParam("storeName") String storeName,Model model){
         Store store=storeService.findByName(storeName);
-        Set<HotStaInfo> info=productService.getHotProducts(store.getId());
-        model.addAttribute("hotStaRecords",info);
+        List<HotStaData> datas=new ArrayList<HotStaData>();
+        model.addAttribute("hotStaDataRecords",datas);
         return "/manager/hotSta";
     }
 
