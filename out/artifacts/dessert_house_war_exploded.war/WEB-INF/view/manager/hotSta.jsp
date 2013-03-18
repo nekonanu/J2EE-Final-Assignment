@@ -16,16 +16,16 @@
                 categories = ['蛋糕', '布丁', '冰激凌'],
                 name = '热销分析',
                 data = [{
-                    y: 83.3,
+                    y: 73.3,
                     color: colors[0],
                     drilldown: {
                         name: '蛋糕',
                         categories: ['乌贼蛋塔', '金克拉'],
-                        data: [68.7, 31.3],
+                        data: [72.7, 27.2],
                         color: colors[0]
                     }
                 }, {
-                    y: 16.7,
+                    y: 26.6,
                     color: colors[1],
                     drilldown: {
                         name: '布丁',

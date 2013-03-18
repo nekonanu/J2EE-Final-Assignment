@@ -19,6 +19,9 @@
           <file>file://$MODULE_DIR$/src/main/configuration/META-INF/spring/spring-security.xml</file>
           <file>file://$MODULE_DIR$/src/main/configuration/META-INF/spring/spring-config.xml</file>
         </fileset>
+        <fileset id="fileset2" name="XML Application Context1" removed="false">
+          <file>file://$MODULE_DIR$/src/main/configuration/META-INF/schedule/spring-scheduler.xml</file>
+        </fileset>
       </configuration>
     </facet>
     <facet type="hibernate" name="Hibernate">

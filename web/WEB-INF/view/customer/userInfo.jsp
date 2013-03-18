@@ -9,6 +9,15 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#userInfoChange").click(function(){
+            $("#infoMessage").empty();
+            $("#infoMessage").append("恭喜您！修改成功！");
+            $("#infoModal").modal('show');
+        });
+    });
+</script>
 
 <fieldset>
     <legend>个人信息</legend>
@@ -22,14 +31,14 @@
     <div class="control-group">
         <label class="control-label" for="e_mail">电子邮件</label>
         <div class="controls">
-            <input type="email" class="input-xlarge uneditable-input"  disabled="true" id="e_mail"  value="${userInfoRecord.email}"/>
+            <input type="email" class="input-xlarge" id="e_mail"  value="${userInfoRecord.email}"/>
             <%--<button class="btn btn-primary">更改</button>--%>
         </div>
     </div>
     <div class="control-group">
         <label class="control-label" for="address">居住地址</label>
         <div class="controls">
-            <input type="email" class="input-xlarge uneditable-input" disabled="true" id="address"  value="${userInfoRecord.email}"/>
+            <input type="text" class="input-xlarge" id="address"  value="${userInfoRecord.address}"/>
             <%--<button class="btn btn-primary">更改</button>--%>
         </div>
     </div>
@@ -80,5 +89,9 @@
             <input type="email" class="input-xlarge uneditable-input" disabled="true" id="deadline_date"  value="<fmt:formatDate value="${userInfoRecord.vipCard.deadlineDate}" type="both"/>"/>
         </div>
     </div>
-
 </fieldset>
+<div class="row">
+    <div class="span2">
+        <button id="userInfoChange" class="btn btn-primary btn-large">更改</button>
+    </div>
+</div>
