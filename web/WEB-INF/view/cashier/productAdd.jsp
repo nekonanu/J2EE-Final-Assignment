@@ -10,52 +10,74 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <script type="text/javascript">
-    $(document).ready(function(){
-        var index=0;
-        $("#addBtn").click(function(){
+    $(document).ready(function () {
+        var index = 0;
+        var fileList = new Array();
+        $("#addBtn").click(function () {
             index++;
-            $("#tableBody").append("<tr id='productAdd"+index+"'></tr>");
-            var element= $("#tableBody").find("tr").last();
-            element.append("<td><input id='name"+index+"' class='input-medium' type='text'/></td>");
-            element.append("<td><input id='price"+index+"' class='input-mini' type='text'/></td>");
-            element.append("<td><input id='num"+index+"' class='input-mini' type='number'/></td>");
+            $("#tableBody").append("<tr id='productAdd" + index + "'></tr>");
+            var element = $("#tableBody").find("tr").last();
+            element.append("<td><input id='name" + index + "' class='input-medium' type='text'/></td>");
+            element.append("<td><input id='price" + index + "' class='input-mini' type='text'/></td>");
+            element.append("<td><input id='num" + index + "' class='input-mini' type='number'/></td>");
 
-            var storeOption="";
-            var select=$("#productType")[0];
-            for(var i=0;i<select.options.length;i++){
-                storeOption+="<option>"+select.options[i].text+"</option>";
+            var storeOption = "";
+            var select = $("#productType")[0];
+            for (var i = 0; i < select.options.length; i++) {
+                storeOption += "<option>" + select.options[i].text + "</option>";
             }
-            element.append("<td><select id='productSelector"+index+"' class='input-medium'>"+storeOption+"</select></td>");
+            element.append("<td><select id='productSelector" + index + "' class='input-medium'>" + storeOption + "</select></td>");
 
-            var storeOption="";
-            var select=$("#storeData")[0];
-            for(var i=0;i<select.options.length;i++){
-                storeOption+="<option>"+select.options[i].text+"</option>";
+            var storeOption = "";
+            var select = $("#storeData")[0];
+            for (var i = 0; i < select.options.length; i++) {
+                storeOption += "<option>" + select.options[i].text + "</option>";
             }
-            element.append("<td><select id='storeName"+index+"' class='input-medium'>"+storeOption+"</select></td>");
-            element.append("<td><input id='img_path"+index+"' class='input-medium' type='text'/></td>");
-            $("#productAdd"+index).hide();
-            $("#productAdd"+index).fadeIn(300);
+            element.append("<td><select id='storeName" + index + "' class='input-medium'>" + storeOption + "</select></td>");
+            element.append("<td><span id='fileupload-zone"+index+"' class='btn btn-success fileinput-btn'><i class='icon-plus icon-white'></i><span id='file-span"+index+"'>选择文件</span><input class='fileupload-btn' id='fileupload"+index+"' type='file' name='files[]' multiple></span></td>");
+            $("#productAdd" + index).hide();
+            $("#productAdd" + index).fadeIn(300);
+
+
+            $("#fileupload"+index).fileupload({
+                url: "<%=request.getContextPath()%>/cashier/fileUpload",
+                add: function(e, data){
+                    console.log("add");
+                    fileList.push(data.files[0].name);
+                    data.submit();
+                },
+                dataType: 'json',
+                dropZone: $("#fileupload-zone"+index),
+                done: function (e, data) {
+                    $("#info").append("上传成功！");
+                    setTimeout(function(){
+                        $("#info").empty();
+                    },3000);
+                    $("#fileupload-zone"+index).addClass('disabled');
+                    $("#fileupload"+index).hide();
+                }
+            });
+
         });
 
-        $("#saveBtn").click(function(){
-            var list=new Array();
-            for(var i=0;i<index;i++){
-                var name=$("#name"+(i+1)).val();
-                var price=$("#price"+(i+1)).val();
-                var num=$("#num"+(i+1)).val();
-                var store_name=$("#storeName"+(i+1)).val();
-                var productType=$("#productSelector"+(i+1)).val();
-                var img_path=$("#img_path"+(i+1)).val();
+        $("#saveBtn").click(function () {
+            var list = new Array();
+            for (var i = 0; i < index; i++) {
+                var name = $("#name" + (i + 1)).val();
+                var price = $("#price" + (i + 1)).val();
+                var num = $("#num" + (i + 1)).val();
+                var store_name = $("#storeName" + (i + 1)).val();
+                var productType = $("#productSelector" + (i + 1)).val();
+                var img_path = fileList[i];
                 console.log(name);
-                if (name!=""&&store_name!=""){
-                    list[i]={
-                        productName:name,
-                        productPrice:price,
-                        productNum:num,
-                        storeName:store_name,
-                        productType:productType,
-                        imgPath:img_path
+                if (name != "" && store_name != "") {
+                    list[i] = {
+                        productName: name,
+                        productPrice: price,
+                        productNum: num,
+                        storeName: store_name,
+                        productType: productType,
+                        imgPath: img_path
                     }
                 }
             }
@@ -64,15 +86,15 @@
             $.ajax({
                 type: "POST",
                 url: "<%=request.getContextPath()%>/cashier/productAdd",
-                dataType:'json',
-                data:JSON.stringify(list),
-                contentType:'application/json;charset=UTF-8',
-                success: function(msg){
-                    if(msg.result=="success"){
+                dataType: 'json',
+                data: JSON.stringify(list),
+                contentType: 'application/json;charset=UTF-8',
+                success: function (msg) {
+                    if (msg.result == "success") {
                         $("#infoMessage").empty();
                         $("#infoMessage").append("操作成功！");
                         $("#infoModal").modal('show');
-                    }else{
+                    } else {
                         $("#errorMessage").empty();
                         $("#errorMessage").append("商品价格和商品数量只能为数字！");
                         $("#errorModal").modal('show');
@@ -92,10 +114,25 @@
             <th>库存数量</th>
             <th>类别</th>
             <th>所属店铺</th>
-            <th>图片路径</th>
+            <th>图片</th>
         </tr>
         </thead>
         <tbody id="tableBody">
+        <%--<tr>--%>
+            <%--<td>fuck</td>--%>
+            <%--<td>fuck</td>--%>
+            <%--<td>fuck</td>--%>
+            <%--<td>fuck</td>--%>
+            <%--<td>fuck</td>--%>
+            <%--<td>--%>
+                <%--<span class="btn btn-success fileinput-btn">--%>
+                <%--<i class="icon-plus icon-white"></i>--%>
+                <%--<span>Add files...</span>--%>
+                <%--<!-- The file input field used as target for the file upload widget -->--%>
+                <%--<input id="fileupload" type="file" name="files[]" multiple="">--%>
+                <%--</span>--%>
+            <%--</td>--%>
+        <%--</tr>--%>
         </tbody>
     </table>
 </div>

@@ -40,7 +40,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="JBoss 7.1.1.Final" level="application_server_libraries" />
     <orderEntry type="library" name="mysql-connector-java-5.1.23-bin" level="project" />
     <orderEntry type="library" name="mydataSource required" level="project" />
     <orderEntry type="library" name="aspectjrt" level="project" />

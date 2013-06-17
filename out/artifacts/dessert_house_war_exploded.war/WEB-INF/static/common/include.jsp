@@ -21,6 +21,10 @@
 <script src="<%=path%>/static/js/jquery-ui-effects.min.js"></script>
 <script src="<%=path%>/static/js/jquery.cookie.js"></script>
 
+<script src="<%=path%>/static/js/jquery.ui.widget.js"></script>
+<script src="<%=path%>/static/js/jquery.iframe-transport.js"></script>
+<script src="<%=path%>/static/js/jquery.fileupload.js"></script>
+
 <script src="<%=path%>/static/js/highCharts/highcharts.js"></script>
 <script src="<%=path%>/static/js/highCharts/modules/data.js"></script>
 <script src="<%=path%>/static/js/highCharts/modules/exporting.js"></script>

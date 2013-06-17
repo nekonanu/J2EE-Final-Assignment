@@ -22,13 +22,16 @@ import org.springframework.security.crypto.password.StandardPasswordEncoder;
 import org.springframework.security.web.authentication.WebAuthenticationDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.util.FileCopyUtils;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -91,6 +94,25 @@ public class CashierController {
         model.addAttribute("storeRecords",stores);
         return "/cashier/productAdd";
     }
+
+    @RequestMapping(value="/fileUpload", method = RequestMethod.POST)
+    public @ResponseBody Map upload(MultipartHttpServletRequest request, HttpServletResponse response) {
+        Map map=new HashMap();
+        MultipartFile file = request.getFile(request.getFileNames().next());
+        String fileName= file.getOriginalFilename();
+        File filePath=new File(request.getSession().getServletContext().getRealPath("/WEB-INF/static/img/"+fileName));
+        try {
+            FileCopyUtils.copy(file.getBytes(),filePath);
+        } catch (IOException e) {
+            e.printStackTrace();
+            map.put("result","fail");
+            return map;
+        }
+        map.put("result","success");
+        return map;
+    }
+
+
 
     @RequestMapping(value = "/productAdd",method = RequestMethod.POST)
     @ResponseBody
