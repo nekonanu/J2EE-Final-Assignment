@@ -22,6 +22,8 @@
                 success: function(msg){
                     $("#contextContainer").empty();
                     $("#contextContainer").append(msg);
+                    $("#contextContainer").hide();
+                    $("#contextContainer").fadeIn(400);
                 }
             });
         }
@@ -40,7 +42,21 @@
                 storeOption+="<option>"+select.options[i].text+"</option>";
             }
             $("#containerSpan select").first().append(storeOption);
+            $("#containerSpan").hide();
+            $("#containerSpan").fadeIn(400);
         }
+
+        $("#homePage").click(function(){
+            $("#control").remove();
+            $("#contextContainer").hide("drop", {direction: "left"}, 300, function () {
+                var container = $("#contextContainer");
+                container.empty();
+                container.append("<h1>Nekosama的糖果屋</h1>");
+                container.append("<p>「你要承受你心天的季候，如同你常常承受从田野上度过的四时。你要静守，度过你心里凄凉的冬日。」晚安~</p>");
+                container.hide();
+                container.fadeIn(400);
+            });
+        });
 
         <%--会员统计--%>
         $("#vipStatistics").click(function(){
@@ -59,6 +75,8 @@
             });
         });
         <%--售出统计--%>
+        $("#saleStatistics").hide();
+
         $("#saleStatistics").click(function(){
             appendSelector("saleStaBtn");
             $("#saleStaBtn").click(function(){
@@ -82,7 +100,7 @@
 </head>
 <body class="home-background">
 <jsp:include page="../common/dialog.jsp"/>
-<div class="navbar navbar-inverse">
+<div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner open">
         <a class="brand" href="#">Nekosama|糖果屋</a>
         <ul class="nav pull-right">
@@ -112,18 +130,18 @@
         </ul>
     </div>
 </div>
-<div class="container">
+<div class="container container-fixed">
     <div class="row-fluid">
         <div class="span2">
             <ul class="nav nav-list home-side-bar-rounded">
                 <li class="nav-header">欢迎使用</li>
-                <li><a href="<%=request.getContextPath()%>/manager/home">介绍</a></li>
+                <li><a id="homePage"><i class="icon-home"></i>首页</a></li>
                 <li class="divider"></li>
-                <li id="vipStatistics"><a>会员统计</a></li>
+                <li id="vipStatistics"><a><i class="icon-user"></i>会员统计</a></li>
                 <li class="divider"></li>
-                <li id="orderStatistics"><a>预定统计</a></li>
+                <li id="orderStatistics"><a><i class="icon-shopping-cart"></i>预定统计</a></li>
                 <li id="saleStatistics"><a>售出统计</a></li>
-                <li id="hotStatistics"><a>热卖分析</a></li>
+                <li id="hotStatistics"><a><i class="icon-heart"></i>热卖分析</a></li>
             </ul>
         </div>
         <div id="containerSpan" class="span10">

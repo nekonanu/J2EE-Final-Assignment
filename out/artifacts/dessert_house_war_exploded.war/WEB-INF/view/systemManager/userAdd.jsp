@@ -14,7 +14,7 @@
         var index=0;
         $("#addBtn").click(function(){
             index++;
-            $("#tableBody").append("<tr></tr>");
+            $("#tableBody").append("<tr id='userAdd"+index+"'></tr>");
             var element= $("#tableBody").find("tr").last();
             //用户名
             element.append("<td><input class='input-mini' id='name"+index+"' type='text'/></td>");
@@ -25,7 +25,7 @@
             //性别
             element.append("<td><select class='input-mini' id='sexSelect"+index+"' ><option>男</option><option>女</option></select> </td>");
             //地址
-            element.append("<td><input class='input-medium'  type='text' id='address"+index+"'/></td>")
+            element.append("<td><input class='input-small'  type='text' id='address"+index+"'/></td>")
             //权限
             element.append("<td><select class='input-small' id='adminSelect"+index+"' ><option>客户</option><option>店员</option><option>经理</option><option>管理员</option></select> </td>");
             //店铺
@@ -37,6 +37,8 @@
             }
             element.append("<td><select class='input-small' id='storeSelect"+index+"'>"+storeOption+"</select> </td>");
 
+            $("#userAdd"+index).hide();
+            $("#userAdd"+index).fadeIn(300);
         });
         $("#saveBtn").click(function(){
             var list=new Array();

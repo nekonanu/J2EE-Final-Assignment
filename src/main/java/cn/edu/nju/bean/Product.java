@@ -72,6 +72,18 @@ public class Product implements Serializable {
         this.productName = productName;
     }
 
+    private String imgPath;
+
+    @javax.persistence.Column(name = "img_path")
+    @Basic
+    public String getImgPath() {
+        return imgPath;
+    }
+
+    public void setImgPath(String imgPath) {
+        this.imgPath = imgPath;
+    }
+
     private int remainNum;
 
     @javax.persistence.Column(name = "remain_num")

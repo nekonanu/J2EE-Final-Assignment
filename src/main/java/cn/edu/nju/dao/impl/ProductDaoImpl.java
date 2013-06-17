@@ -36,4 +36,15 @@ public class ProductDaoImpl extends BaseDaoSupport<Product> implements IProductD
         return query.list();
     }
 
+    @Override
+    public List<Product> findByLike(String text,int store_id) {
+        Session session = getSession();
+        Query query = session.createQuery("from Product p where p.store.id =:storeID and p.productName like :searchText");
+//        Query query = session.createQuery("from Product p where p.productName like '%娃娃头%'");
+        query.setString("searchText","%"+text+"%");
+        query.setInteger("storeID",store_id);
+        List<Product> list = query.list();
+        return list;
+    }
+
 }

@@ -1,9 +1,8 @@
 package cn.edu.nju.service.impl;
 
 import cn.edu.nju.bean.*;
-import cn.edu.nju.controller.jsonData.CustomerOrder;
+import cn.edu.nju.controller.jsonData.CustomerOrderItem;
 import cn.edu.nju.controller.response.HotStaData;
-import cn.edu.nju.controller.response.HotStaInfo;
 import cn.edu.nju.controller.response.OrderSaleStaData;
 import cn.edu.nju.controller.response.OrderSaleTypePieData;
 import cn.edu.nju.dao.IOrderDao;
@@ -136,9 +135,9 @@ public class ProductServiceImpl implements IProductService {
     }
 
     @Override
-    public boolean customerCanAfford(List<CustomerOrder> customerOrderList,User user) {
+    public boolean customerCanAfford(List<CustomerOrderItem> customerOrderItemList,User user) {
         double pay=0;
-        for(CustomerOrder order:customerOrderList){
+        for(CustomerOrderItem order: customerOrderItemList){
             Product product=findByID(order.getProduct_id());
             pay+=product.getPrice()*order.getProduct_num();
         }
@@ -146,6 +145,11 @@ public class ProductServiceImpl implements IProductService {
             return true;
         else
             return false;
+    }
+
+    @Override
+    public List<Product> searchProduct(String searchText,int store_id) {
+        return productDao.findByLike(searchText,store_id);
     }
 
     @Override

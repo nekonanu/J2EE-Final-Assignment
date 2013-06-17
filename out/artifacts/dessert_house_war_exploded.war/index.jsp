@@ -15,7 +15,13 @@
     <title>Nekosama|糖果屋</title>
     <jsp:include page="WEB-INF/static/common/include.jsp"/>
 </head>
-<body class="global-background">
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#myCarousel').carousel();
+    });
+</script>
+
+<body>
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner open">
         <a class="brand" href="#">Nekosama|糖果屋</a>
@@ -32,22 +38,46 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="<%=rootPath%>/employee/login">管理员登陆</a>
+                        <a href="<%=rootPath%>/employee/login" data-transition="pop">管理员登陆</a>
                     </li>
                 </ul>
             </li>
         </ul>
     </div>
 </div>
-<div id="welcome-page" class="container-fluid">
-    <div class="hero-unit hero-unit-opacity">
-        <h1>Nekosama糖果屋</h1>
-        <p>
-            有时间，静下来，无论外界有多纷繁复杂、吵闹，只要让自己的心静下来，哪怕只是让屋子里的灯关著，找一个可以看见星空的地方坐下来，把自己的烦恼告诉星空，它能听地懂.夜晚的天空是最干净的，没有杂质的。
-        </p>
-        <p>你的微笑，是我最大心愿。</p>
-        <p><a class="btn btn-primary btn-large" href="<%=rootPath%>/customer/login">点击登陆</a></p>
+
+<div id="myCarousel" class="carousel slide">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+        <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item">
+            <img src="/dessertHouse/static/img/home_back.jpg" alt="">
+            <div class="carousel-caption">
+                <h4>First Thumbnail label</h4>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            </div>
+        </div>
+        <div class="item active">
+            <img src="/dessertHouse/static/img/home_back.jpg" alt="">
+            <div class="carousel-caption">
+                <h4>Second Thumbnail label</h4>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="/dessertHouse/static/img/home_back.jpg" alt="">
+            <div class="carousel-caption">
+                <h4>Third Thumbnail label</h4>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            </div>
+        </div>
     </div>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
 </div>
+
 </body>
 </html>

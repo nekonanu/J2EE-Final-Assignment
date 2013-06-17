@@ -130,7 +130,7 @@
         <table class="table table-striped table-bordered table-hover">
             <thead>
             <tr>
-                <th>用户名</th>
+                <th style="width: ">用户名</th>
                 <th>邮箱</th>
                 <th>年龄</th>
                 <th>性别</th>

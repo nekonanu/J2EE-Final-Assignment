@@ -4,9 +4,8 @@ import cn.edu.nju.bean.Product;
 import cn.edu.nju.bean.ProductOrder;
 import cn.edu.nju.bean.Sale;
 import cn.edu.nju.bean.User;
-import cn.edu.nju.controller.jsonData.CustomerOrder;
+import cn.edu.nju.controller.jsonData.CustomerOrderItem;
 import cn.edu.nju.controller.response.HotStaData;
-import cn.edu.nju.controller.response.HotStaInfo;
 import cn.edu.nju.controller.response.OrderSaleStaData;
 import cn.edu.nju.controller.response.OrderSaleTypePieData;
 import org.springframework.ui.Model;
@@ -42,8 +41,9 @@ public interface IProductService{
     public void saleProduct(int orderID);
     public Set<ProductOrder> getUncheckedProductOrders(int store_id);
     public Set<Sale> getSales(int store_id);
-    public boolean customerCanAfford(List<CustomerOrder> customerOrderList,User user);
+    public boolean customerCanAfford(List<CustomerOrderItem> customerOrderItemList,User user);
 
+    public List<Product> searchProduct(String searchText,int store_id);
 
     /**
      * 分店铺分析热卖产品

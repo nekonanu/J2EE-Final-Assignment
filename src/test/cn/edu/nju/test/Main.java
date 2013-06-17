@@ -14,6 +14,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.security.crypto.password.StandardPasswordEncoder;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -44,12 +45,16 @@ public class Main {
     }
 
     public static void main(String args[]){
-        Calendar calendar=Calendar.getInstance();
-        calendar.add(Calendar.MONTH,-1);
-        Date begin=calendar.getTime();
-        calendar=Calendar.getInstance();
-        Date end=calendar.getTime();
-        List<OrderSaleTypePieData> list=productService.getOrderTypePercent(begin, end, 1);
+        StandardPasswordEncoder encoder = new StandardPasswordEncoder("secret");
+        System.out.println(encoder.matches("123","df1937975095340dc353fffbbeeaf8f8b8ff30c65d4ff0b220da5764dbd5ca3f1b24b56a39ca09f1"));
+//        List<Product> products = productService.searchProduct("娃娃",1);
+
+//        Calendar calendar=Calendar.getInstance();
+//        calendar.add(Calendar.MONTH,-1);
+//        Date begin=calendar.getTime();
+//        calendar=Calendar.getInstance();
+//        Date end=calendar.getTime();
+//        List<OrderSaleTypePieData> list=productService.getOrderTypePercent(begin, end, 1);
 //        productService.saleProduct(1);
 //        Session session=HibernateUtil.currentSession();
 //        ProductOrder order= (ProductOrder) session.get(ProductOrder.class,1);

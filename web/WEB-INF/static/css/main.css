@@ -1,17 +1,21 @@
 /* add style here */
+
+
 #login_container{
-    position:relative;
-    top:200px;
+    position: relative;
+    top: 120px;
 }
 
 .global-background{
-    background-image: url("../img/login_back.jpg");
+    background-image: url("/dessertHouse/static/img/home_back.jpg");
+    background-size:100% 100%;
     background-attachment: fixed;
 }
 
 .home-background{
-    background-image: url("../img/back1.jpg");
+    background-image: url("/dessertHouse/static/img/back2.jpg");
     background-attachment: fixed;
+    background-size:100% 100%;
     /*background: #ff514c url(../img/noise.png);*/
 }
 
@@ -108,4 +112,14 @@ body > .navbar .brand {
     transition: height 0.3s ease;
     -webkit-transition: height 0.3s ease;
     -moz-transition: height 0.3s ease;
+}
+
+
+.container-fixed{
+    margin-top:60px;
+    width: 1200px;
+}
+
+.row-margin{
+    margin-top: 50px;
 }

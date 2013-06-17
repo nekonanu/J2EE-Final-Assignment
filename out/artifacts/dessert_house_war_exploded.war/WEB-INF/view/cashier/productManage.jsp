@@ -11,8 +11,6 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <script type="text/javascript">
     $(document).ready(function(){
-
-
         var element=$(".productTypeSelect");
         console.log(element);
         console.log(element[0]);
@@ -94,11 +92,11 @@
     <table class="table table-striped table-bordered table-hover">
         <thead>
         <tr>
-            <th>商品ID</th>
-            <th>名称</th>
-            <th>商品单价</th>
-            <th>库存数量</th>
+            <th>商品名称</th>
+            <th>单价</th>
+            <th>数量</th>
             <th>类别</th>
+            <th>图片路径</th>
             <th>所属店铺</th>
             <th>更改</th>
             <th>删除</th>
@@ -107,11 +105,11 @@
         <tbody>
         <c:forEach var="record" items="${productRecords}" varStatus="index">
             <tr>
-                <td>${record.id}</td>
                 <td><input id="product_name${record.id}" type="text" class=" input-medium" value="${record.productName}"></td>
                 <td><input id="product_price${record.id}" type="text" class=" input-mini" value="${record.price}"></td>
                 <td><input id="product_remain${record.id}" type="text" class=" input-mini" value="${record.remainNum}"></td>
                 <td><select id="typeSelector${record.id}" class="productTypeSelect input-small"></select></td>
+                <td><input id="product_img_path" type="text" class="input-medium" value="${record.imgPath}"/></td>
                 <td>${record.store.storeName}</td>
                 <td><button class="btn btn-success change-btn" product-id="${record.id}">更改</button> </td>
                 <td><button class="btn btn-danger delete-btn" product-id="${record.id}">删除</button></td>

@@ -57,6 +57,10 @@
         <location>/WEB-INF/view/common/error404.jsp</location>
     </error-page>
 
+    <welcome-file-list>
+        <welcome-file>/WEB-INF/view/customer/login.jsp</welcome-file>
+    </welcome-file-list>
+
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath*:/META-INF/spring/*.xml</param-value>
@@ -64,4 +68,6 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
+
+
 </web-app>

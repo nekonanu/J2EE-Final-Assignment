@@ -9,6 +9,6 @@ import java.util.ArrayList;
  * Time: 下午8:40
  * To change this template use File | Settings | File Templates.
  */
-public class CustomerOrderList extends ArrayList<CustomerOrder>{
+public class CustomerOrderList extends ArrayList<CustomerOrderItem>{
     public CustomerOrderList(){super();}
 }

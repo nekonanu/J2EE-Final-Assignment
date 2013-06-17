@@ -10,10 +10,6 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
-<script type="text/javascript">
-    $(document).ready(function(){
-    });
-</script>
 <div class="row">
     <table class="table table-striped table-bordered table-hover">
         <thead>
@@ -24,7 +20,6 @@
             <th>商品单价</th>
             <th>预定数量</th>
             <th>预定时间</th>
-            <th>是否发货</th>
         </tr>
         </thead>
         <tbody>
@@ -36,10 +31,13 @@
                 <td>${record.product.price}</td>
                 <td>${record.orderNum}</td>
                 <td><fmt:formatDate value="${record.orderDate}" type="both"/></td>
-                <td>
-                    <c:if test="${record.orderCheck=='true'}">已发货</c:if>
-                    <c:if test="${record.orderCheck=='false'}">未发货</c:if>
-                </td>
+                <%--<td>--%>
+                    <%--<c:if test="${record.orderCheck=='true'}">已发货</c:if>--%>
+                    <%--<c:if test="${record.orderCheck=='false'}">未发货</c:if>--%>
+                <%--</td>--%>
+                <%--<td>--%>
+                    <%--<button class="btn btn-primary" order-id="${record.id}">点击查看</button>--%>
+                <%--</td>--%>
             </tr>
         </c:forEach>
         </tbody>

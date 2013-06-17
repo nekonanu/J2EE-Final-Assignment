@@ -17,6 +17,15 @@ public class ProductAddData {
     private String productNum;
     private String storeName;
     private String productType;
+    private String imgPath;
+
+    public String getImgPath() {
+        return imgPath;
+    }
+
+    public void setImgPath(String imgPath) {
+        this.imgPath = imgPath;
+    }
 
     public String getProductType() {
         return productType;

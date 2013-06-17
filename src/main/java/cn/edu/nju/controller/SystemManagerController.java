@@ -14,6 +14,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.crypto.password.StandardPasswordEncoder;
 import org.springframework.security.web.authentication.WebAuthenticationDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -59,8 +60,9 @@ public class SystemManagerController {
                      HttpServletRequest request, HttpServletResponse response){
         Map map=new HashMap();
         User user=userService.findUserByName(loginForm.getUserName());
-        if (user!=null&&user.getType().equals(User.SYSTEM_MANAGER)&&user.getPassword().equals(loginForm.getPassword())){
-            UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(loginForm.getUserName(), loginForm.getPassword());
+        StandardPasswordEncoder encoder=new StandardPasswordEncoder("secret");
+        if (user!=null&&user.getType().equals(User.SYSTEM_MANAGER)&&encoder.matches(loginForm.getPassword(),user.getPassword())){
+            UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(loginForm.getUserName(), user.getPassword());
             request.getSession();
             token.setDetails(new WebAuthenticationDetails(request));
             Authentication authentication = userAuthManager.authenticate(token);
@@ -167,6 +169,7 @@ public class SystemManagerController {
             Store store=storeService.findByID(data.getStoreID());
             user.setStore(store);
             VipCard vipCard=new VipCard(user);
+            user.setVipCard(vipCard);
             vipCardService.addVipCard(vipCard);
             userService.addUser(user);
         }

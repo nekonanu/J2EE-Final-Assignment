@@ -35,11 +35,24 @@
                 type: "GET",
                 url: "<%=request.getContextPath()%>/"+role+"/"+path,
                 success: function(msg){
-                    $("#contextContainer").empty();
-                    $("#contextContainer").append(msg);
+                    $("#control").remove();
+                    $("#contextContainer").hide("drop", {direction: "left"}, 300, function () {
+                        $(this).html(msg);
+                        $(this).fadeIn(400);
+                    });
                 }
             });
         }
+
+        $("#homePage").click(function(){
+            $("#contextContainer").hide("drop", {direction: "left"}, 300, function () {
+                $(this).empty();
+                $(this).append("<h1>Nekosama的糖果屋</h1>");
+                $(this).append("<p>「你要承受你心天的季候，如同你常常承受从田野上度过的四时。你要静守，度过你心里凄凉的冬日。」晚安~</p>");
+                $(this).hide();
+                $(this).fadeIn(400);
+            });
+        });
 
         $("#adminStoreAdd").click(function(){
             getPage("systemManager","storeAdd");
@@ -60,8 +73,10 @@
                     url: "<%=request.getContextPath()%>/systemManager/adminManage",
                     data:{storeName:name},
                     success: function(msg){
-                        $("#contextContainer").empty();
-                        $("#contextContainer").append(msg);
+                        $("#contextContainer").hide("drop", {direction: "left"}, 300, function () {
+                            $(this).html(msg);
+                            $(this).fadeIn(200);
+                        });
                     }
                 });
             });
@@ -75,7 +90,8 @@
 </head>
 <body class="home-background">
 <jsp:include page="../common/dialog.jsp"/>
-<div class="navbar navbar-inverse">
+
+<div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner open">
         <a class="brand" href="#">Nekosama|糖果屋</a>
         <ul class="nav pull-right">
@@ -105,18 +121,18 @@
         </ul>
     </div>
 </div>
-<div class="container">
+<div class="container container-fixed">
     <div class="row-fluid">
         <div class="span2">
             <ul class="nav nav-list home-side-bar-rounded">
                 <li class="nav-header">欢迎使用</li>
-                <li><a href="<%=request.getContextPath()%>/systemManager/home">介绍</a></li>
+                <li><a id="homePage"><i class="icon-home"></i>首页</a></li>
                 <li class="divider"></li>
-                <li id="adminStoreAdd"><a>店面添加</a></li>
-                <li id="adminStoreMana"><a>店面删改</a></li>
+                <li id="adminStoreAdd"><a><i class="icon-plus"></i>店面添加</a></li>
+                <li id="adminStoreMana"><a><i class="icon-edit"></i>店面删改</a></li>
                 <li class="divider"></li>
-                <li id="adminUserAdd"><a>添加用户</a></li>
-                <li id="adminAuthMana"><a>用户管理</a></li>
+                <li id="adminUserAdd"><a><i class="icon-user"></i>添加用户</a></li>
+                <li id="adminAuthMana"><a><i class="icon-cog"></i>用户管理</a></li>
             </ul>
         </div>
         <div id="containerSpan" class="span10">

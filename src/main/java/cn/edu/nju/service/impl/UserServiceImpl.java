@@ -10,6 +10,7 @@ import cn.edu.nju.dao.IUserDao;
 import cn.edu.nju.dao.IVipCardDao;
 import cn.edu.nju.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.StandardPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -40,7 +41,10 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public void addUser(User user) {
-        System.out.println("save");
+        String pass = user.getPassword();
+        StandardPasswordEncoder encoder = new StandardPasswordEncoder("secret");
+        String encodePass = encoder.encode(pass);
+        user.setPassword(encodePass);
         userDao.save(user);
     }
 

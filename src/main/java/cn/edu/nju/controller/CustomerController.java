@@ -2,6 +2,7 @@ package cn.edu.nju.controller;
 
 import cn.edu.nju.bean.*;
 import cn.edu.nju.controller.jsonData.CustomerOrder;
+import cn.edu.nju.controller.jsonData.CustomerOrderItem;
 import cn.edu.nju.controller.jsonData.ChargeForm;
 import cn.edu.nju.controller.jsonData.LoginForm;
 import cn.edu.nju.controller.validation.CustomerSignUpForm;
@@ -9,12 +10,14 @@ import cn.edu.nju.service.IProductService;
 import cn.edu.nju.service.IStoreService;
 import cn.edu.nju.service.IUserService;
 import cn.edu.nju.service.IVipCardService;
+import cn.edu.nju.util.EncodeUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.crypto.password.StandardPasswordEncoder;
 import org.springframework.security.web.authentication.WebAuthenticationDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -48,7 +51,7 @@ public class CustomerController {
     private IVipCardService vipCardService;
     @Autowired
     private IProductService productService;
-    private CustomerOrder customerOrders;
+    private CustomerOrderItem customerOrdersItem;
     @Autowired
     @Qualifier("userAuthManager")
     protected AuthenticationManager userAuthManager;
@@ -73,9 +76,24 @@ public class CustomerController {
         return "/customer/order";
     }
 
+    @RequestMapping(value = "/searchProduct",method = RequestMethod.GET)
+    public String searchProduct(@RequestParam("searchText") String searchText,Model model){
+        User user=userService.findUserByName(getUserName());
+        List<Product> products = productService.searchProduct(EncodeUtil.encodeStr(searchText),user.getStore().getId());
+        model.addAttribute("productRecords",products);
+        return "/customer/order";
+    }
+
+    @RequestMapping(value = "/shoppingCart",method = RequestMethod.GET)
+    public String shoppingCart(Model model){
+        return "/customer/shoppingCart";
+    }
+
+
+
     @RequestMapping(value = "/order",method = RequestMethod.POST)
     @ResponseBody
-    public Map processOrder(@RequestBody List<CustomerOrder> customerOrderList){
+    public Map processOrder(@RequestBody CustomerOrder customerOrder){
         Map map=new HashMap();
         User user = userService.findUserByName(getUserName());
         if (user.getVipCard().getStatus().equals(VipCard.FREEZE)){
@@ -83,15 +101,16 @@ public class CustomerController {
             map.put("errorMessage","会员卡未激活，无法购买");
             return map;
         }
-        for (CustomerOrder order:customerOrderList){
+        for (CustomerOrderItem order: customerOrder.getOrder_data()){
             if (!order.isNumberValid()){
                 map.put("result","fail");
                 map.put("errorMessage","预定数量必须大于0");
                 return map;
             }
         }
-        if (productService.customerCanAfford(customerOrderList,user)){
-            for (CustomerOrder order:customerOrderList){
+
+        if (customerOrder.getPay_method().equals("normal_pay")||productService.customerCanAfford(customerOrder.getOrder_data(),user)){
+            for (CustomerOrderItem order: customerOrder.getOrder_data()){
                 Product product=productService.findByID(order.getProduct_id());
                 if(product.getRemainNum()<order.getProduct_num()){
                     map.put("result","fail");
@@ -99,7 +118,8 @@ public class CustomerController {
                     return map;
                 }
                 productService.orderProduct(product,user,order.getProduct_num());
-                vipCardService.buyByCard(user,product.getPrice()*order.getProduct_num()*user.getVipCard().getCutoff());
+                if(customerOrder.getPay_method().equals("vip_pay"))
+                    vipCardService.buyByCard(user,product.getPrice()*order.getProduct_num()*user.getVipCard().getCutoff());
             }
             map.put("result","success");
             map.put("infoMessage","恭喜您！订购成功！");
@@ -198,8 +218,9 @@ public class CustomerController {
                      HttpServletRequest request, HttpServletResponse response){
         Map map=new HashMap();
         User user=userService.findUserByName(loginForm.getUserName());
-        if (user!=null&&user.getPassword().equals(user.getPassword())){
-            UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(loginForm.getUserName(), loginForm.getPassword());
+        StandardPasswordEncoder encoder=new StandardPasswordEncoder("secret");
+        if (user!=null&&encoder.matches(loginForm.getPassword(),user.getPassword())){
+            UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(loginForm.getUserName(), user.getPassword());
             request.getSession();
             token.setDetails(new WebAuthenticationDetails(request));
             Authentication authentication = userAuthManager.authenticate(token);

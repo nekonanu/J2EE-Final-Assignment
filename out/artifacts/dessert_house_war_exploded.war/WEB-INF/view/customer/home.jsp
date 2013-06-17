@@ -11,59 +11,67 @@
 <script type="text/javascript">
     $(document).ready(function(){
         <%--订购商品--%>
-        $("#orderPage").click(function(){
+
+        function getPage(role,path){
             $.ajax({
                 type: "GET",
-                url: "<%=request.getContextPath()%>/customer/order",
+                url: "<%=request.getContextPath()%>/"+role+"/"+path,
                 success: function(msg){
-                    $("#contextContainer").empty();
-                    $("#contextContainer").append(msg);
+                    $("#contextContainer").hide("drop", {direction: "left"}, 300, function () {
+                        $(this).html(msg);
+                        $(this).fadeIn(400);
+                    });
                 }
             });
+        }
+
+
+        $("#homePage").click(function(){
+            $("#contextContainer").hide("drop", {direction: "left"}, 300, function () {
+                $(this).empty();
+                $(this).append("<h1>Nekosama的糖果屋</h1>");
+                $(this).append("<p>「你要承受你心天的季候，如同你常常承受从田野上度过的四时。你要静守，度过你心里凄凉的冬日。」晚安~</p>");
+                $(this).hide();
+                $(this).fadeIn(400);
+            });
+        });
+
+        $("#orderPage").click(function(){
+            getPage("customer","order");
         });
         <%--查看已订购--%>
         $("#orderInfo").click(function(){
-            $.ajax({
-                type: "GET",
-                url: "<%=request.getContextPath()%>/customer/orderInfo",
-                success: function(msg){
-                    $("#contextContainer").empty();
-                    $("#contextContainer").append(msg);
-                }
-            });
+            getPage("customer","orderInfo");
         });
         <%--用户信息--%>
         $("#userInfoPage").click(function(){
-            $.ajax({
-                type: "GET",
-                url: "<%=request.getContextPath()%>/customer/userInfo",
-                success: function(msg){
-                    $("#contextContainer").empty();
-                    $("#contextContainer").append(msg);
-                }
-            });
+            getPage("customer","userInfo");
         });
         <%--会员充值--%>
         $("#chargePage").click(function(){
-            $.ajax({
-                type: "GET",
-                url: "<%=request.getContextPath()%>/customer/charge",
-                success: function(msg){
-                    $("#contextContainer").empty();
-                    $("#contextContainer").append(msg);
-                }
-            });
+            getPage("customer","charge");
         });
-        <%--消息盒子--%>
-        $("#messageBoxPage").click(function(){
-            $.ajax({
-                type: "GET",
-                url: "<%=request.getContextPath()%>/customer/messageBox",
-                success: function(msg){
-                    $("#contextContainer").empty();
-                    $("#contextContainer").append(msg);
-                }
-            });
+       <%--购物车--%>
+        $("#shoppingCart").click(function(){
+            getPage("customer","shoppingCart");
+        });
+
+        $("#search").keydown(function(event){
+            <%--keycode enter === 13--%>
+            if(event.which == 13){
+                $.ajax({
+                    type: "GET",
+                    url: "<%=request.getContextPath()%>/customer/searchProduct",
+                    contentType:'charset=UTF-8',
+                    data: {searchText:$(this).val()},
+                    success: function(msg){
+                        $("#contextContainer").hide("drop", {direction: "left"}, 300, function () {
+                            $(this).html(msg);
+                            $(this).fadeIn(400);
+                        });
+                    }
+                });
+            }
         });
 
     });
@@ -75,14 +83,14 @@
 </head>
 <body class="home-background">
 <jsp:include page="../common/dialog.jsp"/>
-<div class="navbar navbar-inverse">
+<div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner open">
         <a class="brand" href="#">Nekosama|糖果屋</a>
         <ul class="nav pull-right">
             <li>
-                <form class="navbar-search pull-left">
-                    <input type="text" class="search-query" placeholder="搜索甜品">
-                </form>
+                <div class="navbar-search pull-left">
+                    <input id="search" type="text" class="search-query" placeholder="搜索甜品">
+                </div>
             </li>
             <li class="divider-vertical"></li>
             <li class="active">
@@ -105,19 +113,19 @@
         </ul>
     </div>
 </div>
-<div class="container">
+<div class="container container-fixed">
     <div class="row-fluid">
         <div class="span2">
             <ul class="nav nav-list home-side-bar-rounded">
                 <li class="nav-header">欢迎使用</li>
-                <li><a href="<%=request.getContextPath()%>/customer/home">介绍</a></li>
+                <li><a id="homePage"><i class="icon-home"></i>首页</a></li>
                 <li class="divider"></li>
-                <li id="orderPage"><a>订购甜点</a></li>
-                <li id="orderInfo"><a>查看订购</a></li>
+                <li id="orderPage"><a><i class="icon-heart"></i>订购甜点</a></li>
+                <li id="shoppingCart"><a><i class="icon-shopping-cart"></i>购物车结算</a></li>
+                <li id="orderInfo"><a><i class="icon-eye-open"></i>查看订购</a></li>
                 <li class="divider"></li>
-                <li id="userInfoPage"><a>个人信息</a></li>
-                <li id="chargePage"><a>会员充值</a></li>
-                <li id="messageBoxPage"><a>消息盒</a></li>
+                <li id="userInfoPage"><a><i class="icon-user"></i>个人信息</a></li>
+                <li id="chargePage"><a><i class="icon-star"></i>会员充值</a></li>
             </ul>
         </div>
         <div class="span10">

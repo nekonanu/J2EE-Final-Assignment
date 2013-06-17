@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" compressed="false" hash="2526042548" />
+  <component name="DataSourceManagerImpl" format="xml" hash="3184068464">
+    <data-source source="LOCAL" name="dessert house Data Source" product="MySQL" version="5.6.11" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.23 ( Revision: ${bzr.revision-id} )" uuid="40ecd3c9-986c-4593-a040-5a616990b764">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/dessert_house?characterEncoding=UTF-8</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>df9bdf98df99df9edf9fdf9c</user-password>
+      <libraries>
+        <library>
+          <url>jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.23-bin.jar!/</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="myDataSource" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="b1aff9dd-9c2a-45fe-9b78-cced48e155a7">
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost/dessert_house</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfc2dfc6dfd8df9bdf93df93df98df9bdf98df93</user-password>
+      <libraries>
+        <library>
+          <url>jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.23-bin.jar!/</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
 </project>
 

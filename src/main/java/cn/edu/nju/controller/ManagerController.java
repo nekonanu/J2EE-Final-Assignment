@@ -12,6 +12,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.crypto.password.StandardPasswordEncoder;
 import org.springframework.security.web.authentication.WebAuthenticationDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -55,8 +56,9 @@ public class ManagerController {
                      HttpServletRequest request, HttpServletResponse response){
         Map map=new HashMap();
         User user=userService.findUserByName(loginForm.getUserName());
-        if (user!=null&&user.getType().equals(User.MANAGER)&&user.getPassword().equals(loginForm.getPassword())){
-            UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(loginForm.getUserName(), loginForm.getPassword());
+        StandardPasswordEncoder encoder=new StandardPasswordEncoder("secret");
+        if (user!=null&&user.getType().equals(User.MANAGER)&&encoder.matches(loginForm.getPassword(),user.getPassword())){
+            UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(loginForm.getUserName(), user.getPassword());
             request.getSession();
             token.setDetails(new WebAuthenticationDetails(request));
             Authentication authentication = userAuthManager.authenticate(token);
@@ -98,24 +100,6 @@ public class ManagerController {
         List<OrderSaleTypePieData> orderSaleTypePieDatas =productService.getOrderTypePercent(begin,end,store.getId());
         model.addAttribute("orderTypePieRecords", orderSaleTypePieDatas);
         return "/manager/orderSta";
-    }
-
-    @RequestMapping(value = "/saleSta")
-    public String saleStatistics(@RequestParam("storeName") String storeName,Model model){
-        Store store= storeService.findByName(storeName);
-        Set<Sale> sales=store.getSales();
-        model.addAttribute("saleStaRecords",sales);
-
-        Calendar calendar=Calendar.getInstance();
-        calendar.add(Calendar.MONTH,-1);
-        Date begin=calendar.getTime();
-        calendar=Calendar.getInstance();
-        Date end=calendar.getTime();
-        List<OrderSaleStaData> saleStaData=productService.getSaleStaData(begin, end, store.getId());
-        List<OrderSaleTypePieData> saleTypePieDatas=productService.getSaleTypePercent(begin, end, store.getId());
-        model.addAttribute("saleLineRecords",saleStaData);
-        model.addAttribute("saleTypePieRecords",saleTypePieDatas);
-        return "/manager/saleSta";
     }
 
     @RequestMapping(value = "/hotSta")

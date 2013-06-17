@@ -18,6 +18,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.crypto.password.StandardPasswordEncoder;
 import org.springframework.security.web.authentication.WebAuthenticationDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -68,8 +69,9 @@ public class CashierController {
                         HttpServletRequest request, HttpServletResponse response){
         Map map=new HashMap();
         User user=userService.findUserByName(loginForm.getUserName());
-        if (user!=null&&user.getType().equals(User.CASHIER)&&user.getPassword().equals(loginForm.getPassword())){
-            UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(loginForm.getUserName(), loginForm.getPassword());
+        StandardPasswordEncoder encoder=new StandardPasswordEncoder("secret");
+        if (user!=null&&user.getType().equals(User.CASHIER)&&encoder.matches(loginForm.getPassword(),user.getPassword())){
+            UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(loginForm.getUserName(), user.getPassword());
             request.getSession();
             token.setDetails(new WebAuthenticationDetails(request));
             Authentication authentication = userAuthManager.authenticate(token);
@@ -110,28 +112,10 @@ public class CashierController {
             Store store=storeService.findByName(data.getStoreName());
             product.setStore(store);
             product.setProductType(data.getProductType());
+            product.setImgPath("/dessertHouse/static/img/"+data.getImgPath());
             productService.addProduct(product);
             map.put("result","success");
         }
-        return map;
-    }
-
-    @RequestMapping(value = "/sale",method = RequestMethod.GET)
-    public String salePage(Model model){
-        Store store=userService.findUserByName(getUserName()).getStore();
-        Set<ProductOrder> orders= productService.getUncheckedProductOrders(store.getId());
-        model.addAttribute("saleOrderRecords",orders);
-        return "/cashier/sale";
-    }
-
-    @RequestMapping(value = "/sale",method = RequestMethod.POST)
-    @ResponseBody
-    public Map processSale(@RequestBody List<SaleData> saleDatas){
-        Map map=new HashMap();
-        for(SaleData data:saleDatas){
-            productService.saleProduct(data.getOrderID());
-        }
-        map.put("result","success");
         return map;
     }
 
@@ -173,13 +157,6 @@ public class CashierController {
         return map;
     }
 
-//    @RequestMapping(value = "/sale",method = RequestMethod.GET)
-//    public String sale(Model model){
-//        User user=userService.findUserByName(getUserName());
-//        Set<ProductOrder> orders=user.getStore().getProductOrders();
-//        model.addAttribute("orderManageRecords",orders);
-//        return "/cashier/sale";
-//    }
 
     @RequestMapping(value = "/home",method = RequestMethod.GET)
     public String home(){

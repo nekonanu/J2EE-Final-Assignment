@@ -14,11 +14,11 @@
         var index=0;
         $("#addBtn").click(function(){
             index++;
-            $("#tableBody").append("<tr></tr>");
+            $("#tableBody").append("<tr id='productAdd"+index+"'></tr>");
             var element= $("#tableBody").find("tr").last();
-            element.append("<td><input id='name"+index+"' class='input-xlarge' type='text'/></td>");
+            element.append("<td><input id='name"+index+"' class='input-medium' type='text'/></td>");
             element.append("<td><input id='price"+index+"' class='input-mini' type='text'/></td>");
-            element.append("<td><input id='num"+index+"' class='input-mini' type='text'/></td>");
+            element.append("<td><input id='num"+index+"' class='input-mini' type='number'/></td>");
 
             var storeOption="";
             var select=$("#productType")[0];
@@ -33,6 +33,9 @@
                 storeOption+="<option>"+select.options[i].text+"</option>";
             }
             element.append("<td><select id='storeName"+index+"' class='input-medium'>"+storeOption+"</select></td>");
+            element.append("<td><input id='img_path"+index+"' class='input-medium' type='text'/></td>");
+            $("#productAdd"+index).hide();
+            $("#productAdd"+index).fadeIn(300);
         });
 
         $("#saveBtn").click(function(){
@@ -43,6 +46,7 @@
                 var num=$("#num"+(i+1)).val();
                 var store_name=$("#storeName"+(i+1)).val();
                 var productType=$("#productSelector"+(i+1)).val();
+                var img_path=$("#img_path"+(i+1)).val();
                 console.log(name);
                 if (name!=""&&store_name!=""){
                     list[i]={
@@ -50,10 +54,13 @@
                         productPrice:price,
                         productNum:num,
                         storeName:store_name,
-                        productType:productType
+                        productType:productType,
+                        imgPath:img_path
                     }
                 }
             }
+
+            console.log(list);
             $.ajax({
                 type: "POST",
                 url: "<%=request.getContextPath()%>/cashier/productAdd",
@@ -85,6 +92,7 @@
             <th>库存数量</th>
             <th>类别</th>
             <th>所属店铺</th>
+            <th>图片路径</th>
         </tr>
         </thead>
         <tbody id="tableBody">

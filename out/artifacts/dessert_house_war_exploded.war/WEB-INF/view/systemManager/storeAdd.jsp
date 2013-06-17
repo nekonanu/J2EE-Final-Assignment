@@ -14,10 +14,12 @@
         var index=0;
         $("#addBtn").click(function(){
             index++;
-            $("#tableBody").append("<tr></tr>");
+            $("#tableBody").append("<tr id='store_add"+index+"'></tr>");
             var element= $("#tableBody").find("tr").last();
             element.append("<td><input id='name"+index+"' class='input-xlarge' type='text'/></td>");
             element.append("<td><input id='location"+index+"' class='input-xlarge' type='text'/></td>");
+            $("#store_add"+index).hide();
+            $("#store_add"+index).fadeIn(300);
         });
         $("#saveBtn").click(function(){
             var list=new Array();

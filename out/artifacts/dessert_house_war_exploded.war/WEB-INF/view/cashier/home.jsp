@@ -14,38 +14,41 @@
 
 <script type="text/javascript">
     $(document).ready(function(){
-        <%--产品管理--%>
-        $("#productManage").click(function(){
+
+        function getPage(role,path){
             $.ajax({
                 type: "GET",
-                url: "<%=request.getContextPath()%>/cashier/productManage",
+                url: "<%=request.getContextPath()%>/"+role+"/"+path,
                 success: function(msg){
-                    $("#contextContainer").empty();
-                    $("#contextContainer").append(msg);
+                    $("#contextContainer").hide("drop", {direction: "left"}, 300, function () {
+                        $(this).html(msg);
+                        $(this).fadeIn(400);
+                    });
                 }
             });
+        }
+
+        $("#homePage").click(function(){
+            $("#contextContainer").hide("drop", {direction: "left"}, 300, function () {
+                $(this).empty();
+                $(this).append("<h1>Nekosama的糖果屋</h1>");
+                $(this).append("<p>「你要承受你心天的季候，如同你常常承受从田野上度过的四时。你要静守，度过你心里凄凉的冬日。」晚安~</p>");
+                $(this).hide();
+                $(this).fadeIn(400);
+            });
+        });
+        <%--产品管理--%>
+        $("#productManage").click(function(){
+            getPage("cashier","productManage");
         });
         <%--产品添加--%>
         $("#productAdd").click(function(){
-            $.ajax({
-                type: "GET",
-                url: "<%=request.getContextPath()%>/cashier/productAdd",
-                success: function(msg){
-                    $("#contextContainer").empty();
-                    $("#contextContainer").append(msg);
-                }
-            });
+            getPage("cashier","productAdd");
         });
         <%--销售删改--%>
+        $("#sale").hide();
         $("#sale").click(function(){
-            $.ajax({
-                type: "GET",
-                url: "<%=request.getContextPath()%>/cashier/sale",
-                success: function(msg){
-                    $("#contextContainer").empty();
-                    $("#contextContainer").append(msg);
-                }
-            });
+            getPage("cashier","sale");
         });
     });
 </script>
@@ -55,7 +58,7 @@
 </head>
 <body class="home-background">
 <jsp:include page="../common/dialog.jsp"/>
-<div class="navbar navbar-inverse">
+<div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner open">
         <a class="brand" href="#">Nekosama|糖果屋</a>
         <ul class="nav pull-right">
@@ -85,16 +88,16 @@
         </ul>
     </div>
 </div>
-<div class="container">
+<div class="container container-fixed">
     <div class="row-fluid">
         <div class="span2">
             <ul class="nav nav-list home-side-bar-rounded">
                 <li class="nav-header">欢迎使用</li>
-                <li><a href="<%=request.getContextPath()%>/cashier/home">介绍</a></li>
+                <li><a id="homePage"><i class="icon-home"></i>首页</a></li>
                 <li class="divider"></li>
-                <li id="productAdd"><a>产品添加</a></li>
-                <li id="productManage"><a>产品删改</a></li>
-                <li class="divider"></li>
+                <li id="productAdd"><a><i class="icon-plus"></i>产品添加</a></li>
+                <li id="productManage"><a><i class="icon-edit"></i>产品删改</a></li>
+                <%--<li class="divider"></li>--%>
                 <li id="sale"><a>销售处理</a></li>
             </ul>
         </div>

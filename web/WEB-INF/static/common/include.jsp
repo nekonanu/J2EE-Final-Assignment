@@ -18,6 +18,8 @@
 <script src="<%=path%>/static/js/jquery.js"></script>
 <script src="<%=path%>/static/js/bootstrap.js"></script>
 <script src="<%=path%>/static/js/jquery-form.js"></script>
+<script src="<%=path%>/static/js/jquery-ui-effects.min.js"></script>
+<script src="<%=path%>/static/js/jquery.cookie.js"></script>
 
 <script src="<%=path%>/static/js/highCharts/highcharts.js"></script>
 <script src="<%=path%>/static/js/highCharts/modules/data.js"></script>
@@ -27,7 +29,8 @@
 
 
 
+
 <link type="text/css" rel="stylesheet" href="<%=path%>/static/css/bootstrap.css"/>
-<link type="text/css" rel="stylesheet" href="<%=path%>/static/css/bootstrap-responsive.css"/>
+<%--<link type="text/css" rel="stylesheet" href="<%=path%>/static/css/bootstrap-responsive.css"/>--%>
 <link type="text/css" rel="stylesheet" href="<%=path%>/static/css/main.css"/>
 <%--<link type="text/css" rel="stylesheet" href="<%=path%>/static/css/doc.css"/>--%>
