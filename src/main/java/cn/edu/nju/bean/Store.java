@@ -11,6 +11,7 @@ import java.util.Set;
  * Time: 下午4:18
  * To change this template use File | Settings | File Templates.
  */
+@javax.persistence.Table(name = "store")
 @Entity
 public class Store implements Serializable {
     public Store(){}

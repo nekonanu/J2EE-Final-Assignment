@@ -8,6 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%
+    String path=request.getContextPath();
+%>
 
 <script type="text/javascript">
     $(document).ready(function(){
@@ -111,7 +114,7 @@
         <c:forEach var="record" items="${productRecords}" varStatus="index">
             <div class="row row-margin">
                 <div class="span4">
-                    <img class="img-rounded" src="${record.imgPath}" width="100%" height="100%"/>
+                    <img class="img-rounded" src="<%=path%>${record.imgPath}" width="100%" height="100%"/>
                 </div>
                 <div class="span6 offset2">
                     <div class="row">

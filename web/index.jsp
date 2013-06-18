@@ -1,83 +1,69 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: nekosama
-  Date: 13-2-28
-  Time: 下午5:26
-  To change this template use File | Settings | File Templates.
---%>
-<!DOCTYPE html>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" import="java.util.*,java.net.URL,java.sql.*,com.baidu.bae.api.util.BaeEnv" pageEncoding="UTF-8"%>
 <%
-    String rootPath=request.getContextPath();
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-    <title>Nekosama|糖果屋</title>
-    <jsp:include page="WEB-INF/static/common/include.jsp"/>
+    <title>Hello World</title>
 </head>
-<script type="text/javascript">
-    $(document).ready(function(){
-        $('#myCarousel').carousel();
-    });
-</script>
-
 <body>
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-inner open">
-        <a class="brand" href="#">Nekosama|糖果屋</a>
-        <ul class="nav pull-right">
-            <li class="active">
-                <a href="#">首页</a>
-            </li>
-            <li class="dropdown">
-                <a class="dropdown-toggle"
-                   data-toggle="dropdown"
-                   href="#">
-                    更多
-                    <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="<%=rootPath%>/employee/login" data-transition="pop">管理员登陆</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-</div>
+<%
+    //（1）指定服务地址，其中dbname需要自己修改
+    //String dbUrl = "jdbc:mysql://sqld.duapp.com:4050/dbname";
+    //（2）直接从请求header中获取ip、端口、用户名和密码信息
+    //String host = request.getHeader("BAE_ENV_ADDR_SQL_IP");
+    //String port = request.getHeader("BAE_ENV_ADDR_SQL_PORT");
+    //String username = request.getHeader("BAE_ENV_AK");
+    //String password = request.getHeader("BAE_ENV_SK");
+    //（3）从线程变量BaeEnv接口获取ip、端口、用户名和密码信息
+    String host = BaeEnv.getBaeHeader(BaeEnv.BAE_ENV_ADDR_SQL_IP);
+    String port = BaeEnv.getBaeHeader(BaeEnv.BAE_ENV_ADDR_SQL_PORT);
+    String username = BaeEnv.getBaeHeader(BaeEnv.BAE_ENV_AK);
+    String password = BaeEnv.getBaeHeader(BaeEnv.BAE_ENV_SK);
+    String driverName = "com.mysql.jdbc.Driver";
+    String dbUrl = "jdbc:mysql://";
+    String serverName = host + ":" + port + "/";
 
-<div id="myCarousel" class="carousel slide">
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class=""></li>
-        <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="2" class=""></li>
-    </ol>
-    <div class="carousel-inner">
-        <div class="item">
-            <img src="/dessertHouse/static/img/home_back.jpg" alt="">
-            <div class="carousel-caption">
-                <h4>First Thumbnail label</h4>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            </div>
-        </div>
-        <div class="item active">
-            <img src="/dessertHouse/static/img/home_back.jpg" alt="">
-            <div class="carousel-caption">
-                <h4>Second Thumbnail label</h4>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="/dessertHouse/static/img/home_back.jpg" alt="">
-            <div class="carousel-caption">
-                <h4>Third Thumbnail label</h4>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            </div>
-        </div>
-    </div>
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
-</div>
+    //从平台查询应用要使用的数据库名
+    String databaseName = "xTHtiEkzuHEEoRJlkbvi";
+    String connName = dbUrl + serverName + databaseName;
+    String sql = "select * from test";
 
+    Connection connection = null;
+    Statement stmt = null;
+    ResultSet rs = null;
+    try {
+        Class.forName(driverName);
+        //具体的数据库操作逻辑
+        connection = DriverManager.getConnection(connName, username,
+                password);
+        stmt = connection.createStatement();
+        rs = stmt.executeQuery(sql);
+        String id = "", name = "";
+        out.println("id&nbsp;&nbsp;&nbsp;&nbsp;name<br/>");
+        while (rs.next()) {
+            id = rs.getString("id");
+            name = rs.getString("name");
+            out.println(id + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + name + "<br/>");
+        }
+    } catch (ClassNotFoundException ex) {
+        // 异常处理逻辑
+        throw ex;
+    } catch (SQLException e) {
+        // 异常处理逻辑
+        throw e;
+    } finally {
+        try {
+            if (connection != null) {
+                connection.close();
+            }
+        } catch (SQLException e) {
+            throw e;
+        }
+    }
+%>
 </body>
 </html>

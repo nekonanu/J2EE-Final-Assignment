@@ -11,6 +11,7 @@ import java.util.Date;
  * Time: 下午4:51
  * To change this template use File | Settings | File Templates.
  */
+@javax.persistence.Table(name = "sale")
 @Entity
 public class Sale implements Serializable {
     private int id;

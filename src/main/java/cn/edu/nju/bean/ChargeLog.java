@@ -12,6 +12,7 @@ import java.util.Date;
  * To change this template use File | Settings | File Templates.
  */
 @javax.persistence.Table(name = "charge_log", schema = "", catalog = "dessert_house")
+//@javax.persistence.Table(name = "charge_log")
 @Entity
 public class ChargeLog implements Serializable {
     private int id;

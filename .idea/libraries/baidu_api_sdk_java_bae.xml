@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="baidu-api-sdk-java-bae">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/BAE/baidu-api-sdk-java-bae.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/BAE/baidu-api-sdk-java.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

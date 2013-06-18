@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<du-web-app xmlns="http://bae.baidu.com/java/1.0">
+    <sessions-enabled>true</sessions-enabled>
+    <static-files>
+        <exclude path="**/static/**.html"/>
+        <exclude path="**/static/**.jsp"/>
+        <exclude path="**/static/**.css"/>
+        <exclude path="**/static/**.jpg"/>
+        <exclude path="**/static/**.png"/>
+        <exclude path="**/static/**.js"/>
+        <exclude path="**/static/**.jsp"/>
+
+        <exclude path="**/customer/**"/>
+        <exclude path="**/cashier/**"/>
+        <exclude path="**/manager/**"/>
+        <exclude path="**/manager/**"/>
+        <exclude path="**/systemManager/**"/>
+        <exclude path="**/employee/**"/>
+    </static-files>
+</du-web-app>

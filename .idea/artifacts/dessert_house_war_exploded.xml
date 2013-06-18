@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="dessert_house:war exploded">
+  <artifact type="exploded-war" build-on-make="true" name="dessert_house:war exploded">
     <output-path>$PROJECT_DIR$/out/artifacts/dessert_house_war_exploded.war</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
@@ -19,6 +19,7 @@
           <element id="library" level="project" name="Hibernate" />
           <element id="library" level="project" name="jstl-1.2" />
           <element id="library" level="project" name="spring" />
+          <element id="library" level="project" name="baidu-api-sdk-java-bae" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="dessert_house/web/Web" />

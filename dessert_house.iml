@@ -52,6 +52,7 @@
     <orderEntry type="library" name="Hibernate" level="project" />
     <orderEntry type="library" name="jstl-1.2" level="project" />
     <orderEntry type="library" name="spring-scheduler" level="project" />
+    <orderEntry type="library" name="baidu-api-sdk-java-bae" level="project" />
   </component>
 </module>
 

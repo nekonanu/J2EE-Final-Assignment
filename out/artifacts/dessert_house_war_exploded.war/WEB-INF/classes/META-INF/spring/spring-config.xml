@@ -9,16 +9,25 @@
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
 
-    <bean id="helloService" class="cn.edu.nju.test.HelloService">
-        <property name="str"  value="hello world!"/>
-    </bean>
-
     <!--Hiberante Config-->
-    <bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+    <!--<bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource">-->
+        <!--<property name="driverClassName" value="com.mysql.jdbc.Driver"/>-->
+        <!--<property name="url" value="jdbc:mysql://localhost/dessert_house"/>-->
+        <!--<property name="username" value="root"/>-->
+        <!--<property name="password" value="123456"/>-->
+        <!--<property name="url" value="jdbc:mysql://sqld.duapp.com:4050/PGnqaWMHtSJgDoLBTsCD"/>-->
+        <!--<property name="username" value="hpIk4DXW1hRe4S7FGWhDtMnu"/>-->
+        <!--<property name="password" value="Gvuj5ACnQz0kGzW39xhwARZy9QkjCkqX"/>-->
+    <!--</bean>-->
+
+    <bean id="myDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
         <property name="url" value="jdbc:mysql://localhost/dessert_house"/>
         <property name="username" value="root"/>
         <property name="password" value="123456"/>
+        <!--<property name="url" value="jdbc:mysql://sqld.duapp.com:4050/xTHtiEkzuHEEoRJlkbvi?characterEncoding=GBK"/>-->
+        <!--<property name="username" value="BChlVivDjWw2aZyni9S2o4Io"/>-->
+        <!--<property name="password" value="wX01BoY6UdXzyGS3lFUyWDI6gOL1vLHS"/>-->
     </bean>
 
     <bean id="mySessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">

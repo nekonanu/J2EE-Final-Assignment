@@ -13,6 +13,7 @@ import java.util.Set;
  * To change this template use File | Settings | File Templates.
  */
 @javax.persistence.Table(name = "vip_card", schema = "", catalog = "dessert_house")
+//@javax.persistence.Table(name = "vip_card")
 @Entity
 public class VipCard implements Serializable {
     public static final String FREEZE="freeze";

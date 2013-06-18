@@ -7,13 +7,13 @@
 }
 
 .global-background{
-    background-image: url("/dessertHouse/static/img/home_back.jpg");
+    background-image: url("../img/home_back.jpg");
     background-size:100% 100%;
     background-attachment: fixed;
 }
 
 .home-background{
-    background-image: url("/dessertHouse/static/img/back2.jpg");
+    background-image: url("../img/back2.jpg");
     background-attachment: fixed;
     background-size:100% 100%;
     /*background: #ff514c url(../img/noise.png);*/

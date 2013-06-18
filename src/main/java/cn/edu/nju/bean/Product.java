@@ -12,6 +12,7 @@ import java.util.Set;
  * To change this template use File | Settings | File Templates.
  */
 @javax.persistence.Table(name = "product", schema = "", catalog = "dessert_house")
+//@javax.persistence.Table(name = "product")
 @Entity
 public class Product implements Serializable {
     private int id;

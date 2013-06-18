@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html>
-<jsp:include page="../../static/common/include.jsp"/>
+<jsp:include page="/WEB-INF/static/common/include.jsp"/>
 <script type="text/javascript">
     $(document).ready(function(){
         function post_ajax(role,user_name,pass_word){
